@@ -1,0 +1,22 @@
+{
+  "product": [
+    {
+      "name": "Produto de Teste",
+      "price": "125",
+      "quant": "1",
+      "id": 1
+    },
+    {
+      "name": "Jair",
+      "price": "2",
+      "quant": "1",
+      "id": 2
+    },
+    {
+      "name": "Melancia",
+      "price": "5",
+      "quant": "2",
+      "id": 3
+    }
+  ]
+}
