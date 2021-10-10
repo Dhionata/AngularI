@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { Product } from './product.model';
+import { Produto } from './produto.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
@@ -8,9 +8,9 @@ import { EMPTY, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductService {
+export class ProdutoService {
 
-  baseUrl = "http://localhost:3000/product"
+  baseUrl = "http://localhost:8080"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -24,36 +24,36 @@ export class ProductService {
       })
   }
 
-  create(product: Product): Observable<Product>{
-    return this.http.post<Product>(this.baseUrl, product).pipe(
+  create(produto: Produto): Observable<Produto>{
+    return this.http.post<Produto>(this.baseUrl, produto).pipe(
     map(obj => obj),
     catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl).pipe(
+  read(): Observable<Produto[]> {
+    return this.http.get<Produto[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
       )
     }
 
-  readById(id: string): Observable<Product>{
+    findById(id: string): Observable<Produto>{
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Product>(url)
+    return this.http.get<Produto>(url)
   }
 
-  update (product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`
-    return this.http.put<Product>(url, product).pipe(
+  update (produto: Produto): Observable<Produto> {
+    const url = `${this.baseUrl}/${produto.id}`
+    return this.http.put<Produto>(url, produto).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
       )
     }
 
-  delete(id: number): Observable<Product>{
+  delete(id: number): Observable<Produto>{
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Product>(url).pipe(
+    return this.http.delete<Produto>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
       )

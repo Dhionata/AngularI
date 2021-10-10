@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import {HomeComponent} from './views/home/home.component';
-import {ProductComponent} from'./views/product/product.component';
-import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
-import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
+import {ProdutoComponent} from'./views/product/produto.component';
+import { ProdutoCreateComponent } from './components/product/produto-criar/produto-criar.component';
+import { ProdutoUpdateComponent } from './components/product/produto-update/produto-update.component';
+import { ProdutoDeleteComponent } from './components/product/produto-delete/produto-delete.component';
 
 const routes: Routes = [{
 
@@ -16,22 +16,22 @@ const routes: Routes = [{
 
   {
   path:"product",
-  component: ProductComponent
+  component: ProdutoComponent
   },
 
   {
     path:"product/create",
-    component: ProductCreateComponent
+    component: ProdutoCreateComponent
   },
 
   {
   path:"product/update/:id",
-  component: ProductUpdateComponent
+  component: ProdutoUpdateComponent
 },
 
 {
   path:"product/delete/:id",
-  component: ProductDeleteComponent
+  component: ProdutoDeleteComponent
 }
 
 ];
