@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProdutoUpdateComponent } from './produto-update.component';
 
-describe('ProductUpdateComponent', () => {
+describe('ProdutoUpdateComponent', () => {
   let component: ProdutoUpdateComponent;
   let fixture: ComponentFixture<ProdutoUpdateComponent>;
 

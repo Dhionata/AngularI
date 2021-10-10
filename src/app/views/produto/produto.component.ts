@@ -3,7 +3,7 @@ import {Router} from '@angular/router'
 import { HeaderService } from 'src/app/components/templates/header/header.service';
 
 @Component({
-  selector: 'app-product',
+  selector: 'app-produto',
   templateUrl: './produto.component.html',
   styleUrls: ['./produto.component.scss']
 })
@@ -13,7 +13,7 @@ export class ProdutoComponent implements OnInit {
     headerService.headerData = {
       title: "Cadastro de produtos",
       icon: 'storefront',
-      routerUrl: '/product'
+      routerUrl: '/produto'
     }
   }
 
@@ -21,6 +21,6 @@ export class ProdutoComponent implements OnInit {
   }
 
     navigateToProdutoCreate(): void{
-        this.router.navigate(['product/create'])
+        this.router.navigate(['produto/create'])
     }
 }

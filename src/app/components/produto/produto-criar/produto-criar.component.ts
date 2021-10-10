@@ -26,13 +26,13 @@ export class ProdutoCreateComponent implements OnInit {
   CreateProduto(): void {
     this.ProdutoService.create(this.produto).subscribe(() => {
       this.ProdutoService.ShowOMessage('Produto criado!')
-      this.router.navigate(['/product'])
+      this.router.navigate(['/produto'])
 
     })
 
   }
   cancel(): void {
-    this.router.navigate(['/product'])
+    this.router.navigate(['/produto'])
   }
 
 
