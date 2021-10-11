@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProdutolerComponent } from './produto-ler.component';
+import { EnderecoDeleteComponent } from './endereco-delete.component';
 
-describe('ProdutoLerComponent', () => {
-  let component: ProdutolerComponent;
-  let fixture: ComponentFixture<ProdutolerComponent>;
+describe('EnderecoDeleteComponent', () => {
+  let component: EnderecoDeleteComponent;
+  let fixture: ComponentFixture<EnderecoDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProdutolerComponent]
+      declarations: [EnderecoDeleteComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProdutolerComponent);
+    fixture = TestBed.createComponent(EnderecoDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
