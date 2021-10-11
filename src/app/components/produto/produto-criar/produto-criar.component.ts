@@ -1,7 +1,7 @@
 import { Produto } from '../produto.model';
 import { ProdutoService } from '../produto.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produto-criar',
