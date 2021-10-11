@@ -8,6 +8,11 @@ import { ProdutoCreateComponent } from './components/produto/produto-criar/produ
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
 
+import {ClienteComponent} from'./views/cliente/cliente.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+
 const routes: Routes = [{
 
   path: "",
@@ -32,6 +37,26 @@ const routes: Routes = [{
 {
   path:"produto/delete/:id",
   component: ProdutoDeleteComponent
+},
+
+{
+path:"cliente",
+component: ClienteComponent
+},
+
+{
+  path:"cliente/create",
+  component: ClienteCreateComponent
+},
+
+{
+path:"cliente/update/:id",
+component: ClienteUpdateComponent
+},
+
+{
+path:"cliente/delete/:id",
+component: ClienteDeleteComponent
 }
 
 ];

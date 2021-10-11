@@ -16,6 +16,8 @@ import {MatListModule} from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ProdutoComponent } from './views/produto/produto.component';
 import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
+import { ClienteComponent } from './views/cliente/cliente.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
 import {MatButtonModule} from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -25,9 +27,13 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule} from '@angular/material/input';
 import { ProdutolerComponent } from './components/produto/produto-ler/produto-ler.component';
+import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort'
+
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -48,7 +54,12 @@ registerLocaleData(localePt)
     ProdutoCreateComponent,
     ProdutolerComponent,
     ProdutoUpdateComponent,
-    ProdutoDeleteComponent
+    ProdutoDeleteComponent,
+    ClienteComponent,
+    ClienteCreateComponent,
+    ClientelerComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent
   ],
   imports: [
     BrowserModule,
