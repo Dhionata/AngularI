@@ -11,7 +11,9 @@ import { Router } from '@angular/router';
 export class TelefoneClienteCreateComponent implements OnInit {
 
   telefoneCliente: TelefoneCliente = {
-    cliente: Cliente = null!,//necessário criar a classe Cliente
+    cliente: null!,
+    numero:""
+    //necessário criar a classe Cliente
     //o Número tem que vir da classe Telefone.
   }
 
@@ -23,7 +25,7 @@ export class TelefoneClienteCreateComponent implements OnInit {
   }
 
   CreateTelefoneCliente(): void {
-    this.TelefoneClienteService.create(this.TelefoneCliente).subscribe(() => {
+    this.TelefoneClienteService.create(this.telefoneCliente).subscribe(() => {
       this.TelefoneClienteService.ShowOMessage('TelefoneCliente criado!')
       this.router.navigate(['/TelefoneCliente'])
 

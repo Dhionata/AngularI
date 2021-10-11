@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TelefoneClienteCreateComponent } from './TelefoneCliente-criar.component';
+import { TelefoneClienteCreateComponent } from './telefoneCliente-criar.component';
 
 describe('TelefoneClienteCreateComponent', () => {
   let component: TelefoneClienteCreateComponent;

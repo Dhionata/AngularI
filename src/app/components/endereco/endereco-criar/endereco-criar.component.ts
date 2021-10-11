@@ -11,8 +11,15 @@ import { Router } from '@angular/router';
 export class EnderecoCreateComponent implements OnInit {
 
   endereco: Endereco = {
-    cliente: Cliente = null!,//necessário criar a classe Cliente
-    //o Número tem que vir da classe Telefone.
+    id: 0,
+    logradouro: "",
+    cidade: "",
+    bairro: "",
+    complemento: "",
+    cep: "",
+    numero: "",
+    coordenadaX: 0,
+    coordenadaY: 0
   }
 
   constructor(private EnderecoService: EnderecoService,
