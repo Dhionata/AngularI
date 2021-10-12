@@ -13,7 +13,8 @@ export class ClienteCreateComponent implements OnInit {
   cliente: cliente = {
     nome: '',
     email: null!,
-    quantidade: null!,
+    cnpjCpf: null!,
+    senha: null!,
     id: 0
   }
 

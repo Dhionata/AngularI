@@ -7,13 +7,18 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput placeholder="Email (R$)"
+        <input matInput placeholder="Email"
         [value] = "cliente.email" name = "email" disabled>
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Quantidade"
-      [value] = "cliente.quantidade" name = "quantidade" disabled>
+      <input matInput placeholder="Senha"
+      [(ngModel)] = "cliente.senha" name = "senha">
+  </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Cnpj/Cpf"
+      [value] = "cliente.cnpjCpf" name = "cnpjCpf" disabled>
   </mat-form-field>
 
   </form>

@@ -6,12 +6,16 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="E-mail" [(ngModel)]="cliente.email" name="preco">
+            <input matInput placeholder="E-mail" [(ngModel)]="cliente.email" name="email">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="cliente.quantidade" name="quantidade">
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="cliente.cnpjCpf" name="cnpjCpf">
         </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="senha" [(ngModel)]="cliente.senha" name="senha">
+      </mat-form-field>
 
     </form>
 </mat-card>
