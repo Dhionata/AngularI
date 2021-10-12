@@ -12,7 +12,7 @@ export class TelefoneClienteCreateComponent implements OnInit {
 
   telefoneCliente: TelefoneCliente = {
     cliente: null!,
-    numero:""
+    numero: ""
     //necessário criar a classe Cliente
     //o Número tem que vir da classe Telefone.
   }

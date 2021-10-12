@@ -8,9 +8,9 @@ describe('TelefoneFornecedorUpdateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TelefoneFornecedorUpdateComponent ]
+      declarations: [TelefoneFornecedorUpdateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

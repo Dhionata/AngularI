@@ -1,7 +1,7 @@
 import { Telefone } from '../telefone.model';
 import { TelefoneService } from '../telefone.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Telefone-criar',
@@ -11,9 +11,7 @@ import {Router} from '@angular/router';
 export class TelefoneCreateComponent implements OnInit {
 
   Telefone: Telefone = {
-    nome:'',
-    preco: null!,
-    quantidade: null!
+    numero: ""
   }
 
   constructor(private TelefoneService: TelefoneService,

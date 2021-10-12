@@ -8,9 +8,9 @@ describe('EnderecoCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EnderecoCreateComponent ]
+      declarations: [EnderecoCreateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

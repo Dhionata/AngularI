@@ -10,22 +10,22 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { NavComponent } from './components/produto/nav/nav.component';
 
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import {MatListModule} from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
 import { ProdutoComponent } from './views/produto/produto.component';
 import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
-import {HttpClientModule} from'@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 import { ProdutolerComponent } from './components/produto/produto-ler/produto-ler.component';
 import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
 import { MatTableModule } from '@angular/material/table';

@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class TelefoneFornecedorCreateComponent implements OnInit {
 
   telefoneFornecedor: TelefoneFornecedor = {
-    cliente: Cliente = null!,//necessário criar a classe Cliente
-    //o Número tem que vir da classe Telefone.
+    numero: "",
+    cliente: null!,
   }
 
   constructor(private TelefoneFornecedorService: TelefoneFornecedorService,

@@ -8,9 +8,9 @@ describe('EnderecoUpdateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EnderecoUpdateComponent ]
+      declarations: [EnderecoUpdateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

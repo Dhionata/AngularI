@@ -15,7 +15,7 @@ export class ClienteDeleteComponent implements OnInit {
   constructor(private ClienteService: ClienteService,
     private router: Router,
     private route: ActivatedRoute
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -24,7 +24,7 @@ export class ClienteDeleteComponent implements OnInit {
     )
   }
 
-  deletecliente(): void{
+  deletecliente(): void {
     this.ClienteService.delete(this.cliente.id!).subscribe(() => {
       this.ClienteService.ShowOMessage('cliente Excluido com sucesso')
       this.router.navigate(['/cliente'])
@@ -32,7 +32,7 @@ export class ClienteDeleteComponent implements OnInit {
 
   }
 
-  cancel(): void{
+  cancel(): void {
     this.router.navigate(['/cliente'])
   }
 

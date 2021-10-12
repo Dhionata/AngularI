@@ -13,9 +13,9 @@ export class TelefoneClienteUpdateComponent implements OnInit {
   TelefoneCliente!: TelefoneCliente;
 
   constructor(private TelefoneClienteService: TelefoneClienteService,
-     private router: Router,
-     private route: ActivatedRoute
-     ) { }
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -23,17 +23,17 @@ export class TelefoneClienteUpdateComponent implements OnInit {
       this.TelefoneCliente = TelefoneCliente)
   }
 
-    updateTelefoneCliente(): void{
-      this.TelefoneClienteService.update(this.TelefoneCliente).subscribe(() => {
+  updateTelefoneCliente(): void {
+    this.TelefoneClienteService.update(this.TelefoneCliente).subscribe(() => {
       this.TelefoneClienteService.ShowOMessage('TelefoneCliente atualizado com sucesso')
       this.router.navigate(["/TelefoneCliente"])
     })
 
-    }
+  }
 
-    cancel(): void {
-      this.router.navigate(['/TelefoneCliente'])
-    }
+  cancel(): void {
+    this.router.navigate(['/TelefoneCliente'])
+  }
 
 
 }

@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { TelefoneCliente } from './TelefoneCliente.model';
+import { TelefoneCliente } from './telefoneCliente.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -10,7 +10,7 @@ import { EMPTY, Observable } from 'rxjs';
 })
 export class TelefoneClienteService {
 
-  baseUrl = "http://localhost:8080/TelefoneCliente"
+  baseUrl = "http://localhost:8080/telefoneCliente"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }

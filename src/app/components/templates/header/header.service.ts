@@ -7,7 +7,7 @@ import { HeaderData } from './header-data.model';
 })
 export class HeaderService {
 
- private _headerData = new BehaviorSubject<HeaderData>({
+  private _headerData = new BehaviorSubject<HeaderData>({
     title: 'Início',
     icon: 'home',
     routerUrl: ''
@@ -16,11 +16,11 @@ export class HeaderService {
 
   constructor() { }
 
-  get headerData(): HeaderData{
+  get headerData(): HeaderData {
     return this._headerData.value
   }
 
-  set headerData (headerData: HeaderData){
+  set headerData(headerData: HeaderData) {
     this._headerData.next(headerData)
   }
 }

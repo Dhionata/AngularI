@@ -13,9 +13,9 @@ export class ProdutoUpdateComponent implements OnInit {
   produto!: Produto;
 
   constructor(private ProdutoService: ProdutoService,
-     private router: Router,
-     private route: ActivatedRoute
-     ) { }
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -23,17 +23,17 @@ export class ProdutoUpdateComponent implements OnInit {
       this.produto = produto)
   }
 
-    updateProduto(): void{
-      this.ProdutoService.update(this.produto).subscribe(() => {
+  updateProduto(): void {
+    this.ProdutoService.update(this.produto).subscribe(() => {
       this.ProdutoService.ShowOMessage('Produto atualizado com sucesso')
       this.router.navigate(["/produto"])
     })
 
-    }
+  }
 
-    cancel(): void {
-      this.router.navigate(['/produto'])
-    }
+  cancel(): void {
+    this.router.navigate(['/produto'])
+  }
 
 
 }

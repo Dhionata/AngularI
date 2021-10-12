@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router'
+import { Router } from '@angular/router'
 import { HeaderService } from 'src/app/components/templates/header/header.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class ProdutoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-    navigateToProdutoCreate(): void{
-        this.router.navigate(['produto/create'])
-    }
+  navigateToProdutoCreate(): void {
+    this.router.navigate(['produto/create'])
+  }
 }

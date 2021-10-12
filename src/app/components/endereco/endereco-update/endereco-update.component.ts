@@ -13,9 +13,9 @@ export class EnderecoUpdateComponent implements OnInit {
   Endereco!: Endereco;
 
   constructor(private EnderecoService: EnderecoService,
-     private router: Router,
-     private route: ActivatedRoute
-     ) { }
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
@@ -23,17 +23,17 @@ export class EnderecoUpdateComponent implements OnInit {
       this.Endereco = Endereco)
   }
 
-    updateEndereco(): void{
-      this.EnderecoService.update(this.Endereco).subscribe(() => {
+  updateEndereco(): void {
+    this.EnderecoService.update(this.Endereco).subscribe(() => {
       this.EnderecoService.ShowOMessage('Endereco atualizado com sucesso')
       this.router.navigate(["/Endereco"])
     })
 
-    }
+  }
 
-    cancel(): void {
-      this.router.navigate(['/Endereco'])
-    }
+  cancel(): void {
+    this.router.navigate(['/Endereco'])
+  }
 
 
 }
