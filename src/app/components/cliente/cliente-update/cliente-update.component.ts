@@ -25,7 +25,7 @@ export class ClienteUpdateComponent implements OnInit {
 
     updatecliente(): void{
       this.ClienteService.update(this.cliente).subscribe(() => {
-      this.ClienteService.ShowOMessage('cliente atualizado com sucesso')
+      this.ClienteService.ShowOMessage('Cliente atualizado com sucesso')
       this.router.navigate(["/cliente"])
     })
 
