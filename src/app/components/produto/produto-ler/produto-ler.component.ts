@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ProdutolerComponent implements OnInit {
 
   produto!: Produto[]
-  displayedColumns = ['id', 'nome', 'disponivel', 'actions']
+  displayedColumns = ['id', 'nome']
 
   constructor(private ProdutoService: ProdutoService) { }
 
