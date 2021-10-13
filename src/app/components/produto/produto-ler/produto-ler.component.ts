@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutolerComponent implements OnInit {
 
-  produtos!: Produto[]
-  displayedColumns = ['id', 'nome', 'diponivel', 'actions']
+  produto!: Produto[]
+  displayedColumns = ['id', 'nome', 'disponivel', 'actions']
 
   constructor(private ProdutoService: ProdutoService) { }
 
   ngOnInit(): void {
-    this.ProdutoService.read().subscribe(produtos => {
-      this.produtos = produtos
-      console.log(produtos);
+    this.ProdutoService.read().subscribe(produto => {
+      this.produto = produto
+      console.log(produto);
 
     })
   }
