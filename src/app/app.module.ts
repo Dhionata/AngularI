@@ -18,6 +18,8 @@ import { ProdutoComponent } from './views/produto/produto.component';
 import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
 import { ClienteComponent } from './views/cliente/cliente.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
+import { EnderecoComponent } from './views/endereco/endereco.component';
+import { EnderecoCreateComponent } from './components/endereco/endereco-criar/endereco-criar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -28,12 +30,16 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
 import { ProdutolerComponent } from './components/produto/produto-ler/produto-ler.component';
 import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
+import { EnderecolerComponent } from './components/endereco/endereco-ler/endereco-ler.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort'
 
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+
+import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
+import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -59,7 +65,12 @@ registerLocaleData(localePt)
     ClienteCreateComponent,
     ClientelerComponent,
     ClienteUpdateComponent,
-    ClienteDeleteComponent
+    ClienteDeleteComponent,
+    EnderecoComponent,
+    EnderecoCreateComponent,
+    EnderecolerComponent,
+    EnderecoUpdateComponent,
+    EnderecoDeleteComponent
   ],
   imports: [
     BrowserModule,

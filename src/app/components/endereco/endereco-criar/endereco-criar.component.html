@@ -2,16 +2,36 @@
     <mat-card-title>Novo Endereco</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="Endereco.nome" name="nome">
+            <input matInput placeholder="Logradouro" [(ngModel)]="endereco.logradouro" name="logradouro">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="Endereco.preco" name="preco">
+            <input matInput placeholder="Cidade" [(ngModel)]="endereco.cidade" name="cidade">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="Endereco.quantidade" name="quantidade">
+            <input matInput placeholder="Bairro" [(ngModel)]="endereco.bairro" name="bairro">
         </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Complemento" [(ngModel)]="endereco.complemento" name="complemento">
+        </mat-form-field>
+
+        <mat-form-field>
+        <input matInput placeholder="Cep" [(ngModel)]="endereco.cep" name="cep">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput placeholder="Numero" [(ngModel)]="endereco.numero" name="numero">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Coordenada X" [(ngModel)]="endereco.coordenadaX" name="coordenadaX">
+            </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Coordenada Y" [(ngModel)]="endereco.coordenadaY" name="coordenadaY">
+            </mat-form-field>
 
     </form>
 </mat-card>
