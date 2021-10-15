@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-Endereco-delete',
+  selector: 'app-endereco-delete',
   templateUrl: './endereco-delete.component.html',
   styleUrls: ['./endereco-delete.component.scss']
 })

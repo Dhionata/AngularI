@@ -4,9 +4,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Endereco } from '../endereco.model';
 
 @Component({
-  selector: 'app-Endereco-update',
-  templateUrl: './Endereco-update.component.html',
-  styleUrls: ['./Endereco-update.component.scss']
+  selector: 'app-endereco-update',
+  templateUrl: './endereco-update.component.html',
+  styleUrls: ['./endereco-update.component.scss']
 })
 export class EnderecoUpdateComponent implements OnInit {
 
