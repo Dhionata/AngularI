@@ -3,14 +3,15 @@ import { Endereco } from '../endereco.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-Endereco-ler',
-  templateUrl: './Endereco-ler.component.html',
-  styleUrls: ['./Endereco-ler.component.scss']
+  selector: 'app-endereco-ler',
+  templateUrl: './endereco-ler.component.html',
+  styleUrls: ['./endereco-ler.component.scss']
 })
 export class EnderecolerComponent implements OnInit {
 
   Enderecos!: Endereco[]
-  displayedColumns = ['id', 'nome', 'preco', 'quantidade', 'actions']
+  displayedColumns = ['id', 'logradouro', 'cidade', 'bairro',
+   'complemento','cep','numero','coordenadaX','coordenadaY', 'actions']
 
   constructor(private EnderecoService: EnderecoService) { }
 

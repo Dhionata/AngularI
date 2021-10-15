@@ -4,9 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-Endereco-criar',
-  templateUrl: './Endereco-criar.component.html',
-  styleUrls: ['./Endereco-criar.component.scss']
+  selector: 'app-endereco-criar',
+  templateUrl: './endereco-criar.component.html',
+  styleUrls: ['./endereco-criar.component.scss']
 })
 export class EnderecoCreateComponent implements OnInit {
 
