@@ -8,7 +8,7 @@ import { usuario } from '../usuario.model';
   templateUrl: './usuario-update.component.html',
   styleUrls: ['./usuario-update.component.scss']
 })
-export class UsuarioComponent implements OnInit {
+export class UsuarioUpdateComponent implements OnInit {
 
   usuario!: usuario;
 

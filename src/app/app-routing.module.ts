@@ -17,6 +17,11 @@ import { EnderecoCreateComponent } from './components/endereco/endereco-criar/en
 import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
 import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
 
+import { UsuarioComponent } from './views/usuario/usuario.component';
+import { UsuarioCreateComponent } from './components/usuario/usuario-criar/usuario-criar.component';
+import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usuario-delete.component';
+import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
+
 const routes: Routes = [{
 
   path: "",
@@ -85,22 +90,22 @@ const routes: Routes = [{
 
 {
   path: "usuario",
-  component: EnderecoComponent
+  component: UsuarioComponent
 },
 
 {
   path: "usuario/create",
-  component: EnderecoCreateComponent
+  component: UsuarioCreateComponent
 },
 
 {
   path: "usuario/update/:id",
-  component: EnderecoUpdateComponent
+  component: UsuarioUpdateComponent
 },
 
 {
   path: "usuario/delete/:id",
-  component: EnderecoDeleteComponent
+  component: UsuarioDeleteComponent
 }
 
 ];

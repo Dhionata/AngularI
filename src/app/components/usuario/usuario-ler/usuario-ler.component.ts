@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './usuario-ler.component.html',
   styleUrls: ['./usuario-ler.component.scss']
 })
-export class UsuarioCreateComponent implements OnInit {
+export class UsuariolerComponent implements OnInit {
 
-  clientes!: usuario[]
-  displayedColumns = ['id', 'nome', 'email', 'quantidade', 'actions']
+  usuario!: usuario[]
+  displayedColumns = ['id','cnpjCpf','email','nome','senha','actions']
 
   constructor(private UsuarioService: UsuarioService) { }
 
   ngOnInit(): void {
-    this.UsuarioService.read().subscribe(usuarios => {
-      this.usuarios = usuarios
-      console.log(usuarios);
+    this.UsuarioService.read().subscribe(usuario => {
+      this.usuario = usuario
+      console.log(usuario);
 
     })
   }
