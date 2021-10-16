@@ -81,6 +81,26 @@ const routes: Routes = [{
 {
   path: "endereco/delete/:id",
   component: EnderecoDeleteComponent
+},
+
+{
+  path: "usuario",
+  component: EnderecoComponent
+},
+
+{
+  path: "usuario/create",
+  component: EnderecoCreateComponent
+},
+
+{
+  path: "usuario/update/:id",
+  component: EnderecoUpdateComponent
+},
+
+{
+  path: "usuario/delete/:id",
+  component: EnderecoDeleteComponent
 }
 
 ];

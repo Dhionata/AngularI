@@ -1,3 +1,4 @@
+import { usuario } from './components/usuario/usuario.model';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -14,37 +15,44 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './views/home/home.component';
-import { ProdutoComponent } from './views/produto/produto.component';
-import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
-import { ClienteComponent } from './views/cliente/cliente.component';
-import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
-import { EnderecoComponent } from './views/endereco/endereco.component';
-import { EnderecoCreateComponent } from './components/endereco/endereco-criar/endereco-criar.component';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input';
-import { ProdutolerComponent } from './components/produto/produto-ler/produto-ler.component';
-import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
-import { EnderecolerComponent } from './components/endereco/endereco-ler/endereco-ler.component';
+
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort'
+import { MatSortModule } from '@angular/material/sort';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
+import { ClienteComponent } from './views/cliente/cliente.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
 
 import { EnderecoUpdateComponent } from './components/endereco/endereco-update/endereco-update.component';
 import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
+import { EnderecolerComponent } from './components/endereco/endereco-ler/endereco-ler.component';
+import { EnderecoComponent } from './views/endereco/endereco.component';
+import { EnderecoCreateComponent } from './components/endereco/endereco-criar/endereco-criar.component';
 
-import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
 import { ProdutoUpdateComponent } from './components/produto/produto-update/produto-update.component';
 import { ProdutoDeleteComponent } from './components/produto/produto-delete/produto-delete.component';
+import { ProdutolerComponent } from './components/produto/produto-ler/produto-ler.component';
+import { ProdutoComponent } from './views/produto/produto.component';
+import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
+
+import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
+import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usuario-delete.component';
+import { UsuariolerComponent } from './components/usuario/usuario-ler/usuario-ler.component';
+import { UsuarioComponent } from './views/usuario/usuario.component';
+import { UsuarioCreateComponent } from './components/usuario/usuario-criar/usuario-criar.component';
 
 
 registerLocaleData(localePt)
@@ -70,7 +78,12 @@ registerLocaleData(localePt)
     EnderecoCreateComponent,
     EnderecolerComponent,
     EnderecoUpdateComponent,
-    EnderecoDeleteComponent
+    EnderecoDeleteComponent,
+    UsuarioComponent,
+    UsuarioCreateComponent,
+    UsuariolerComponent,
+    UsuarioUpdateComponent,
+    UsuarioDeleteComponent
   ],
   imports: [
     BrowserModule,

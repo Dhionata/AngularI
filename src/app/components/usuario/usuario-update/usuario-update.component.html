@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Alterar usuario</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="usuario.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="senha" [(ngModel)]="usuario.senha" name="senha">
+        </mat-form-field>
+
+    </form>
+</mat-card>
+<button mat-raised-button (click)="updatecliente()" color="primary">
+Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+Cancelar
+</button>

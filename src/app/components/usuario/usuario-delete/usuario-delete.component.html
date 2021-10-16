@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Excluir usuario</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="usuario.nome" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [value]="usuario.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" name="senha">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [value]="usuario.cnpjCpf" name="cnpjCpf" disabled>
+        </mat-form-field>
+
+    </form>
+</mat-card>
+<button mat-raised-button (click)="deletecliente()" color="warn">
+Excluir
+</button>
+
+<button mat-raised-button (click)="cancel()">
+Cancelar
+</button>
