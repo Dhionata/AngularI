@@ -2,12 +2,7 @@
   <mat-card-title class="title">
     Bem Vindo!
   </mat-card-title>
- <!--  <mat-menu #animals="matMenu">
-    <button mat-icon-button [matMenuTriggerFor]="clickMenu"
-  #clickMenuTrigger="matMenuTrigger">
-  <mat-icon>touch_app</mat-icon>
-</button>
-  </mat-menu> -->
+
   <mat-card-subtitle class="subtitle">
     Sistema Delivery Web
   </mat-card-subtitle>
@@ -34,8 +29,28 @@
   <mat-menu #afterMenu="matMenu" xPosition="after">
     <button mat-menu-item>Item 1</button>
   </mat-menu>
-
 </mat-card>
+<mat-nav-list>
+  <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Keep</span>
+    <span mat-line>Add to a note</span>
+  </a>
+
+  <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Docs</span>
+    <span mat-line>Embed in a document</span>
+  </a>
+
+  <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Plus</span>
+    <span mat-line>Share with your friends</span>
+  </a>
+
+  <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
+    <span mat-line>Google Hangouts</span>
+    <span mat-line>Show to your coworkers</span>
+  </a>
+</mat-nav-list>
 <!--<mat-grid-list cols="2" rowHeight="2:1">
   <mat-grid-tile>1</mat-grid-tile>
   <mat-grid-tile>2</mat-grid-tile>
@@ -49,3 +64,9 @@
   <button mat-menu-item>Birds</button>
   <button mat-menu-item>Mammals</button>
 </mat-menu>-->
+ <!--  <mat-menu #animals="matMenu">
+    <button mat-icon-button [matMenuTriggerFor]="clickMenu"
+  #clickMenuTrigger="matMenuTrigger">
+  <mat-icon>touch_app</mat-icon>
+</button>
+  </mat-menu> -->
