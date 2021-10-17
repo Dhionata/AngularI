@@ -5,6 +5,7 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
+
 })
 export class HomeComponent implements OnInit {
 
@@ -16,8 +17,9 @@ export class HomeComponent implements OnInit {
     }
 
   }
-
   ngOnInit(): void {
   }
 
 }
+export class MenuOverviewExample {}
+export class GridListOverviewExample {}
