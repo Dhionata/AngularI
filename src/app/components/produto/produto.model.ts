@@ -1,5 +1,7 @@
 export interface Produto {
   id?: number
   nome: string
-  //disponivel: boolean
+  //lista<ProdutoFornecedor>
+  listaFornecedores:,
+  disponivel: true
 }
