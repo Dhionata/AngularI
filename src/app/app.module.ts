@@ -31,6 +31,12 @@ import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 
+import { ItemPedidoUpdateComponent } from './components/itemPedido/itemPedido-update/itemPedido-update.component';
+import { ItemPedidoDeleteComponent } from './components/itemPedido/itemPedido-delete/itemPedido-delete.component';
+import { ItemPedidolerComponent } from './components/itemPedido/itemPedido-ler/itemPedido-ler.component';
+import { ItemPedidoComponent } from './views/itemPedido/itemPedido.component';
+import { ItemPedidoCreateComponent } from './components/itemPedido/itemPedido-criar/itemPedido-criar.component';
+
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 import { ClientelerComponent } from './components/cliente/cliente-ler/cliente-ler.component';
@@ -75,6 +81,11 @@ registerLocaleData(localePt)
     ClientelerComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
+    ItemPedidoComponent,
+    ItemPedidoCreateComponent,
+    ItemPedidolerComponent,
+    ItemPedidoUpdateComponent,
+    ItemPedidoDeleteComponent,
     EnderecoComponent,
     EnderecoCreateComponent,
     EnderecolerComponent,
