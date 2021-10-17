@@ -20,7 +20,7 @@ export class ItemPedidoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToClienteCreate(): void {
+  navigateToItemPedidoCreate(): void {
     this.router.navigate(['ItemPedido/create'])
   }
 }
