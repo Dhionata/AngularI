@@ -1,3 +1,4 @@
+import { fornecedor } from './components/fornecedor/fornecedor.model';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -21,6 +22,11 @@ import { UsuarioComponent } from './views/usuario/usuario.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-criar/usuario-criar.component';
 import { UsuarioDeleteComponent } from './components/usuario/usuario-delete/usuario-delete.component';
 import { UsuarioUpdateComponent } from './components/usuario/usuario-update/usuario-update.component';
+
+import { FornecedorComponent } from './views/fornecedor/fornecedor.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-criar/fornecedor-criar.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 
 const routes: Routes = [{
 
@@ -106,6 +112,26 @@ const routes: Routes = [{
 {
   path: "usuario/delete/:id",
   component: UsuarioDeleteComponent
+},
+
+{
+  path: "fornecedor",
+  component: FornecedorComponent
+},
+
+{
+  path: "fornecedor/create",
+  component: FornecedorCreateComponent
+},
+
+{
+  path: "fornecedor/update/:id",
+  component: FornecedorUpdateComponent
+},
+
+{
+  path: "fornecedor/delete/:id",
+  component: FornecedorDeleteComponent
 }
 
 ];
