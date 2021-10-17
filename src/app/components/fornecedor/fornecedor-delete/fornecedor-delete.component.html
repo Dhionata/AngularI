@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir fornecedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="fornecedor.descricao" name="nome" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Endreco" [value]="fornecedor.endereco" name="endereco" disabled>
+        </mat-form-field>
+
+    </form>
+</mat-card>
+<button mat-raised-button (click)="deletefornecedor()" color="warn">
+Excluir
+</button>
+
+<button mat-raised-button (click)="cancel()">
+Cancelar
+</button>

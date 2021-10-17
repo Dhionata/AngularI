@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>Novo fornecedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+            [(ngModel)] = "fornecedor.descricao" name= "descricao">
+        </mat-form-field>
+
+    </form>
+</mat-card>
+<button mat-raised-button (click)="Createfornecedor()" color="primary">
+  Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+  Cancelar
+</button>
