@@ -14,6 +14,7 @@ import { NavComponent } from './components/produto/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { HomeComponent } from './views/home/home.component';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -61,6 +62,12 @@ import { UsuariolerComponent } from './components/usuario/usuario-ler/usuario-le
 import { UsuarioComponent } from './views/usuario/usuario.component';
 import { UsuarioCreateComponent } from './components/usuario/usuario-criar/usuario-criar.component';
 
+import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
+import { FornecedorlerComponent } from './components/fornecedor/fornecedor-ler/fornecedor-ler.component';
+import { FornecedorComponent } from './views/fornecedor/fornecedor.component';
+import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-criar/fornecedor-criar.component';
+
 
 registerLocaleData(localePt)
 
@@ -95,7 +102,12 @@ registerLocaleData(localePt)
     UsuarioCreateComponent,
     UsuariolerComponent,
     UsuarioUpdateComponent,
-    UsuarioDeleteComponent
+    UsuarioDeleteComponent,
+    FornecedorComponent,
+    FornecedorCreateComponent,
+    FornecedorlerComponent,
+    FornecedorUpdateComponent,
+    FornecedorDeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -116,7 +128,8 @@ registerLocaleData(localePt)
     MatSortModule,
     MatMenuModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatBottomSheetModule
   ],
   providers: [{
     provide: LOCALE_ID,
