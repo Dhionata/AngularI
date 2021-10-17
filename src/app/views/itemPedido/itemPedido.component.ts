@@ -4,8 +4,8 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
 
 @Component({
   selector: 'app-ItemPedido',
-  templateUrl: './ItemPedido.component.html',
-  styleUrls: ['./ItemPedido.component.scss']
+  templateUrl: './itemPedido.component.html',
+  styleUrls: ['./itemPedido.component.scss']
 })
 export class ItemPedidoComponent implements OnInit {
 

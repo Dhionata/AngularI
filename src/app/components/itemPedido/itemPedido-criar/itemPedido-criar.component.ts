@@ -1,7 +1,7 @@
-import { ItemPedido } from '../itemPedido.model';
+import { itemPedido } from '../itemPedido.model';
 import { ItemPedidoService } from '../itemPedido.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-itemPedido-criar',
@@ -10,19 +10,19 @@ import {Router} from '@angular/router';
 })
 export class ItemPedidoCreateComponent implements OnInit {
 
-  itemPedido: ItemPedido = {
-    id: '',
-    pedido: '',
-    produto: '',
-    quantidade: '' ,
-    avaliacao: ''
-  }
+  itemPedido!: itemPedido;
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router) { }
 
   ngOnInit(): void {
-
+    /* itemPedido = {
+      id: '',
+      pedido: '',
+      produto: '',
+      quantidade: '' ,
+      avaliacao: ''
+    } */
   }
 
   Createcliente(): void {
