@@ -1,7 +1,8 @@
+import { produtoFornecedor } from "../produtoFornecedor/produtoFornecedor.model";
+
 export interface Produto {
   id?: number
   nome: string
-  //lista<ProdutoFornecedor>
-  listaFornecedores:,
+  listaFornecedores: Array<produtoFornecedor>,
   disponivel: true
 }
