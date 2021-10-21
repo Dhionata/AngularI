@@ -33,6 +33,11 @@ import { produtoFornecedorCreateComponent } from './components/produtoFornecedor
 import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
 import { produtoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
 
+import { AvaliacaoComponent } from './views/avaliacao/avaliacao.component';
+import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar/avaliacao-criar.component';
+import { AvaliacaoDeleteComponent } from './components/avaliacao/avaliacao-delete/avaliacao-delete.component';
+import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
+
 const routes: Routes = [{
 
   path: "",
@@ -157,7 +162,26 @@ path: "produtoFornecedor",
 {
   path: "produtoFornecedor/delete/:id",
   component: produtoFornecedorDeleteComponent
-}
+},
+{
+  path: "avaliacao",
+    component: AvaliacaoComponent
+  },
+
+  {
+    path: "avaliacao/create",
+    component: AvaliacaoCreateComponent
+  },
+
+  {
+    path: "avaliacao/update/:id",
+    component: AvaliacaoUpdateComponent
+  },
+
+  {
+    path: "avaliacao/delete/:id",
+    component: AvaliacaoDeleteComponent
+  }
 
 
 ];

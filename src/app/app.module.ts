@@ -76,7 +76,13 @@ import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor
 import { produtoFornecedorlerComponent } from './components/produtoFornecedor/produtoFornecedor-ler/produtoFornecedor-ler.component';
 import { ProdutoFornecedorComponent } from './views/produtoFornecedor/produtoFornecedor.component';
 import { produtoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
-import { NgModuleResolver } from '@angular/compiler';
+
+import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
+import { AvaliacaoDeleteComponent } from './components/avaliacao/avaliacao-delete/avaliacao-delete.component';
+import { AvaliacaolerComponent } from './components/avaliacao/avaliacao-ler/avaliacao-ler.component';
+import { AvaliacaoComponent } from './views/avaliacao/avaliacao.component';
+import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar/avaliacao-criar.component';
+
 
 registerLocaleData(localePt)
 
@@ -121,9 +127,12 @@ registerLocaleData(localePt)
     produtoFornecedorlerComponent,
     produtoFornecedorUpdateComponent,
     produtoFornecedorDeleteComponent,
-    ProdutoFornecedorComponent
-
-
+    ProdutoFornecedorComponent,
+    AvaliacaoCreateComponent,
+    AvaliacaolerComponent,
+    AvaliacaoUpdateComponent,
+    AvaliacaoDeleteComponent,
+    AvaliacaoComponent
   ],
 
 
