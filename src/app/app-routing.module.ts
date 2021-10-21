@@ -38,6 +38,12 @@ import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar
 import { AvaliacaoDeleteComponent } from './components/avaliacao/avaliacao-delete/avaliacao-delete.component';
 import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
 
+import { EnderecoClienteComponent } from './views/enderecoCliente/enderecoCliente.component';
+import { EnderecoClienteCreateComponent } from './components/enderecoCliente/enderecoCliente-criar/enderecoCliente-criar.component';
+import { EnderecoClienteDeleteComponent } from './components/enderecoCliente/enderecoCliente-delete/enderecoCliente-delete.component';
+import { EnderecoClienteUpdateComponent } from './components/enderecoCliente/enderecoCliente-update/enderecoCliente-update.component';
+
+
 const routes: Routes = [{
 
   path: "",
@@ -181,7 +187,27 @@ path: "produtoFornecedor",
   {
     path: "avaliacao/delete/:id",
     component: AvaliacaoDeleteComponent
-  }
+  },
+
+  {
+    path: "enderecoCliente",
+      component: EnderecoClienteComponent
+    },
+
+    {
+      path: "enderecoCliente/create",
+      component: EnderecoClienteCreateComponent
+    },
+
+    {
+      path: "enderecoCliente/update/:id",
+      component: EnderecoClienteUpdateComponent
+    },
+
+    {
+      path: "enderecoCliente/delete/:id",
+      component: EnderecoClienteDeleteComponent
+    }
 
 
 ];

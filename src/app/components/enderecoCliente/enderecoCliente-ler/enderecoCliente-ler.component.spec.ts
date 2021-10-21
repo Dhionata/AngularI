@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EnderecoDeleteComponent } from './endereco-delete.component';
+import { EnderecoClientelerComponent } from './enderecoCliente-ler.component';
 
-describe('EnderecoDeleteComponent', () => {
-  let component: EnderecoDeleteComponent;
-  let fixture: ComponentFixture<EnderecoDeleteComponent>;
+describe('EnderecoClientelerComponent', () => {
+  let component: EnderecoClientelerComponent;
+  let fixture: ComponentFixture<EnderecoClientelerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EnderecoDeleteComponent]
+      declarations: [EnderecoClientelerComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnderecoDeleteComponent);
+    fixture = TestBed.createComponent(EnderecoClientelerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

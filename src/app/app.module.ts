@@ -83,6 +83,12 @@ import { AvaliacaolerComponent } from './components/avaliacao/avaliacao-ler/aval
 import { AvaliacaoComponent } from './views/avaliacao/avaliacao.component';
 import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar/avaliacao-criar.component';
 
+import { EnderecoClienteUpdateComponent } from './components/enderecoCliente/enderecoCliente-update/enderecoCliente-update.component';
+import { EnderecoClienteDeleteComponent } from './components/enderecoCliente/enderecoCliente-delete/enderecoCliente-delete.component';
+import { EnderecoClientelerComponent } from './components/enderecoCliente/enderecoCliente-ler/enderecoCliente-ler.component';
+import { EnderecoClienteComponent } from './views/enderecoCliente/enderecoCliente.component';
+import { EnderecoClienteCreateComponent } from './components/enderecoCliente/enderecoCliente-criar/enderecoCliente-criar.component';
+
 
 registerLocaleData(localePt)
 
@@ -132,7 +138,12 @@ registerLocaleData(localePt)
     AvaliacaolerComponent,
     AvaliacaoUpdateComponent,
     AvaliacaoDeleteComponent,
-    AvaliacaoComponent
+    AvaliacaoComponent,
+    EnderecoClienteCreateComponent,
+    EnderecoClientelerComponent,
+    EnderecoClienteUpdateComponent,
+    EnderecoClienteDeleteComponent,
+    EnderecoClienteComponent
   ],
 
 

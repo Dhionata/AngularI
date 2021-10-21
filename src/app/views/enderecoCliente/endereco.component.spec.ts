@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EnderecoCreateComponent } from './endereco-criar.component';
+import { EnderecoClienteComponent } from './enderecoCliente.component';
 
-describe('EnderecoCreateComponent', () => {
-  let component: EnderecoCreateComponent;
-  let fixture: ComponentFixture<EnderecoCreateComponent>;
+describe('EnderecoClienteComponent', () => {
+  let component: EnderecoClienteComponent;
+  let fixture: ComponentFixture<EnderecoClienteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [EnderecoCreateComponent]
+      declarations: [EnderecoClienteComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EnderecoCreateComponent);
+    fixture = TestBed.createComponent(EnderecoClienteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
