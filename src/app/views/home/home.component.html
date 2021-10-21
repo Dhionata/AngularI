@@ -8,9 +8,12 @@
   </mat-card-subtitle>
   <mat-toolbar>
     <span>Nome do Fornecedor</span>
+    <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+      <mat-icon>home</mat-icon>
+    </button>
   </mat-toolbar>
-  <button mat-button [matMenuTriggerFor]="aboveMenu">Produto</button>
-  <mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
     <button mat-menu-item>lista produtos</button>
   </mat-menu>
 
@@ -19,55 +22,13 @@
         <button mat-menu-item>clientes</button>
     </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="beforeMenu">Pedido</button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-button [matMenuTriggerFor]="belowMenu">Pedido</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
         <button mat-menu-item>lista pedidos</button>
     </mat-menu>
 
-
-  <button mat-button [matMenuTriggerFor]="afterMenu">Carrinho</button>
-  <mat-menu #afterMenu="matMenu" xPosition="after">
+  <button mat-button [matMenuTriggerFor]="belowMenu">Carrinho</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
     <button mat-menu-item>Item 1</button>
   </mat-menu>
 </mat-card>
-<!--
-<mat-nav-list>
-  <a href="https://keep.google.com/" mat-list-item (click)="openLink($event)">
-    <span mat-line>Google Keep</span>
-    <span mat-line>Add to a note</span>
-  </a>
-
-  <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
-    <span mat-line>Google Docs</span>
-    <span mat-line>Embed in a document</span>
-  </a>
-
-  <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
-    <span mat-line>Google Plus</span>
-    <span mat-line>Share with your friends</span>
-  </a>
-
-  <a href="https://hangouts.google.com/" mat-list-item (click)="openLink($event)">
-    <span mat-line>Google Hangouts</span>
-    <span mat-line>Show to your coworkers</span>
-  </a>
-</mat-nav-list>
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>1</mat-grid-tile>
-  <mat-grid-tile>2</mat-grid-tile>
-  <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-</mat-grid-list>
- <mat-menu #vertebrates="matMenu">
-  <button mat-menu-item [matMenuTriggerFor]="produto">Fishes</button>
-  <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-  <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-  <button mat-menu-item>Birds</button>
-  <button mat-menu-item>Mammals</button>
-</mat-menu>-->
- <!--  <mat-menu #animals="matMenu">
-    <button mat-icon-button [matMenuTriggerFor]="clickMenu"
-  #clickMenuTrigger="matMenuTrigger">
-  <mat-icon>touch_app</mat-icon>
-</button>
-  </mat-menu> -->
