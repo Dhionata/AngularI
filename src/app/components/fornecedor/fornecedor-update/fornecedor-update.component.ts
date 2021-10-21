@@ -1,7 +1,7 @@
 import { FornecedorService } from '../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { fornecedor } from '../fornecedor.model';
+import { Fornecedor } from '../fornecedor.model';
 
 @Component({
   selector: 'app-fornecedor-update',
@@ -10,7 +10,7 @@ import { fornecedor } from '../fornecedor.model';
 })
 export class FornecedorUpdateComponent implements OnInit {
 
-  fornecedor!: fornecedor;
+  fornecedor!: Fornecedor;
 
   constructor(private FornecedorService: FornecedorService,
     private router: Router,

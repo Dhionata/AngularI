@@ -2,7 +2,6 @@ import { Produto } from '../produto.model';
 import { ProdutoService } from '../produto.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { produtoFornecedor } from '../../produtoFornecedor/produtoFornecedor.model';
 
 @Component({
   selector: 'app-produto-criar',
@@ -17,11 +16,7 @@ export class ProdutoCreateComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    /* produto = {
-      nome: '',
-      disponivel: true,
-      listaFornecedores: produtoFornecedor
-    } */
+
   }
 
   CreateProduto(): void {
