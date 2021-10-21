@@ -20,7 +20,7 @@ export class EnderecoFornecedorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToenderecoFornecedorCreate(): void {
+  navigateToEnderecoFornecedorCreate(): void {
     this.router.navigate(['enderecoFornecedor/create'])
   }
 }
