@@ -89,6 +89,12 @@ import { EnderecoClientelerComponent } from './components/enderecoCliente/endere
 import { EnderecoClienteComponent } from './views/enderecoCliente/enderecoCliente.component';
 import { EnderecoClienteCreateComponent } from './components/enderecoCliente/enderecoCliente-criar/enderecoCliente-criar.component';
 
+import { EnderecoFornecedorUpdateComponent } from './components/enderecoFornecedor/enderecoFornecedor-update/enderecoFornecedor-update.component';
+import { EnderecoFornecedorDeleteComponent } from './components/enderecoFornecedor/enderecoFornecedor-delete/enderecoFornecedor-delete.component';
+import { EnderecoFornecedorlerComponent } from './components/enderecoFornecedor/enderecoFornecedor-ler/enderecoFornecedor-ler.component';
+import { EnderecoFornecedorComponent } from './views/enderecoFornecedor/enderecoFornecedor.component';
+import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedor/enderecoFornecedor-criar/enderecoFornecedor-criar.component';
+
 
 registerLocaleData(localePt)
 
@@ -143,10 +149,13 @@ registerLocaleData(localePt)
     EnderecoClientelerComponent,
     EnderecoClienteUpdateComponent,
     EnderecoClienteDeleteComponent,
-    EnderecoClienteComponent
+    EnderecoClienteComponent,
+    EnderecoFornecedorCriarComponent,
+    EnderecoFornecedorlerComponent,
+    EnderecoFornecedorUpdateComponent,
+    EnderecoFornecedorDeleteComponent,
+    EnderecoFornecedorComponent
   ],
-
-
 
   imports: [
     BrowserModule,

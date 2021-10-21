@@ -23,7 +23,7 @@ export class EnderecoClienteUpdateComponent implements OnInit {
       this.enderecoCliente = enderecoCliente)
   }
 
-  updateenderecoCliente(): void {
+  updateEnderecoCliente(): void {
     this.EnderecoClienteService.update(this.enderecoCliente).subscribe(() => {
       this.EnderecoClienteService.ShowOMessage('enderecoCliente atualizado com sucesso')
       this.router.navigate(["/enderecoCliente"])

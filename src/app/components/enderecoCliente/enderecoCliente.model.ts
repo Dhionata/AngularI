@@ -1,5 +1,5 @@
 import { cliente } from '../cliente/cliente.model';
-export interface enderecoCliente {
+export class enderecoCliente {
   id?: number
-  cliente: cliente
+  cliente: cliente | undefined
 }

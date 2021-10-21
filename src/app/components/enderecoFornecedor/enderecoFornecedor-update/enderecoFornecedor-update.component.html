@@ -1,0 +1,15 @@
+<mat-card>
+    <mat-card-title>Alterar enderecoFornecedor</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="enderecoFornecedor" [(ngModel)]="enderecoFornecedor.fornecedor" name="enderecoFornecedor">
+        </mat-form-field>
+    </form>
+</mat-card>
+<button mat-raised-button (click)="updateEnderecoFornecedor()" color="primary">
+Atualizar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+Cancelar
+</button>
