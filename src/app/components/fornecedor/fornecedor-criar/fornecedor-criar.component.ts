@@ -1,4 +1,4 @@
-import { fornecedor } from '../fornecedor.model';
+import { Fornecedor } from '../fornecedor.model';
 import { FornecedorService } from '../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
@@ -10,13 +10,10 @@ import {Router} from '@angular/router';
 })
 export class FornecedorCreateComponent implements OnInit {
 
-  fornecedor: fornecedor = {
-    descricao: '',
-    endereco: '',
-    id: 0
-  }
+  fornecedor!: Fornecedor;
 
-  constructor(private FornecedorService: FornecedorService,
+
+  constructor(private fornecedorService: FornecedorService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -24,8 +21,8 @@ export class FornecedorCreateComponent implements OnInit {
   }
 
   Createfornecedor(): void {
-    this.FornecedorService.create(this.fornecedor).subscribe(() => {
-      this.FornecedorService.ShowOMessage('fornecedor criado!')
+    this.fornecedorService.create(this.fornecedor).subscribe(() => {
+      this.fornecedorService.ShowOMessage('fornecedor criado!')
       this.router.navigate(['/fornecedor'])
 
     })

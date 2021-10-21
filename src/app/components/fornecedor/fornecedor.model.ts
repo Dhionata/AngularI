@@ -1,6 +1,6 @@
-import { Endereco } from '../endereco/endereco.model';
-export interface fornecedor {
-  id: number;
+export interface Fornecedor {
+  id?: number;
+  preco: number;
   descricao: String;
   endereco: String
 }

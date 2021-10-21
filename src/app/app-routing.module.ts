@@ -1,4 +1,3 @@
-import { fornecedor } from './components/fornecedor/fornecedor.model';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,6 +12,7 @@ import { ClienteComponent } from './views/cliente/cliente.component';
 import { ClienteCreateComponent } from './components/cliente/cliente-criar/cliente-criar.component';
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+
 import { EnderecoComponent } from './views/endereco/endereco.component';
 import { EnderecoCreateComponent } from './components/endereco/endereco-criar/endereco-criar.component';
 import { EnderecoDeleteComponent } from './components/endereco/endereco-delete/endereco-delete.component';
@@ -27,6 +27,11 @@ import { FornecedorComponent } from './views/fornecedor/fornecedor.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-criar/fornecedor-criar.component';
 import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-delete/fornecedor-delete.component';
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
+
+import { ProdutoFornecedorComponent } from './views/produtoFornecedor/produtoFornecedor.component';
+import { produtoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
+import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
+import { produtoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
 
 const routes: Routes = [{
 
@@ -132,7 +137,28 @@ const routes: Routes = [{
 {
   path: "fornecedor/delete/:id",
   component: FornecedorDeleteComponent
+},
+
+{
+path: "produtoFornecedor",
+  component: ProdutoFornecedorComponent
+},
+
+{
+  path: "produtoFornecedor/create",
+  component: produtoFornecedorCreateComponent
+},
+
+{
+  path: "produtoFornecedor/update/:id",
+  component: produtoFornecedorUpdateComponent
+},
+
+{
+  path: "produtoFornecedor/delete/:id",
+  component: produtoFornecedorDeleteComponent
 }
+
 
 ];
 

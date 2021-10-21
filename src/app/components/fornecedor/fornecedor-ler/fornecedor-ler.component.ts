@@ -1,5 +1,5 @@
 import { FornecedorService } from '../fornecedor.service';
-import { fornecedor } from '../fornecedor.model';
+import { Fornecedor } from '../fornecedor.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FornecedorlerComponent implements OnInit {
 
-  fornecedor!: fornecedor[]
-  displayedColumns = ['id','descricao','endereco']
+  fornecedor!: Fornecedor[]
+  displayedColumns = ['id','preco', 'action']
 
   constructor(private FornecedorService: FornecedorService) { }
 

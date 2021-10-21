@@ -1,4 +1,4 @@
-import { fornecedor } from '../fornecedor.model';
+import { Fornecedor } from '../fornecedor.model';
 import { FornecedorService } from '../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FornecedorDeleteComponent implements OnInit {
 
-  fornecedor!: fornecedor;
+  fornecedor!: Fornecedor;
 
   constructor(private FornecedorService: FornecedorService,
     private router: Router,

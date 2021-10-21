@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { NavComponent } from './components/produto/nav/nav.component';
@@ -68,6 +71,12 @@ import { FornecedorlerComponent } from './components/fornecedor/fornecedor-ler/f
 import { FornecedorComponent } from './views/fornecedor/fornecedor.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-criar/fornecedor-criar.component';
 
+import { produtoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
+import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
+import { produtoFornecedorlerComponent } from './components/produtoFornecedor/produtoFornecedor-ler/produtoFornecedor-ler.component';
+import { ProdutoFornecedorComponent } from './views/produtoFornecedor/produtoFornecedor.component';
+import { produtoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
+import { NgModuleResolver } from '@angular/compiler';
 
 registerLocaleData(localePt)
 
@@ -107,8 +116,18 @@ registerLocaleData(localePt)
     FornecedorCreateComponent,
     FornecedorlerComponent,
     FornecedorUpdateComponent,
-    FornecedorDeleteComponent
+    FornecedorDeleteComponent,
+    produtoFornecedorCreateComponent,
+    produtoFornecedorlerComponent,
+    produtoFornecedorUpdateComponent,
+    produtoFornecedorDeleteComponent,
+    ProdutoFornecedorComponent
+
+
   ],
+
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -137,4 +156,6 @@ registerLocaleData(localePt)
   }],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

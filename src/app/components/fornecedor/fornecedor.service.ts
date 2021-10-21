@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { fornecedor } from './fornecedor.model';
+import { Fornecedor } from './fornecedor.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,36 @@ export class FornecedorService {
     })
   }
 
-  create(fornecedor: fornecedor): Observable<fornecedor> {
-    return this.http.post<fornecedor>(this.baseUrl + "/Adicionar/teste", fornecedor).pipe(
+  create(Fornecedor: Fornecedor): Observable<Fornecedor> {
+    return this.http.post<Fornecedor>(this.baseUrl + "/Adicionar/", Fornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<fornecedor[]> {
-    return this.http.get<fornecedor[]>(this.baseUrl).pipe(
+  read(): Observable<Fornecedor[]> {
+    return this.http.get<Fornecedor[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<fornecedor> {
+  findById(id: string): Observable<Fornecedor> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<fornecedor>(url)
+    return this.http.get<Fornecedor>(url)
   }
 
-  update(fornecedor: fornecedor): Observable<fornecedor> {
-    const url = `${this.baseUrl}/${fornecedor.id}`
-    return this.http.put<fornecedor>(url, fornecedor).pipe(
+  update(Fornecedor: Fornecedor): Observable<Fornecedor> {
+    const url = `${this.baseUrl}/${Fornecedor.id}`
+    return this.http.put<Fornecedor>(url, Fornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<fornecedor> {
+  delete(id: number): Observable<Fornecedor> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.delete<fornecedor>(url).pipe(
+    return this.http.delete<Fornecedor>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
