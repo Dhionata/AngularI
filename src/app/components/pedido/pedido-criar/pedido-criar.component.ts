@@ -12,9 +12,9 @@ export class pedidoCreateComponent implements OnInit {
 
   pedido: pedido = {
 
-  itensPedido: Array<itemPedido>,
-  cliente: cliente,
-  formaPagamento: FormaPagamento,
+  itensPedido: [],
+  cliente: null!,
+  formaPagamento: null!,
   desconto: null!,
   pago: null!,
   entregue: null!,

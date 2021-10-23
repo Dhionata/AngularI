@@ -1,9 +1,7 @@
-import { cliente } from './../../cliente/cliente.model';
 import { enderecoCliente } from '../enderecoCliente.model';
 import { EnderecoClienteService } from '../enderecoCliente.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { cliente } from '../../cliente/cliente.model';
 
 @Component({
   selector: 'app-enderecoCliente-criar',
@@ -13,7 +11,7 @@ import { cliente } from '../../cliente/cliente.model';
 export class EnderecoClienteCreateComponent implements OnInit {
 
   enderecoCliente: enderecoCliente = {
-    cliente: cliente
+    cliente: null!,
   }
 
   constructor(private EnderecoClienteService: EnderecoClienteService,

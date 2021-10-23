@@ -2,7 +2,6 @@ import { enderecoFornecedor } from '../enderecoFornecedor.model';
 import { EnderecoFornecedorService } from '../enderecoFornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Fornecedor } from '../../fornecedor/fornecedor.model';
 
 @Component({
   selector: 'app-enderecoFornecedor-criar',
@@ -12,7 +11,7 @@ import { Fornecedor } from '../../fornecedor/fornecedor.model';
 export class EnderecoFornecedorCriarComponent implements OnInit {
 
   enderecoFornecedor: enderecoFornecedor = {
-    fornecedor!: Fornecedor,
+    fornecedor: null!,
   };
 
   constructor(

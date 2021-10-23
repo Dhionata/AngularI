@@ -97,6 +97,7 @@ import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-
 import { pedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.component';
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
 
 
 registerLocaleData(localePt)
@@ -162,7 +163,8 @@ registerLocaleData(localePt)
     pedidoDeleteComponent,
     pedidoLerComponent,
     pedidoComponent,
-    pedidoCreateComponent
+    pedidoCreateComponent,
+    FormaPagamentoComponent
 
 
 

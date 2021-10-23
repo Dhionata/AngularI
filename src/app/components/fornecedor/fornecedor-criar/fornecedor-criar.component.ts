@@ -14,10 +14,9 @@ export class FornecedorCreateComponent implements OnInit {
   fornecedor: Fornecedor = {
     descricao:  " ",
     endereco: " ",
-    listaProdutos: Array<produtoFornecedor>,
-    listaTelefones: Array<TelefoneFornecedor>
-  }
-
+    listaProdutos: [],
+    listaTelefones: [],
+  };
 
   constructor(private fornecedorService: FornecedorService,
     private router: Router) { }
@@ -38,5 +37,5 @@ export class FornecedorCreateComponent implements OnInit {
     this.router.navigate(['/fornecedor'])
   }
 
-
 }
+

@@ -13,7 +13,7 @@ export class produtoFornecedorCreateComponent implements OnInit {
   produtoFornecedor: produtoFornecedor = {
 
   produto: "",
-  fornecedor: Fornecedor,
+  fornecedor: null!,
   preco: null!,
   quantidadeEmEstoque: null!,
   dataCadastro: null!,
