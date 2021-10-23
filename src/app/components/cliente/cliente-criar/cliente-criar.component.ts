@@ -15,7 +15,6 @@ export class ClienteCreateComponent implements OnInit {
     email: null!,
     cnpjCpf: null!,
     senha: null!,
-    id: 0
   }
 
   constructor(private ClienteService: ClienteService,

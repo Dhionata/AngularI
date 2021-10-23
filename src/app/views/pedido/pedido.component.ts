@@ -11,7 +11,7 @@ export class pedidoComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title: "Cadastro de produtos Fornecedor",
+      title: "Cadastro pedidos",
       icon: 'storefront',
       routerUrl: '/pedido'
     }

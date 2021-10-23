@@ -1,3 +1,4 @@
+import { cliente } from './../../cliente/cliente.model';
 import { TelefoneCliente } from '../telefoneCliente.model';
 import { TelefoneClienteService } from '../telefoneCliente.service';
 import { Component, OnInit } from '@angular/core';
@@ -11,10 +12,9 @@ import { Router } from '@angular/router';
 export class TelefoneClienteCreateComponent implements OnInit {
 
   telefoneCliente: TelefoneCliente = {
-    cliente: null!,
+    cliente: cliente,
     numero: ""
-    //necessário criar a classe Cliente
-    //o Número tem que vir da classe Telefone.
+
   }
 
   constructor(private TelefoneClienteService: TelefoneClienteService,

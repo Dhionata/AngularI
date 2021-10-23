@@ -15,7 +15,6 @@ export class UsuarioCreateComponent implements OnInit {
     email: null!,
     cnpjCpf: null!,
     senha: null!,
-    id: 0
   }
 
   constructor(private UsuarioService: UsuarioService,

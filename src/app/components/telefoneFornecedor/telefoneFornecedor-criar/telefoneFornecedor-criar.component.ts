@@ -12,7 +12,7 @@ export class TelefoneFornecedorCreateComponent implements OnInit {
 
   telefoneFornecedor: TelefoneFornecedor = {
     numero: "",
-    cliente: null!,
+    cliente: cliente,
   }
 
   constructor(private TelefoneFornecedorService: TelefoneFornecedorService,

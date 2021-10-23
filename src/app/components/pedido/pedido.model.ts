@@ -1,8 +1,9 @@
+import { itemPedido } from '../itemPedido/itemPedido.model';
 import { cliente } from './../cliente/cliente.model';
 
 export interface pedido {
   id?: number,
-  itensPedido: Array<ItemPedido>,
+  itensPedido: Array<itemPedido>,
   cliente: cliente,
   formaPagamento: FormaPagamento,
   desconto: number,

@@ -1,3 +1,4 @@
+import { cliente } from './../../cliente/cliente.model';
 import { enderecoCliente } from '../enderecoCliente.model';
 import { EnderecoClienteService } from '../enderecoCliente.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +13,6 @@ import { cliente } from '../../cliente/cliente.model';
 export class EnderecoClienteCreateComponent implements OnInit {
 
   enderecoCliente: enderecoCliente = {
-    id: 0,
     cliente: cliente
   }
 

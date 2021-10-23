@@ -2,6 +2,7 @@ import { Fornecedor } from '../fornecedor.model';
 import { FornecedorService } from '../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { TelefoneFornecedor } from '../../telefoneFornecedor/telefoneFornecedor.model';
 
 @Component({
   selector: 'app-fornecedor-criar',
@@ -10,7 +11,12 @@ import {Router} from '@angular/router';
 })
 export class FornecedorCreateComponent implements OnInit {
 
-  fornecedor!: Fornecedor;
+  fornecedor: Fornecedor = {
+    descricao:  " ",
+    endereco: " ",
+    listaProdutos: Array<produtoFornecedor>,
+    listaTelefones: Array<TelefoneFornecedor>
+  }
 
 
   constructor(private fornecedorService: FornecedorService,

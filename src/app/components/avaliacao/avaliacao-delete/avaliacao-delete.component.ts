@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AvaliacaoDeleteComponent implements OnInit {
 
-  avaliacao!: avaliacao;
+  avaliacao!: avaliacao
 
   constructor(private AvaliacaoService: AvaliacaoService,
     private router: Router,

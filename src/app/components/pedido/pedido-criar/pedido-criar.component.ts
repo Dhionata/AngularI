@@ -10,7 +10,16 @@ import { Router } from '@angular/router';
 })
 export class pedidoCreateComponent implements OnInit {
 
-  pedido!: pedido
+  pedido: pedido = {
+
+  itensPedido: Array<itemPedido>,
+  cliente: cliente,
+  formaPagamento: FormaPagamento,
+  desconto: null!,
+  pago: null!,
+  entregue: null!,
+  data: null!
+  }
 
 
   constructor(private pedidoService: pedidoService,

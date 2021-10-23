@@ -10,9 +10,9 @@ import { Fornecedor } from '../../fornecedor/fornecedor.model';
   styleUrls: ['./enderecoFornecedor-criar.component.scss'],
 })
 export class EnderecoFornecedorCriarComponent implements OnInit {
+
   enderecoFornecedor: enderecoFornecedor = {
-    id: 0,
-    fornecedor: Fornecedor,
+    fornecedor!: Fornecedor,
   };
 
   constructor(

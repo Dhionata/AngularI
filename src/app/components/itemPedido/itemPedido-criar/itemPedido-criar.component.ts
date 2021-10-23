@@ -10,7 +10,13 @@ import { Router } from '@angular/router';
 })
 export class ItemPedidoCreateComponent implements OnInit {
 
-  itemPedido!: itemPedido;
+  itemPedido: itemPedido = {
+
+  nome: " ",
+  email: " ",
+  senha: " ",
+  cnpjCpf: null!
+  }
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router) { }

@@ -10,7 +10,12 @@ import {Router} from '@angular/router';
 })
 export class AvaliacaoCreateComponent implements OnInit {
 
-  avaliacao!: avaliacao;
+  avaliacao: avaliacao = {
+
+  nota: null!,
+  comentario: ' ',
+  data: null!
+}
 
 
   constructor(private AvaliacaoService: AvaliacaoService,
