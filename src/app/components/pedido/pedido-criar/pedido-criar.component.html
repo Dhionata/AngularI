@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>Novo Pedido </mat-card-title>
+  <form>
+      <mat-form-field>
+          <input matInput placeholder="Pedido"
+          [(ngModel)]= "pedido.id" name="Pedido">
+      </mat-form-field>
+
+  </form>
+</mat-card>
+<button mat-raised-button (click)="CreatePedido()" color="primary">
+Salvar
+</button>
+
+<button mat-raised-button (click)="cancel()">
+Cancelar
+</button>

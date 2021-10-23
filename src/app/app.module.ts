@@ -7,9 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { NavComponent } from './components/produto/nav/nav.component';
@@ -95,6 +92,12 @@ import { EnderecoFornecedorlerComponent } from './components/enderecoFornecedor/
 import { EnderecoFornecedorComponent } from './views/enderecoFornecedor/enderecoFornecedor.component';
 import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedor/enderecoFornecedor-criar/enderecoFornecedor-criar.component';
 
+import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
+import { pedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.component';
+import { pedidoComponent } from './views/pedido/pedido.component';
+import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+
 
 registerLocaleData(localePt)
 
@@ -154,7 +157,16 @@ registerLocaleData(localePt)
     EnderecoFornecedorlerComponent,
     EnderecoFornecedorUpdateComponent,
     EnderecoFornecedorDeleteComponent,
-    EnderecoFornecedorComponent
+    EnderecoFornecedorComponent,
+    pedidoUpdateComponent,
+    pedidoDeleteComponent,
+    pedidoLerComponent,
+    pedidoComponent,
+    pedidoCreateComponent
+
+
+
+
   ],
 
   imports: [

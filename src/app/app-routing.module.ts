@@ -48,6 +48,11 @@ import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedo
 import { EnderecoFornecedorDeleteComponent } from './components/enderecoFornecedor/enderecoFornecedor-delete/enderecoFornecedor-delete.component';
 import { EnderecoFornecedorUpdateComponent } from './components/enderecoFornecedor/enderecoFornecedor-update/enderecoFornecedor-update.component';
 
+import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
+import { pedidoComponent } from './views/pedido/pedido.component';
+import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+
 
 const routes: Routes = [{
 
@@ -216,7 +221,7 @@ path: "produtoFornecedor",
 
     {
       path: "enderecoFornecedor",
-        component: EnderecoClienteComponent
+        component: EnderecoFornecedorComponent
       },
 
       {
@@ -232,7 +237,27 @@ path: "produtoFornecedor",
       {
         path: "enderecoFornecedor/delete/:id",
         component: EnderecoFornecedorDeleteComponent
-      }
+      },
+
+      {
+        path: "pedido",
+          component: pedidoComponent
+        },
+
+        {
+          path: "pedido/create",
+          component: pedidoCreateComponent
+        },
+
+        {
+          path: "pedido/update/:id",
+          component: pedidoUpdateComponent
+        },
+
+        {
+          path: "pedido/delete/:id",
+          component: pedidoDeleteComponent
+        }
 
 
 ];
