@@ -1,4 +1,3 @@
-import { pedido } from '../../components/pedido/pedido.model';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { pedidoComponent } from './pedido.component';

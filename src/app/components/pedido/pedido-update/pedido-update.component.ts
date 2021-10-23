@@ -23,7 +23,7 @@ export class pedidoUpdateComponent implements OnInit {
       this.pedido = pedido)
   }
 
-  updateprodutoFornecedor(): void {
+  updatepedido(): void {
     this.pedidoService.update(this.pedido).subscribe(() => {
       this.pedidoService.ShowOMessage('pedido atualizado com sucesso')
       this.router.navigate(["/pedido"])
