@@ -1,4 +1,4 @@
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
@@ -100,12 +102,14 @@ import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-c
 import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
 
 
+
 registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    LoginComponent,
     FooterComponent,
     NavComponent,
     HomeComponent,
@@ -164,10 +168,8 @@ registerLocaleData(localePt)
     pedidoLerComponent,
     pedidoComponent,
     pedidoCreateComponent,
-    FormaPagamentoComponent
-
-
-
+    FormaPagamentoComponent,
+    LoginComponent,
 
   ],
 
@@ -191,13 +193,17 @@ registerLocaleData(localePt)
     MatMenuModule,
     MatIconModule,
     MatGridListModule,
-    MatBottomSheetModule
+    MatBottomSheetModule,
+    ReactiveFormsModule,
+    BrowserModule,
+    AppRoutingModule
   ],
-  providers: [{
-    provide: LOCALE_ID,
-    useValue: 'pt-BR'
-  }],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
+  ]
 })
 
 
