@@ -52,6 +52,7 @@ import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-
 import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const routes: Routes = [{
@@ -257,6 +258,11 @@ path: "produtoFornecedor",
         {
           path: "pedido/delete/:id",
           component: pedidoDeleteComponent
+        },
+
+        {
+          path: "login",
+          component: LoginComponent
         }
 
 
