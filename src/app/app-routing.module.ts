@@ -265,7 +265,6 @@ path: "produtoFornecedor",
           component: LoginComponent
         }
 
-
 ];
 
 @NgModule({
