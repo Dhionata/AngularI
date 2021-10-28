@@ -45,7 +45,7 @@ export class produtoFornecedorService {
 
   update(produtoFornecedor: produtoFornecedor): Observable<produtoFornecedor> {
     const url = `${this.baseUrl}/${produtoFornecedor.id}`
-    return this.http.put<produtoFornecedor>(url, produtoFornecedor).pipe(
+    return this.http.patch<produtoFornecedor>(url, produtoFornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

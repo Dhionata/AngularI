@@ -18,8 +18,6 @@ export class produtoFornecedorCreateComponent implements OnInit {
   quantidadeEmEstoque: null!,
   dataCadastro: null!,
   dataAtualizacao: null!
-
-
   }
 
   constructor(private produtoFornecedorService: produtoFornecedorService,
