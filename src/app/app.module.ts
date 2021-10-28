@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/templates/header/header.component'
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
@@ -196,7 +197,8 @@ registerLocaleData(localePt)
     MatBottomSheetModule,
     ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
