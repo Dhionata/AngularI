@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./mapa.css']
 })
 export class MapaComponent {
-  texto : string = 'Wenceslau Braz - Cuidado com as cargas';
-  lat: number = -23.8779431;
-  lng: number = -49.8046873;
+  texto : string = 'Chupa sociedade';
+  lat: number = -16.8360435;
+  lng: number = -49.2509255;
   zoom: number = 15;
 }
