@@ -53,9 +53,12 @@ import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { LoginComponent } from './components/login/login.component';
+import { MapaComponent } from './components/mapa/mapa';
+
 
 
 const routes: Routes = [{
+
 
   path: "",
   component: HomeComponent
@@ -263,7 +266,13 @@ path: "produtoFornecedor",
         {
           path: "login",
           component: LoginComponent
+        },
+
+        {
+          path: "mapa",
+          component: MapaComponent
         }
+
 
 ];
 

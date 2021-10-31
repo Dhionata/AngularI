@@ -1,8 +1,13 @@
-let map: google.maps.Map;
+import { Component } from '@angular/core';
 
-function initMap(): void {
-  map = new google.maps.Map(document.getElementById("mapa") as HTMLElement, {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
+@Component({
+  selector: 'app-root',
+  templateUrl: './mapa.html',
+  styleUrls: ['./mapa.css']
+})
+export class MapaComponent {
+  texto : string = 'Wenceslau Braz - Cuidado com as cargas';
+  lat: number = -23.8779431;
+  lng: number = -49.8046873;
+  zoom: number = 15;
 }
