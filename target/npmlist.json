@@ -1,0 +1,51 @@
+{
+    "version": "0.0.0",
+    "name": "hello-world",
+    "dependencies": {
+        "@angular/animations": {
+            "version": "12.2.9"
+        },
+        "@angular/cdk": {
+            "version": "12.2.9"
+        },
+        "@angular/common": {
+            "version": "12.2.9"
+        },
+        "@angular/compiler": {
+            "version": "12.2.9"
+        },
+        "@angular/core": {
+            "version": "12.2.9"
+        },
+        "@angular/forms": {
+            "version": "12.2.9"
+        },
+        "@angular/material": {
+            "version": "12.2.9"
+        },
+        "@angular/platform-browser-dynamic": {
+            "version": "12.2.9"
+        },
+        "@angular/platform-browser": {
+            "version": "12.2.9"
+        },
+        "@angular/router": {
+            "version": "12.2.9"
+        },
+        "express": {
+            "version": "4.17.1"
+        },
+        "json-server": {
+            "version": "0.16.3"
+        },
+        "rxjs": {
+            "version": "6.6.7"
+        },
+        "tslib": {
+            "version": "2.3.1"
+        },
+        "zone.js": {
+            "version": "0.11.4"
+        }
+    }
+}
