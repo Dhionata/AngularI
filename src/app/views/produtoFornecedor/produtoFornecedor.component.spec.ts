@@ -1,4 +1,3 @@
-import { produtoFornecedor } from '../../components/produtoFornecedor/produtoFornecedor.model';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProdutoFornecedorComponent } from './produtoFornecedor.component';

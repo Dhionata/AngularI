@@ -25,7 +25,7 @@ export class UsuarioService {
   }
 
   create(usuario: usuario): Observable<usuario> {
-    return this.http.post<usuario>(this.baseUrl + "/Adicionar/teste", usuario).pipe(
+    return this.http.post<usuario>(this.baseUrl + "/Adicionar/", usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

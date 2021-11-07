@@ -103,6 +103,7 @@ import { pedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.co
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
+import { AuthService } from './components/login/auth.service';
 
 
 
@@ -205,7 +206,7 @@ registerLocaleData(localePt)
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'
     })
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

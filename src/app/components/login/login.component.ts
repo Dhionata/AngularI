@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { EmailValidator, FormBuilder } from "@angular/forms";
+import { AuthService } from './auth.service';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   formBuilder: any;
   form: any;
 
-  constructor(privateformBuilder:FormBuilder) {
+  constructor(privateformBuilder:FormBuilder, private AuthService : AuthService) {
 
     email: ''
     senha: ''
@@ -22,16 +23,19 @@ export class LoginComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-/* criarForm(){
+    fazerlogin(){
 
-    this.form = this.formBuilder.group({
+    }
+  /* criarForm(){
 
-        email: [''],
+      this.form = this.formBuilder.group({
 
-        senha: ['']
+          email: [''],
 
-    })
+          senha: ['']
 
-} */
+      })
+
+  } */
 
 }

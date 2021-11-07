@@ -20,7 +20,7 @@ export class UsuarioComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToClienteCreate(): void {
+  navigateToUsuarioCreate(): void {
     this.router.navigate(['usuario/create'])
   }
 }
