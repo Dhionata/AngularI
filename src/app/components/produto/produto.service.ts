@@ -1,4 +1,4 @@
-import { catchError, map} from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { Produto } from './produto.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -26,7 +26,7 @@ export class ProdutoService {
 
   create(produto: Produto): Observable<Produto> {
     return this.http.post<Produto>(this.baseUrl + "/Adicionar/", produto).pipe(
-       map(obj => obj),
+      map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
@@ -39,20 +39,23 @@ export class ProdutoService {
   }
 
   findById(id: string): Observable<Produto> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<Produto>(url)
+    const url = `${this.baseUrl}/BuscarById/${id}`
+    return this.http.get<Produto>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
   }
 
   update(produto: Produto): Observable<Produto> {
-    const url = `${this.baseUrl}/${produto.id}`
-    return this.http.put<Produto>(url, produto).pipe(
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<Produto>(url, produto).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
   delete(id: number): Observable<Produto> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/Remover/${id}`
     return this.http.delete<Produto>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
