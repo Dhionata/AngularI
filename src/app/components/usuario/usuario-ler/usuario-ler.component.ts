@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsuariolerComponent implements OnInit {
 
   usuario!: Usuario[]
-  displayedColumns = ['id','nome','actions']
+  displayedColumns = ['id', 'nome', 'email', 'cnpjCpf', 'actions']
 
   constructor(private UsuarioService: UsuarioService) { }
 
@@ -18,7 +18,6 @@ export class UsuariolerComponent implements OnInit {
     this.UsuarioService.read().subscribe(usuario => {
       this.usuario = usuario
       console.log(usuario);
-
     })
   }
 

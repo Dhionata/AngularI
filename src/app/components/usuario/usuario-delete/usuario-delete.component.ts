@@ -24,7 +24,7 @@ export class UsuarioDeleteComponent implements OnInit {
     )
   }
 
-  deleteusuario(): void {
+  deleteUsuario(): void {
     this.UsuarioService.delete(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario Excluido com sucesso')
       this.router.navigate(['/usuario'])

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { EmailValidator, FormBuilder } from "@angular/forms";
 import { AuthService } from './auth.service';
-import { usuario } from '../usuario/usuario.model';
-
+import { Usuario } from '../usuario/usuario.model';
 
 @Component({
   selector: 'app-login',

@@ -24,7 +24,7 @@ export class UsuarioCreateComponent implements OnInit {
 
   }
 
-  Createusuario(): void {
+  createUsuario(): void {
     this.UsuarioService.create(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario criado!')
       this.router.navigate(['/usuario'])
