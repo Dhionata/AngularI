@@ -107,7 +107,6 @@ import { AuthService } from './components/login/auth.service';
 
 
 
-registerLocaleData(localePt)
 
 @NgModule({
   declarations: [
