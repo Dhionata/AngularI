@@ -25,7 +25,7 @@ export class ProdutoDeleteComponent implements OnInit {
   }
 
   deleteProduto(): void {
-    this.ProdutoService.delete(this.produto.id!).subscribe(() => {
+    this.ProdutoService.delete(this.produto).subscribe(() => {
       this.ProdutoService.ShowOMessage('Produto Excluido com sucesso')
       this.router.navigate(['/produto'])
     })

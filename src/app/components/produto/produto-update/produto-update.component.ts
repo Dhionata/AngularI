@@ -11,6 +11,7 @@ import { Produto } from '../produto.model';
 export class ProdutoUpdateComponent implements OnInit {
 
   produto!: Produto;
+  displayedColumns = ['id', 'nome', 'listaFornecedores', 'disponivel']
 
   constructor(private ProdutoService: ProdutoService,
     private router: Router,

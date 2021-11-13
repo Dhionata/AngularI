@@ -1,6 +1,6 @@
 import { catchError, map } from 'rxjs/operators';
 import { Produto } from './produto.model';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { EMPTY, Observable } from 'rxjs';
@@ -25,7 +25,8 @@ export class ProdutoService {
   }
 
   create(produto: Produto): Observable<Produto> {
-    return this.http.post<Produto>(this.baseUrl + "/Adicionar/", produto).pipe(
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Produto>(url, produto).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -38,9 +39,10 @@ export class ProdutoService {
     )
   }
 
+  //params para definir os parâmetros do get()
   findById(id: string): Observable<Produto> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
-    return this.http.get<Produto>(url).pipe(
+    const url = `${this.baseUrl}/BuscarById/`
+    return this.http.get<Produto>(url, { params: { "id": id } }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -54,9 +56,10 @@ export class ProdutoService {
     )
   }
 
-  delete(id: number): Observable<Produto> {
-    const url = `${this.baseUrl}/Remover/${id}`
-    return this.http.delete<Produto>(url).pipe(
+  //body para passar o objeto
+  delete(produto: Produto): Observable<Produto> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Produto>(url, { body: produto }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
