@@ -25,7 +25,8 @@ export class UsuarioService {
   }
 
   create(usuario: usuario): Observable<usuario> {
-    return this.http.post<usuario>(this.baseUrl + "/Adicionar/", usuario).pipe(
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -39,21 +40,24 @@ export class UsuarioService {
   }
 
   findById(id: string): Observable<usuario> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<usuario>(url)
-  }
-
-  update(usuario: usuario): Observable<usuario> {
-    const url = `${this.baseUrl}/${usuario.id}`
-    return this.http.put<usuario>(url, usuario).pipe(
+    const url = `${this.baseUrl}/BuscarById/`
+    return this.http.get<usuario>(url, { params: { "id": id } }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<usuario> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<usuario>(url).pipe(
+  update(produto: usuario): Observable<usuario> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<usuario>(url, produto).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(produto: usuario): Observable<usuario> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<usuario>(url, { body: produto }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

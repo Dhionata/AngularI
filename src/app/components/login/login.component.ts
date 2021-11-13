@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { EmailValidator, FormBuilder } from "@angular/forms";
 import { AuthService } from './auth.service';
+import { usuario } from '../usuario/usuario.model';
 
 
 @Component({
@@ -10,8 +11,13 @@ import { AuthService } from './auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   formBuilder: any;
   form: any;
+
+  /* private usuario: usuario new usuario(); */
 
   constructor(privateformBuilder:FormBuilder, private AuthService : AuthService) {
 
@@ -19,10 +25,10 @@ export class LoginComponent implements OnInit {
     senha: ''
 
 }
-  ngOnInit(): void {
+/*   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-
+ */
     fazerlogin(){
 
     }
