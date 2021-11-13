@@ -1,7 +1,7 @@
 import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { usuario } from '../usuario.model';
+import { Usuario } from '../usuario.model';
 
 @Component({
   selector: 'app-usuario-update',
@@ -10,7 +10,7 @@ import { usuario } from '../usuario.model';
 })
 export class UsuarioUpdateComponent implements OnInit {
 
-  usuario!: usuario;
+  usuario!: Usuario;
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,

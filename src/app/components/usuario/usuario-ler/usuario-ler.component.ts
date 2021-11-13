@@ -1,5 +1,5 @@
 import { UsuarioService } from '../usuario.service';
-import { usuario } from '../usuario.model';
+import { Usuario } from '../usuario.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariolerComponent implements OnInit {
 
-  usuario!: usuario[]
+  usuario!: Usuario[]
   displayedColumns = ['id','nome','actions']
 
   constructor(private UsuarioService: UsuarioService) { }

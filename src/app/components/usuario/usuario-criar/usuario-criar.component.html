@@ -2,24 +2,20 @@
     <mat-card-title>Novo usuario</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-            [(ngModel)] = "usuario.nome" name= "nome">
+            <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder="Email"
-          [(ngModel)] = "usuario.email" name = "email">
-      </mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="email">
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Senha"
-        [(ngModel)] = "usuario.senha" password = "password">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" password="password">
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Cnpj/Cpf"
-        [(ngModel)] = "usuario.cnpjCpf" name = "cnpjCpf">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf">
+        </mat-form-field>
 
     </form>
 </mat-card>

@@ -1,4 +1,4 @@
-import { usuario } from '../usuario.model';
+import { Usuario } from '../usuario.model';
 import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UsuarioDeleteComponent implements OnInit {
 
-  usuario!: usuario;
+  usuario!: Usuario;
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,

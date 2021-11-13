@@ -1,7 +1,7 @@
-import { usuario } from '../usuario.model';
+import { Usuario } from '../usuario.model';
 import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-criar',
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class UsuarioCreateComponent implements OnInit {
 
-  usuario: usuario = {
+  usuario: Usuario = {
     nome: '',
     email: null!,
     cnpjCpf: null!,

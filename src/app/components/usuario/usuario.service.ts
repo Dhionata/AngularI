@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { usuario } from './usuario.model';
+import { Usuario } from './usuario.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,39 @@ export class UsuarioService {
     })
   }
 
-  create(usuario: usuario): Observable<usuario> {
-    return this.http.post<usuario>(this.baseUrl + "/Adicionar/", usuario).pipe(
+  create(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<usuario[]> {
-    return this.http.get<usuario[]>(this.baseUrl).pipe(
+  read(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<usuario> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<usuario>(url)
+  findById(id: string): Observable<Usuario> {
+    const url = `${this.baseUrl}/BuscarById/`
+    return this.http.get<Usuario>(url, { params: { "id": id } }).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e)))
   }
 
-  update(usuario: usuario): Observable<usuario> {
-    const url = `${this.baseUrl}/${usuario.id}`
-    return this.http.put<usuario>(url, usuario).pipe(
+  update(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.baseUrl}/Atualizar`
+    return this.http.patch<Usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<usuario> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<usuario>(url).pipe(
+  delete(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Usuario>(url, { body: usuario }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
