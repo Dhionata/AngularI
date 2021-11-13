@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
 import { AgmCoreModule } from '@agm/core';
 
@@ -103,16 +102,15 @@ import { pedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.co
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
-import { AuthService } from './components/login/auth.service';
-
-
+import { AuthenticationComponent } from './components/login/authentication/authentication.component';
+/* import { LoginComponent } from './components/login/singin/login.component'; */
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
+    /* LoginComponent, */
     FooterComponent,
     NavComponent,
     HomeComponent,
@@ -172,8 +170,8 @@ import { AuthService } from './components/login/auth.service';
     pedidoComponent,
     pedidoCreateComponent,
     FormaPagamentoComponent,
-    LoginComponent,
-    MapaComponent
+    MapaComponent,
+    AuthenticationComponent
 
   ],
 
@@ -200,12 +198,13 @@ import { AuthService } from './components/login/auth.service';
     MatBottomSheetModule,
     ReactiveFormsModule,
     BrowserModule,
+    /* LoginComponent, */
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'
     })
   ],
-  providers: [AuthService],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

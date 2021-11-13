@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class UsuarioCreateComponent implements OnInit {
 
-  usuario: Usuario = {
+  Usuario: Usuario = {
     nome: '',
     email: null!,
     cnpjCpf: null!,
@@ -24,8 +24,8 @@ export class UsuarioCreateComponent implements OnInit {
 
   }
 
-  Createusuario(): void {
-    this.UsuarioService.create(this.usuario).subscribe(() => {
+  CreateUsuario(): void {
+    this.UsuarioService.create(this.Usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario criado!')
       this.router.navigate(['/usuario'])
 

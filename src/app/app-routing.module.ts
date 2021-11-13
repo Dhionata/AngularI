@@ -52,9 +52,9 @@ import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-
 import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { pedidoComponent } from './views/pedido/pedido.component';
 import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
-import { LoginComponent } from './components/login/login.component';
+import { LoginComponent } from './components/login/singin/login.component';
 import { MapaComponent } from './components/mapa/mapa';
-
+import { AuthenticationComponent } from './components/login/authentication/authentication.component';
 
 
 const routes: Routes = [{
@@ -62,6 +62,11 @@ const routes: Routes = [{
 
   path: "",
   component: HomeComponent
+},
+
+{
+  path: "",
+  component: AuthenticationComponent
 },
 
 {
