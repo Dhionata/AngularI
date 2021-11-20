@@ -12,13 +12,15 @@ export class UsuarioCreateComponent implements OnInit {
 
   usuario: Usuario = {
     nome: '',
-    email: null!,
-    cnpjCpf: null!,
-    senha: null!,
+    email: '',
+    senha: '',
+    cnpjCpf: '',
   }
 
   constructor(private UsuarioService: UsuarioService,
-    private router: Router) { }
+    private router: Router) {
+
+  }
 
   ngOnInit(): void {
 

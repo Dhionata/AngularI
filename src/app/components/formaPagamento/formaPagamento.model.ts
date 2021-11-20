@@ -1,3 +1,3 @@
-export enum formaPagamento {
+export enum FormaPagamento {
  Debito, Credito, Parcelado, Vista, Boleto
 }

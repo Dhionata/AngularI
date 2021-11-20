@@ -1,5 +1,5 @@
-import { produtoFornecedorService } from '../produtoFornecedor.service';
-import { produtoFornecedor } from '../produtoFornecedor.model';
+import { ProdutoFornecedorService } from '../produtoFornecedor.service';
+import { ProdutoFornecedor } from '../produtoFornecedor.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,23 +10,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class produtoFornecedorDeleteComponent implements OnInit {
 
-  produtoFornecedor!: produtoFornecedor;
+  produtoFornecedor!: ProdutoFornecedor;
 
-  constructor(private produtoFornecedorService: produtoFornecedorService,
+  constructor(private ProdutoFornecedorService: ProdutoFornecedorService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.produtoFornecedorService.findById(id!).subscribe(produtoFornecedor =>
+    this.ProdutoFornecedorService.findById(id!).subscribe(produtoFornecedor =>
       this.produtoFornecedor = produtoFornecedor
     )
   }
 
   deleteprodutoFornecedor(): void {
-    this.produtoFornecedorService.delete(this.produtoFornecedor.id!).subscribe(() => {
-      this.produtoFornecedorService.ShowOMessage('produtoFornecedor Excluido com sucesso')
+    this.ProdutoFornecedorService.delete(this.produtoFornecedor).subscribe(() => {
+      this.ProdutoFornecedorService.ShowOMessage('produtoFornecedor Excluido com sucesso')
       this.router.navigate(['/produtoFornecedor'])
     })
 

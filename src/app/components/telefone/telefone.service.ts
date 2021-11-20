@@ -25,7 +25,8 @@ export class TelefoneService {
   }
 
   create(Telefone: Telefone): Observable<Telefone> {
-    return this.http.post<Telefone>(this.baseUrl + "/Adicionar/", Telefone).pipe(
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Telefone>(url, Telefone).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -39,21 +40,24 @@ export class TelefoneService {
   }
 
   findById(id: string): Observable<Telefone> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<Telefone>(url)
-  }
-
-  update(Telefone: Telefone): Observable<Telefone> {
-    const url = `${this.baseUrl}/${Telefone.id}`
-    return this.http.put<Telefone>(url, Telefone).pipe(
+    const url = `${this.baseUrl}/BuscarById/${id}`
+    return this.http.get<Telefone>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<Telefone> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Telefone>(url).pipe(
+  update(Telefone: Telefone): Observable<Telefone> {
+    const url = `${this.baseUrl}/Atualizar`
+    return this.http.patch<Telefone>(url, { body: Telefone }).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(telefone: Telefone): Observable<Telefone> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Telefone>(url, { body: telefone }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

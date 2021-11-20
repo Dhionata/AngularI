@@ -1,5 +1,5 @@
-import { pedido } from '../pedido.model';
-import { pedidoService } from '../pedido.service';
+import { Pedido } from '../pedido.model';
+import { PedidoService } from '../pedido.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class pedidoCreateComponent implements OnInit {
 
-  pedido: pedido = {
+  pedido: Pedido = {
 
   itensPedido: [],
   cliente: null!,
@@ -22,7 +22,7 @@ export class pedidoCreateComponent implements OnInit {
   }
 
 
-  constructor(private pedidoService: pedidoService,
+  constructor(private PedidoService: PedidoService,
     private router: Router) { }
 
 
@@ -32,8 +32,8 @@ export class pedidoCreateComponent implements OnInit {
   }
 
   CreatePedido(): void {
-    this.pedidoService.create(this.pedido).subscribe(() => {
-      this.pedidoService.ShowOMessage('pedido criado!')
+    this.PedidoService.create(this.pedido).subscribe(() => {
+      this.PedidoService.ShowOMessage('pedido criado!')
       this.router.navigate(['/pedido'])
 
     })

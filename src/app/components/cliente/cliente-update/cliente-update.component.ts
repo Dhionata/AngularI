@@ -1,7 +1,7 @@
 import { ClienteService } from '../cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { cliente } from '../cliente.model';
+import { Cliente } from '../cliente.model';
 
 @Component({
   selector: 'app-cliente-update',
@@ -10,7 +10,7 @@ import { cliente } from '../cliente.model';
 })
 export class ClienteUpdateComponent implements OnInit {
 
-  cliente!: cliente;
+  cliente!: Cliente;
 
   constructor(private ClienteService: ClienteService,
     private router: Router,

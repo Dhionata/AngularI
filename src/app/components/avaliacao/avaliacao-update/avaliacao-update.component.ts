@@ -1,7 +1,7 @@
 import { AvaliacaoService } from '../avaliacao.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { avaliacao } from '../avaliacao.model';
+import { Avaliacao } from '../avaliacao.model';
 
 @Component({
   selector: 'app-avaliacao-update',
@@ -10,7 +10,7 @@ import { avaliacao } from '../avaliacao.model';
 })
 export class AvaliacaoUpdateComponent implements OnInit {
 
-  avaliacao!: avaliacao;
+  avaliacao!: Avaliacao;
 
   constructor(private AvaliacaoService: AvaliacaoService,
     private router: Router,

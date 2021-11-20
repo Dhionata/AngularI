@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { enderecoClienteDeleteComponent } from './enderecoCliente-delete.component';
 
 describe('enderecoClienteDeleteComponent', () => {
-  let component: enderecoClienteDeleteComponent;
-  let fixture: ComponentFixture<enderecoClienteDeleteComponent>;
+  let component: EnderecoClienteDeleteComponent;
+  let fixture: ComponentFixture<EnderecoClienteDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

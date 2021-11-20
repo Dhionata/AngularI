@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { enderecoFornecedor } from './enderecoFornecedor.model';
+import { EnderecoFornecedor } from './enderecoFornecedor.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,40 @@ export class EnderecoFornecedorService {
     })
   }
 
-  create(enderecoFornecedor: enderecoFornecedor): Observable<enderecoFornecedor> {
-    return this.http.post<enderecoFornecedor>(this.baseUrl + "/Adicionar/", enderecoFornecedor).pipe(
+  create(enderecoFornecedor: EnderecoFornecedor): Observable<EnderecoFornecedor> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<EnderecoFornecedor>(url, enderecoFornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<enderecoFornecedor[]> {
-    return this.http.get<enderecoFornecedor[]>(this.baseUrl).pipe(
+  read(): Observable<EnderecoFornecedor[]> {
+    return this.http.get<EnderecoFornecedor[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<enderecoFornecedor> {
+  findById(id: string): Observable<EnderecoFornecedor> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<enderecoFornecedor>(url)
-  }
-
-  update(enderecoFornecedor: enderecoFornecedor): Observable<enderecoFornecedor> {
-    const url = `${this.baseUrl}/${enderecoFornecedor.id}`
-    return this.http.put<enderecoFornecedor>(url, enderecoFornecedor).pipe(
+    return this.http.get<EnderecoFornecedor>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<enderecoFornecedor> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<enderecoFornecedor>(url).pipe(
+  update(enderecoFornecedor: EnderecoFornecedor): Observable<EnderecoFornecedor> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<EnderecoFornecedor>(url, enderecoFornecedor).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(enderecoFornecedor: EnderecoFornecedor): Observable<EnderecoFornecedor> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<EnderecoFornecedor>(url, { body: EnderecoFornecedor }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

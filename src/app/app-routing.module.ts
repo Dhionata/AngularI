@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
 import { HomeComponent } from './views/home/home.component';
 import { ProdutoComponent } from './views/produto/produto.component';
 import { ProdutoCreateComponent } from './components/produto/produto-criar/produto-criar.component';
@@ -55,11 +54,7 @@ import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-c
 import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
 
-
-
 const routes: Routes = [{
-
-
   path: "",
   component: HomeComponent
 },
@@ -165,7 +160,7 @@ const routes: Routes = [{
 },
 
 {
-path: "produtoFornecedor",
+  path: "produtoFornecedor",
   component: ProdutoFornecedorComponent
 },
 
@@ -185,95 +180,93 @@ path: "produtoFornecedor",
 },
 {
   path: "avaliacao",
-    component: AvaliacaoComponent
-  },
+  component: AvaliacaoComponent
+},
 
-  {
-    path: "avaliacao/create",
-    component: AvaliacaoCreateComponent
-  },
+{
+  path: "avaliacao/create",
+  component: AvaliacaoCreateComponent
+},
 
-  {
-    path: "avaliacao/update/:id",
-    component: AvaliacaoUpdateComponent
-  },
+{
+  path: "avaliacao/update/:id",
+  component: AvaliacaoUpdateComponent
+},
 
-  {
-    path: "avaliacao/delete/:id",
-    component: AvaliacaoDeleteComponent
-  },
+{
+  path: "avaliacao/delete/:id",
+  component: AvaliacaoDeleteComponent
+},
 
-  {
-    path: "enderecoCliente",
-      component: EnderecoClienteComponent
-    },
+{
+  path: "enderecoCliente",
+  component: EnderecoClienteComponent
+},
 
-    {
-      path: "enderecoCliente/create",
-      component: EnderecoClienteCreateComponent
-    },
+{
+  path: "enderecoCliente/create",
+  component: EnderecoClienteCreateComponent
+},
 
-    {
-      path: "enderecoCliente/update/:id",
-      component: EnderecoClienteUpdateComponent
-    },
+{
+  path: "enderecoCliente/update/:id",
+  component: EnderecoClienteUpdateComponent
+},
 
-    {
-      path: "enderecoCliente/delete/:id",
-      component: EnderecoClienteDeleteComponent
-    },
+{
+  path: "enderecoCliente/delete/:id",
+  component: EnderecoClienteDeleteComponent
+},
 
-    {
-      path: "enderecoFornecedor",
-        component: EnderecoFornecedorComponent
-      },
+{
+  path: "enderecoFornecedor",
+  component: EnderecoFornecedorComponent
+},
 
-      {
-        path: "enderecoFornecedor/create",
-        component: EnderecoFornecedorCriarComponent
-      },
+{
+  path: "enderecoFornecedor/create",
+  component: EnderecoFornecedorCriarComponent
+},
 
-      {
-        path: "enderecoFornecedor/update/:id",
-        component: EnderecoFornecedorUpdateComponent
-      },
+{
+  path: "enderecoFornecedor/update/:id",
+  component: EnderecoFornecedorUpdateComponent
+},
 
-      {
-        path: "enderecoFornecedor/delete/:id",
-        component: EnderecoFornecedorDeleteComponent
-      },
+{
+  path: "enderecoFornecedor/delete/:id",
+  component: EnderecoFornecedorDeleteComponent
+},
 
-      {
-        path: "pedido",
-          component: pedidoComponent
-        },
+{
+  path: "pedido",
+  component: pedidoComponent
+},
 
-        {
-          path: "pedido/create",
-          component: pedidoCreateComponent
-        },
+{
+  path: "pedido/create",
+  component: pedidoCreateComponent
+},
 
-        {
-          path: "pedido/update/:id",
-          component: pedidoUpdateComponent
-        },
+{
+  path: "pedido/update/:id",
+  component: pedidoUpdateComponent
+},
 
-        {
-          path: "pedido/delete/:id",
-          component: pedidoDeleteComponent
-        },
+{
+  path: "pedido/delete/:id",
+  component: pedidoDeleteComponent
+},
 
-        {
-          path: "login",
-          component: LoginComponent
-        },
+{
+  path: "login",
+  component: LoginComponent
+},
 
-        {
-          path: "mapa",
-          component: MapaComponent
-        }
-
-
+{
+  path: "mapa",
+  component: MapaComponent
+}
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 import { EnderecoClienteService } from '../enderecoCliente.service';
-import { enderecoCliente } from '../enderecoCliente.model';
+import { EnderecoCliente } from '../enderecoCliente.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnderecoClientelerComponent implements OnInit {
 
-  enderecoClientes!: enderecoCliente[]
+  enderecoClientes!: EnderecoCliente[]
   displayedColumns = ['id', 'cliente', 'actions']
 
   constructor(private EnderecoClienteService: EnderecoClienteService) { }

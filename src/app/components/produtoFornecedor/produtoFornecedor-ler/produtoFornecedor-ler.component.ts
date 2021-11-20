@@ -1,5 +1,5 @@
-import { produtoFornecedorService } from '../produtoFornecedor.service';
-import { produtoFornecedor } from '../produtoFornecedor.model';
+import { ProdutoFornecedorService } from '../produtoFornecedor.service';
+import { ProdutoFornecedor } from '../produtoFornecedor.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class produtoFornecedorlerComponent implements OnInit {
 
-  produtoFornecedor!: produtoFornecedor[]
+  produtoFornecedor!: ProdutoFornecedor[]
   displayedColumns = ['id', 'preco' , 'action']
 
-  constructor(private produtoFornecedorService: produtoFornecedorService) { }
+  constructor(private produtoFornecedorService: ProdutoFornecedorService) { }
 
   ngOnInit(): void {
     this.produtoFornecedorService.read().subscribe(produtoFornecedor => {

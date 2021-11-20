@@ -40,14 +40,14 @@ export class UsuarioService {
   }
 
   findById(id: string): Observable<Usuario> {
-    const url = `${this.baseUrl}/BuscarById/`
-    return this.http.get<Usuario>(url, { params: { "id": id } }).pipe(
+    const url = `${this.baseUrl}/BuscarById/${id}`
+    return this.http.get<Usuario>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e)))
   }
 
   update(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.baseUrl}/Atualizar`
+    const url = `${this.baseUrl}/Atualizar/`
     return this.http.patch<Usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

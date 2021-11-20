@@ -25,7 +25,8 @@ export class FornecedorService {
   }
 
   create(Fornecedor: Fornecedor): Observable<Fornecedor> {
-    return this.http.post<Fornecedor>(this.baseUrl + "/Adicionar/", Fornecedor).pipe(
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Fornecedor>(url, Fornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -40,20 +41,23 @@ export class FornecedorService {
 
   findById(id: string): Observable<Fornecedor> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<Fornecedor>(url)
-  }
-
-  update(Fornecedor: Fornecedor): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/${Fornecedor.id}`
-    return this.http.put<Fornecedor>(url, Fornecedor).pipe(
+    return this.http.get<Fornecedor>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Fornecedor>(url).pipe(
+  update(Fornecedor: Fornecedor): Observable<Fornecedor> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<Fornecedor>(url, Fornecedor).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(fornecedor: Fornecedor): Observable<Fornecedor> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Fornecedor>(url, { body: fornecedor }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

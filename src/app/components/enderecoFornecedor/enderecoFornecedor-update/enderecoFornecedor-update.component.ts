@@ -1,7 +1,7 @@
 import { EnderecoFornecedorService } from '../enderecoFornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { enderecoFornecedor } from '../enderecoFornecedor.model';
+import { EnderecoFornecedor } from '../enderecoFornecedor.model';
 
 @Component({
   selector: 'app-enderecoFornecedor-update',
@@ -10,7 +10,7 @@ import { enderecoFornecedor } from '../enderecoFornecedor.model';
 })
 export class EnderecoFornecedorUpdateComponent implements OnInit {
 
-  enderecoFornecedor!: enderecoFornecedor;
+  enderecoFornecedor!: EnderecoFornecedor;
 
   constructor(private EnderecoFornecedorService: EnderecoFornecedorService,
     private router: Router,

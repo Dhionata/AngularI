@@ -1,6 +1,6 @@
 import { Fornecedor } from "../fornecedor/fornecedor.model";
 
-export interface produtoFornecedor {
+export interface ProdutoFornecedor {
   id?: number,
   produto: String,
   fornecedor: Fornecedor,

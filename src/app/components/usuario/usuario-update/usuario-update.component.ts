@@ -10,11 +10,16 @@ import { Usuario } from '../usuario.model';
 })
 export class UsuarioUpdateComponent implements OnInit {
 
-  usuario!: Usuario;
+  usuario: Usuario = {
+    senha: '',
+    email: '',
+    cnpjCpf: '',
+    nome: ''
+  }
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +28,7 @@ export class UsuarioUpdateComponent implements OnInit {
       this.usuario = usuario)
   }
 
-  updatecliente(): void {
+  updateUsuario(): void {
     this.UsuarioService.update(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
@@ -34,6 +39,4 @@ export class UsuarioUpdateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/usuario'])
   }
-
-
 }

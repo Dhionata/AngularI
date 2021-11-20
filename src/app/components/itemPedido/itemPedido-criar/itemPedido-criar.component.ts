@@ -1,4 +1,4 @@
-import { itemPedido } from '../itemPedido.model';
+import { ItemPedido } from '../itemPedido.model';
 import { ItemPedidoService } from '../itemPedido.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,12 +10,11 @@ import { Router } from '@angular/router';
 })
 export class ItemPedidoCreateComponent implements OnInit {
 
-  itemPedido: itemPedido = {
-
-  nome: " ",
-  email: " ",
-  senha: " ",
-  cnpjCpf: null!
+  itemPedido: ItemPedido = {
+    nome: " ",
+    email: " ",
+    senha: " ",
+    cnpjCpf: null!
   }
 
   constructor(private ItemPedidoService: ItemPedidoService,
@@ -37,11 +36,9 @@ export class ItemPedidoCreateComponent implements OnInit {
       this.router.navigate(['/itemPedido'])
 
     })
-
   }
+
   cancel(): void {
     this.router.navigate(['/itemPedido'])
   }
-
-
 }

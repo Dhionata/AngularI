@@ -1,12 +1,12 @@
-import { formaPagamento } from './../formaPagamento/formaPagamento.model';
-import { itemPedido } from '../itemPedido/itemPedido.model';
-import { cliente } from './../cliente/cliente.model';
+import { FormaPagamento } from './../formaPagamento/formaPagamento.model';
+import { ItemPedido } from '../itemPedido/itemPedido.model';
+import { Cliente } from './../cliente/cliente.model';
 
-export interface pedido {
+export interface Pedido {
   id?: number,
-  itensPedido: Array<itemPedido>,
-  cliente: cliente,
-  formaPagamento: formaPagamento,
+  itensPedido: Array<ItemPedido>,
+  cliente: Cliente,
+  formaPagamento: FormaPagamento,
   desconto: number,
   pago: boolean,
   entregue: boolean,

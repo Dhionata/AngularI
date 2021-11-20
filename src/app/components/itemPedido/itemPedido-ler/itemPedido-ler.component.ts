@@ -1,5 +1,5 @@
 import { ItemPedidoService } from '../itemPedido.service';
-import { itemPedido } from '../itemPedido.model';
+import { ItemPedido } from '../itemPedido.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,16 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemPedidolerComponent implements OnInit {
 
-  itemPedidos!: itemPedido[]
-  displayedColumns = ['id','cnpjCpf','email','nome','senha','actions']
+  itensPedido!: ItemPedido[]
+  displayedColumns = ['id', 'cnpjCpf', 'email', 'nome', 'senha', 'actions']
 
   constructor(private ItemPedidoService: ItemPedidoService) { }
 
   ngOnInit(): void {
-    this.ItemPedidoService.read().subscribe(itemPedidos => {
-      this.itemPedidos = itemPedidos
-      console.log(itemPedidos);
-
+    this.ItemPedidoService.read().subscribe(itensPedido => {
+      this.itensPedido = itensPedido
+      console.log(itensPedido);
     })
   }
 

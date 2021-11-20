@@ -1,5 +1,5 @@
-import { pedidoService } from '../pedido.service';
-import { pedido } from '../pedido.model';
+import { PedidoService } from '../pedido.service';
+import { Pedido } from '../pedido.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,23 +10,23 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class pedidoDeleteComponent implements OnInit {
 
-  pedido!: pedido;
+  pedido!: Pedido;
 
-  constructor(private pedidoService: pedidoService,
+  constructor(private PedidoService: PedidoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.pedidoService.findById(id!).subscribe(pedido =>
+    this.PedidoService.findById(id!).subscribe(pedido =>
       this.pedido = pedido
     )
   }
 
   deleteprodutoFornecedor(): void {
-    this.pedidoService.delete(this.pedido.id!).subscribe(() => {
-      this.pedidoService.ShowOMessage('pedido Excluido com sucesso')
+    this.PedidoService.delete(this.pedido).subscribe(() => {
+      this.PedidoService.ShowOMessage('pedido Excluido com sucesso')
       this.router.navigate(['/pedido'])
     })
 

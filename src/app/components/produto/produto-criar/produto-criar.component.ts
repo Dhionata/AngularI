@@ -1,4 +1,4 @@
-import { produtoFornecedor } from './../../produtoFornecedor/produtoFornecedor.model';
+import { ProdutoFornecedor } from './../../produtoFornecedor/produtoFornecedor.model';
 import { Produto } from '../produto.model';
 import { ProdutoService } from '../produto.service';
 import { Component, OnInit } from '@angular/core';

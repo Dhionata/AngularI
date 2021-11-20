@@ -25,7 +25,7 @@ export class FornecedorDeleteComponent implements OnInit {
   }
 
   deletefornecedor(): void {
-    this.FornecedorService.delete(this.fornecedor.id!).subscribe(() => {
+    this.FornecedorService.delete(this.fornecedor).subscribe(() => {
       this.FornecedorService.ShowOMessage('fornecedor Excluido com sucesso')
       this.router.navigate(['/fornecedor'])
     })

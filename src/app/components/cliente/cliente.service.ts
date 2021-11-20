@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { cliente } from './cliente.model';
+import { Cliente } from './cliente.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,40 @@ export class ClienteService {
     })
   }
 
-  create(cliente: cliente): Observable<cliente> {
-    return this.http.post<cliente>(this.baseUrl + "/Adicionar/teste", cliente).pipe(
+  create(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Cliente>(url, cliente).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<cliente[]> {
-    return this.http.get<cliente[]>(this.baseUrl).pipe(
+  read(): Observable<Cliente[]> {
+    return this.http.get<Cliente[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<cliente> {
+  findById(id: string): Observable<Cliente> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<cliente>(url)
-  }
-
-  update(cliente: cliente): Observable<cliente> {
-    const url = `${this.baseUrl}/${cliente.id}`
-    return this.http.put<cliente>(url, cliente).pipe(
+    return this.http.get<Cliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<cliente> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<cliente>(url).pipe(
+  update(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<Cliente>(url, cliente).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(cliente: Cliente): Observable<Cliente> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Cliente>(url, { body: cliente }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

@@ -1,5 +1,5 @@
-import { pedidoService } from '../pedido.service';
-import { pedido } from '../pedido.model';
+import { PedidoService } from '../pedido.service';
+import { Pedido } from '../pedido.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,13 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class pedidoLerComponent implements OnInit {
 
-  pedido!: pedido[]
+  pedido!: Pedido[]
   displayedColumns = ['id', 'preco' , 'action']
 
-  constructor(private pedidoService: pedidoService) { }
+  constructor(private PedidoService: PedidoService) { }
 
   ngOnInit(): void {
-    this.pedidoService.read().subscribe(pedido => {
+    this.PedidoService.read().subscribe(pedido => {
       this.pedido = pedido
       console.log(pedido);
 

@@ -25,7 +25,8 @@ export class EnderecoService {
   }
 
   create(Endereco: Endereco): Observable<Endereco> {
-    return this.http.post<Endereco>(this.baseUrl + "/Adicionar/", Endereco).pipe(
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Endereco>(url, Endereco).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -44,16 +45,16 @@ export class EnderecoService {
   }
 
   update(Endereco: Endereco): Observable<Endereco> {
-    const url = `${this.baseUrl}/${Endereco.id}`
-    return this.http.put<Endereco>(url, Endereco).pipe(
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<Endereco>(url, Endereco).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<Endereco> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<Endereco>(url).pipe(
+  delete(endereco: Endereco): Observable<Endereco> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Endereco>(url, { body: endereco }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

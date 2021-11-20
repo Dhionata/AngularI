@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { itemPedido } from './itemPedido.model';
+import { ItemPedido } from './itemPedido.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,40 @@ export class ItemPedidoService {
     })
   }
 
-  create(itemPedido: itemPedido): Observable<itemPedido> {
-    return this.http.post<itemPedido>(this.baseUrl + "/Adicionar/teste", itemPedido).pipe(
+  create(itemPedido: ItemPedido): Observable<ItemPedido> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<ItemPedido>(url, itemPedido).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<itemPedido[]> {
-    return this.http.get<itemPedido[]>(this.baseUrl).pipe(
+  read(): Observable<ItemPedido[]> {
+    return this.http.get<ItemPedido[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<itemPedido> {
+  findById(id: string): Observable<ItemPedido> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<itemPedido>(url)
-  }
-
-  update(itemPedido: itemPedido): Observable<itemPedido> {
-    const url = `${this.baseUrl}/${itemPedido.id}`
-    return this.http.put<itemPedido>(url, itemPedido).pipe(
+    return this.http.get<ItemPedido>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<itemPedido> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<itemPedido>(url).pipe(
+  update(itemPedido: ItemPedido): Observable<ItemPedido> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<ItemPedido>(url, itemPedido).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(itemPedido: ItemPedido): Observable<ItemPedido> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<ItemPedido>(url,{body: itemPedido}).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

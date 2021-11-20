@@ -1,5 +1,5 @@
 import { EnderecoClienteService } from '../enderecoCliente.service';
-import { enderecoCliente } from '../enderecoCliente.model';
+import { EnderecoCliente } from '../enderecoCliente.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EnderecoClienteDeleteComponent implements OnInit {
 
-  enderecoCliente!: enderecoCliente;
+  enderecoCliente!: EnderecoCliente;
 
   constructor(private EnderecoClienteService: EnderecoClienteService,
     private router: Router,
@@ -25,7 +25,7 @@ export class EnderecoClienteDeleteComponent implements OnInit {
   }
 
   deleteenderecoCliente(): void {
-    this.EnderecoClienteService.delete(this.enderecoCliente.id!).subscribe(() => {
+    this.EnderecoClienteService.delete(this.enderecoCliente).subscribe(() => {
       this.EnderecoClienteService.ShowOMessage('enderecoCliente Excluido com sucesso')
       this.router.navigate(['/enderecoCliente'])
     })
