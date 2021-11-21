@@ -10,6 +10,8 @@ import { Usuario } from '../usuario.model';
 })
 export class UsuarioUpdateComponent implements OnInit {
 
+  botaoHabilitado: boolean = false;
+
   usuario: Usuario = {
     senha: '',
     email: '',
@@ -34,6 +36,16 @@ export class UsuarioUpdateComponent implements OnInit {
       this.router.navigate(["/usuario"])
     })
 
+  }
+
+  desabilitar(): void {
+    console.log("tá entrando no desabilitar")
+    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.senha == '' || this.usuario.cnpjCpf == '') {
+      this.botaoHabilitado = false;
+    }
+    else {
+      this.botaoHabilitado = true;
+    }
   }
 
   cancel(): void {

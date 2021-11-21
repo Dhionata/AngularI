@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class UsuarioCreateComponent implements OnInit {
 
+  botaoHabilitado: boolean = false;
+
   usuario: Usuario = {
     nome: '',
     email: '',
@@ -26,11 +28,22 @@ export class UsuarioCreateComponent implements OnInit {
 
   }
 
+  //listener
+  desabilitar(): void {
+    console.log("tá entrando no desabilitar")
+    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.senha == '' || this.usuario.cnpjCpf == '') {
+      this.botaoHabilitado = false;
+    }
+    else {
+      this.botaoHabilitado = true;
+    }
+  }
+
   createUsuario(): void {
+    this.botaoHabilitado = false;
     this.UsuarioService.create(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario criado!')
       this.router.navigate(['/usuario'])
-
     })
 
   }
