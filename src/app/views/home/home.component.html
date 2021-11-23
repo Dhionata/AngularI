@@ -1,48 +1,47 @@
 <mat-card class="home mat-elevation-z3">
-  <mat-card-title class="title">
-    Bem Vindo
+    <mat-card-title class="title">
+        Bem Vindo
+
+    </mat-card-title>
     <section>
-      <div class="example-button-row">
-        <a href="/login">
-          <button m mat-raised-button color="primary">Login</button>
-        </a>
-      </div>
+        <div class="example-button-row">
+            <a href="/login">
+                <button m mat-raised-button color="primary">Login</button>
+            </a>
+        </div>
+        <div class="example-button-row">
+            <a href="/usuario/create">
+                <button mat-raised-button color="primary">Cadastro</button></a>
+        </div>
     </section>
-    <section>
-      <div class="example-button-row">
-        <a href="/usuario/create">
-          <button mat-raised-button color="primary">Cadastro</button></a>
-      </div>
-    </section>
-  </mat-card-title>
-  <mat-card-subtitle class="subtitle">
-    Sistema Delivery Web
-  </mat-card-subtitle>
-  <mat-toolbar>
-    <span>Nome do Fornecedor</span>
-  </mat-toolbar>
-  <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>lista produtos</button>
-  </mat-menu>
+    <mat-card-subtitle class="subtitle">
+        Sistema Delivery Web
+    </mat-card-subtitle>
+    <mat-toolbar>
+        <span>Nome do Fornecedor</span>
+    </mat-toolbar>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item>lista produtos</button>
+    </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="belowMenu">Clientes</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>clientes</button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Clientes</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item>clientes</button>
+    </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="belowMenu">Pedido</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>lista pedidos</button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Pedido</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item>lista pedidos</button>
+    </mat-menu>
 
-  <button mat-button [matMenuTriggerFor]="belowMenu">Carrinho</button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Item 1</button>
-  </mat-menu>
+    <button mat-button [matMenuTriggerFor]="belowMenu">Carrinho</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item>Item 1</button>
+    </mat-menu>
 
 </mat-card>
 
 <div class="example-button-row">
-    <button routerLink = 'mapa' mat-raised-button color="primary">Mapa</button>
+    <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
 </div>
