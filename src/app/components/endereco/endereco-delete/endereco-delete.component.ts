@@ -25,7 +25,7 @@ export class EnderecoDeleteComponent implements OnInit {
   }
 
   deleteEndereco(): void {
-    this.EnderecoService.delete(this.Endereco.id!).subscribe(() => {
+    this.EnderecoService.delete(this.Endereco).subscribe(() => {
       this.EnderecoService.ShowOMessage('Endereco Excluido com sucesso')
       this.router.navigate(['/Endereco'])
     })

@@ -1,4 +1,4 @@
-import { avaliacao } from '../avaliacao.model';
+import { Avaliacao } from '../avaliacao.model';
 import { AvaliacaoService } from '../avaliacao.service';
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
@@ -10,7 +10,7 @@ import {Router} from '@angular/router';
 })
 export class AvaliacaoCreateComponent implements OnInit {
 
-  avaliacao: avaliacao = {
+  avaliacao: Avaliacao = {
 
   nota: null!,
   comentario: ' ',

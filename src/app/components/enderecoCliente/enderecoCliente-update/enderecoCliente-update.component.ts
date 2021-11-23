@@ -1,7 +1,7 @@
 import { EnderecoClienteService } from '../enderecoCliente.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { enderecoCliente } from '../enderecoCliente.model';
+import { EnderecoCliente } from '../enderecoCliente.model';
 
 @Component({
   selector: 'app-enderecoCliente-update',
@@ -10,7 +10,7 @@ import { enderecoCliente } from '../enderecoCliente.model';
 })
 export class EnderecoClienteUpdateComponent implements OnInit {
 
-  enderecoCliente!: enderecoCliente;
+  enderecoCliente!: EnderecoCliente;
 
   constructor(private EnderecoClienteService: EnderecoClienteService,
     private router: Router,

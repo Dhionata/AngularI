@@ -1,5 +1,5 @@
 import { EnderecoFornecedorService } from '../enderecoFornecedor.service';
-import { enderecoFornecedor } from '../enderecoFornecedor.model';
+import { EnderecoFornecedor } from '../enderecoFornecedor.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EnderecoFornecedorDeleteComponent implements OnInit {
 
-  enderecoFornecedor!: enderecoFornecedor;
+  enderecoFornecedor!: EnderecoFornecedor;
 
   constructor(private EnderecoFornecedorService: EnderecoFornecedorService,
     private router: Router,
@@ -25,7 +25,7 @@ export class EnderecoFornecedorDeleteComponent implements OnInit {
   }
 
   deleteEnderecoFornecedor(): void {
-    this.EnderecoFornecedorService.delete(this.enderecoFornecedor.id!).subscribe(() => {
+    this.EnderecoFornecedorService.delete(this.enderecoFornecedor).subscribe(() => {
       this.EnderecoFornecedorService.ShowOMessage('enderecoFornecedor Excluido com sucesso')
       this.router.navigate(['/enderecoFornecedor'])
     })

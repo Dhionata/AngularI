@@ -1,4 +1,4 @@
-import { itemPedido } from '../itemPedido.model';
+import { ItemPedido } from '../itemPedido.model';
 import { ItemPedidoService } from '../itemPedido.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ItemPedidoDeleteComponent implements OnInit {
 
-  itemPedido!: itemPedido;
+  itemPedido!: ItemPedido;
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router,
@@ -25,7 +25,7 @@ export class ItemPedidoDeleteComponent implements OnInit {
   }
 
   deleteitemPedido(): void {
-    this.ItemPedidoService.delete(this.itemPedido.id!).subscribe(() => {
+    this.ItemPedidoService.delete(this.itemPedido).subscribe(() => {
       this.ItemPedidoService.ShowOMessage('itemPedido Excluido com sucesso')
       this.router.navigate(['/itemPedido'])
     })

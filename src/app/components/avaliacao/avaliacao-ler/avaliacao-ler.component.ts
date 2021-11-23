@@ -1,5 +1,5 @@
 import { AvaliacaoService } from '../avaliacao.service';
-import { avaliacao } from '../avaliacao.model';
+import { Avaliacao } from '../avaliacao.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvaliacaolerComponent implements OnInit {
 
-  avaliacao!: avaliacao[]
+  avaliacao!: Avaliacao[]
   displayedColumns = ['id','nota', 'comentario', 'action']
 
   constructor(private AvaliacaoService: AvaliacaoService) { }

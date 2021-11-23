@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { produtoFornecedor } from './produtoFornecedor.model';
+import { ProdutoFornecedor } from './produtoFornecedor.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -8,9 +8,9 @@ import { EMPTY, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class produtoFornecedorService {
+export class ProdutoFornecedorService {
 
-  baseUrl = "http://localhost:8080/produtoFornecedor"
+  baseUrl = "http://localhost:8080/ProdutoFornecedor"
 
   constructor(private snackBar: MatSnackBar,
     private http: HttpClient) { }
@@ -24,36 +24,37 @@ export class produtoFornecedorService {
     })
   }
 
-  create(produtoFornecedor: produtoFornecedor): Observable<produtoFornecedor> {
-    return this.http.post<produtoFornecedor>(this.baseUrl + "/Adicionar/", produtoFornecedor).pipe(
+  create(produtoFornecedor: ProdutoFornecedor): Observable<ProdutoFornecedor> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<ProdutoFornecedor>(url, produtoFornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<produtoFornecedor[]> {
-    return this.http.get<produtoFornecedor[]>(this.baseUrl).pipe(
+  read(): Observable<ProdutoFornecedor[]> {
+    return this.http.get<ProdutoFornecedor[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<produtoFornecedor> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.get<produtoFornecedor>(url)
+  findById(id: string): Observable<ProdutoFornecedor> {
+    const url = `${this.baseUrl}/BuscarById/${id}`
+    return this.http.get<ProdutoFornecedor>(url)
   }
 
-  update(produtoFornecedor: produtoFornecedor): Observable<produtoFornecedor> {
-    const url = `${this.baseUrl}/${produtoFornecedor.id}`
-    return this.http.patch<produtoFornecedor>(url, produtoFornecedor).pipe(
+  update(produtoFornecedor: ProdutoFornecedor): Observable<ProdutoFornecedor> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<ProdutoFornecedor>(url, produtoFornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<produtoFornecedor> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<produtoFornecedor>(url).pipe(
+  delete(produtoFornecedor: ProdutoFornecedor): Observable<ProdutoFornecedor> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<ProdutoFornecedor>(url, { body: produtoFornecedor }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

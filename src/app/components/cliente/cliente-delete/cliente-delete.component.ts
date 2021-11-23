@@ -1,4 +1,4 @@
-import { cliente } from '../cliente.model';
+import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ClienteDeleteComponent implements OnInit {
 
-  cliente!: cliente;
+  cliente!: Cliente;
 
   constructor(private ClienteService: ClienteService,
     private router: Router,
@@ -25,7 +25,7 @@ export class ClienteDeleteComponent implements OnInit {
   }
 
   deletecliente(): void {
-    this.ClienteService.delete(this.cliente.id!).subscribe(() => {
+    this.ClienteService.delete(this.cliente).subscribe(() => {
       this.ClienteService.ShowOMessage('cliente Excluido com sucesso')
       this.router.navigate(['/cliente'])
     })

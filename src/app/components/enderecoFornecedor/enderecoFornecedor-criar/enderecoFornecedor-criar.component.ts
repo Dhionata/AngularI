@@ -1,4 +1,4 @@
-import { enderecoFornecedor } from '../enderecoFornecedor.model';
+import { EnderecoFornecedor } from '../enderecoFornecedor.model';
 import { EnderecoFornecedorService } from '../enderecoFornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class EnderecoFornecedorCriarComponent implements OnInit {
 
-  enderecoFornecedor: enderecoFornecedor = {
+  enderecoFornecedor: EnderecoFornecedor = {
     fornecedor: null!,
   };
 

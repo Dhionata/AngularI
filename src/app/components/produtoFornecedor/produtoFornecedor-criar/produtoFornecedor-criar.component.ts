@@ -1,5 +1,5 @@
-import { produtoFornecedor } from '../produtoFornecedor.model';
-import { produtoFornecedorService } from '../produtoFornecedor.service';
+import { ProdutoFornecedor } from '../produtoFornecedor.model';
+import { ProdutoFornecedorService } from '../produtoFornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class produtoFornecedorCreateComponent implements OnInit {
 
-  produtoFornecedor: produtoFornecedor = {
+  produtoFornecedor: ProdutoFornecedor = {
 
   produto: "",
   fornecedor: null!,
@@ -20,7 +20,7 @@ export class produtoFornecedorCreateComponent implements OnInit {
   dataAtualizacao: null!
   }
 
-  constructor(private produtoFornecedorService: produtoFornecedorService,
+  constructor(private ProdutoFornecedorService: ProdutoFornecedorService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -29,8 +29,8 @@ export class produtoFornecedorCreateComponent implements OnInit {
   }
 
   CreateprodutoFornecedor(): void {
-    this.produtoFornecedorService.create(this.produtoFornecedor).subscribe(() => {
-      this.produtoFornecedorService.ShowOMessage('produtoFornecedor criado!')
+    this.ProdutoFornecedorService.create(this.produtoFornecedor).subscribe(() => {
+      this.ProdutoFornecedorService.ShowOMessage('produtoFornecedor criado!')
       this.router.navigate(['/produtoFornecedor'])
 
     })

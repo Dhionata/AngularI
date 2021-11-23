@@ -1,4 +1,4 @@
-import { cliente } from './../../cliente/cliente.model';
+import { Cliente } from './../../cliente/cliente.model';
 import { TelefoneCliente } from '../telefoneCliente.model';
 import { TelefoneClienteService } from '../telefoneCliente.service';
 import { Component, OnInit } from '@angular/core';
@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class TelefoneClienteCreateComponent implements OnInit {
 
   telefoneCliente: TelefoneCliente = {
-    cliente: cliente,
+    cliente: Cliente,
     numero: ""
 
   }

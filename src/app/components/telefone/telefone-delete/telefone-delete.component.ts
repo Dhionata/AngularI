@@ -25,7 +25,7 @@ export class TelefoneDeleteComponent implements OnInit {
   }
 
   deleteTelefone(): void {
-    this.TelefoneService.delete(this.Telefone.id!).subscribe(() => {
+    this.TelefoneService.delete(this.Telefone).subscribe(() => {
       this.TelefoneService.ShowOMessage('Telefone Excluido com sucesso')
       this.router.navigate(['/Telefone'])
     })

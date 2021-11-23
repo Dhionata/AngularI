@@ -1,6 +1,6 @@
 import { NgModule, LOCALE_ID, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,7 +18,7 @@ import { NavComponent } from './components/produto/nav/nav.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
-import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import { HomeComponent } from './views/home/home.component';
 
 import { MatButtonModule } from '@angular/material/button';
@@ -31,7 +31,7 @@ import { MatInputModule } from '@angular/material/input';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSortModule } from '@angular/material/sort';
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -106,6 +106,11 @@ import { AuthenticationComponent } from './components/login/authentication/authe
 /* import { LoginComponent } from './components/login/singin/login.component'; */
 
 
+<<<<<<< HEAD
+=======
+registerLocaleData(localePt)
+
+>>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
 @NgModule({
   declarations: [
     AppComponent,
@@ -170,8 +175,13 @@ import { AuthenticationComponent } from './components/login/authentication/authe
     pedidoComponent,
     pedidoCreateComponent,
     FormaPagamentoComponent,
+<<<<<<< HEAD
     MapaComponent,
     AuthenticationComponent
+=======
+    LoginComponent,
+    MapaComponent,
+>>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
 
   ],
 

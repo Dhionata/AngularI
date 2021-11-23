@@ -1,7 +1,7 @@
-import { pedidoService } from '../pedido.service';
+import { PedidoService } from '../pedido.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { pedido } from '../pedido.model';
+import { Pedido } from '../pedido.model';
 
 @Component({
   selector: 'app-pedido-update',
@@ -10,22 +10,22 @@ import { pedido } from '../pedido.model';
 })
 export class pedidoUpdateComponent implements OnInit {
 
-  pedido!: pedido;
+  pedido!: Pedido;
 
-  constructor(private pedidoService: pedidoService,
+  constructor(private PedidoService: PedidoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.pedidoService.findById(id!).subscribe(pedido =>
+    this.PedidoService.findById(id!).subscribe(pedido =>
       this.pedido = pedido)
   }
 
   updatepedido(): void {
-    this.pedidoService.update(this.pedido).subscribe(() => {
-      this.pedidoService.ShowOMessage('pedido atualizado com sucesso')
+    this.PedidoService.update(this.pedido).subscribe(() => {
+      this.PedidoService.ShowOMessage('pedido atualizado com sucesso')
       this.router.navigate(["/pedido"])
     })
 

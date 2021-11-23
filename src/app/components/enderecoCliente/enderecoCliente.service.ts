@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { enderecoCliente } from './enderecoCliente.model';
+import { EnderecoCliente } from './enderecoCliente.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,40 @@ export class EnderecoClienteService {
     })
   }
 
-  create(enderecoCliente: enderecoCliente): Observable<enderecoCliente> {
-    return this.http.post<enderecoCliente>(this.baseUrl + "/Adicionar/", enderecoCliente).pipe(
+  create(enderecoCliente: EnderecoCliente): Observable<EnderecoCliente> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<EnderecoCliente>(url, enderecoCliente).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<enderecoCliente[]> {
-    return this.http.get<enderecoCliente[]>(this.baseUrl).pipe(
+  read(): Observable<EnderecoCliente[]> {
+    return this.http.get<EnderecoCliente[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<enderecoCliente> {
+  findById(id: string): Observable<EnderecoCliente> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<enderecoCliente>(url)
-  }
-
-  update(enderecoCliente: enderecoCliente): Observable<enderecoCliente> {
-    const url = `${this.baseUrl}/${enderecoCliente.id}`
-    return this.http.put<enderecoCliente>(url, enderecoCliente).pipe(
+    return this.http.get<EnderecoCliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<enderecoCliente> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<enderecoCliente>(url).pipe(
+  update(enderecoCliente: EnderecoCliente): Observable<EnderecoCliente> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<EnderecoCliente>(url, enderecoCliente).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(enderecoCliente: EnderecoCliente): Observable<EnderecoCliente> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<EnderecoCliente>(url, { body: enderecoCliente }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

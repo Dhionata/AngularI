@@ -1,5 +1,5 @@
 import { EnderecoFornecedorService } from '../enderecoFornecedor.service';
-import { enderecoFornecedor } from '../enderecoFornecedor.model';
+import { EnderecoFornecedor } from '../enderecoFornecedor.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnderecoFornecedorlerComponent implements OnInit {
 
-  enderecoFornecedor!: enderecoFornecedor[]
+  enderecoFornecedor!: EnderecoFornecedor[]
   displayedColumns = ['id', 'enderecoFornecedor', 'actions']
 
   constructor(private EnderecoFornecedorService: EnderecoFornecedorService) { }

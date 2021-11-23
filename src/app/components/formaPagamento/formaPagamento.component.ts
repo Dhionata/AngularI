@@ -1,4 +1,4 @@
-import { formaPagamento } from './formaPagamento.model';
+import { FormaPagamento } from './formaPagamento.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

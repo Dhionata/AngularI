@@ -40,20 +40,23 @@ export class TelefoneClienteService {
 
   findById(id: string): Observable<TelefoneCliente> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<TelefoneCliente>(url)
-  }
-
-  update(TelefoneCliente: TelefoneCliente): Observable<TelefoneCliente> {
-    const url = `${this.baseUrl}/${TelefoneCliente.id}`
-    return this.http.put<TelefoneCliente>(url, TelefoneCliente).pipe(
+    return this.http.get<TelefoneCliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<TelefoneCliente> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<TelefoneCliente>(url).pipe(
+  update(TelefoneCliente: TelefoneCliente): Observable<TelefoneCliente> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<TelefoneCliente>(url, TelefoneCliente).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(telefoneCliente: TelefoneCliente): Observable<TelefoneCliente> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<TelefoneCliente>(url, { body: telefoneCliente }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

@@ -1,5 +1,5 @@
 import { catchError, map } from 'rxjs/operators';
-import { avaliacao } from './avaliacao.model';
+import { Avaliacao } from './avaliacao.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -24,36 +24,40 @@ export class AvaliacaoService {
     })
   }
 
-  create(avaliacao: avaliacao): Observable<avaliacao> {
-    return this.http.post<avaliacao>(this.baseUrl + "/Adicionar/", avaliacao).pipe(
+  create(avaliacao: Avaliacao): Observable<Avaliacao> {
+    const url = `${this.baseUrl}/Adicionar/`
+    return this.http.post<Avaliacao>(url, avaliacao).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  read(): Observable<avaliacao[]> {
-    return this.http.get<avaliacao[]>(this.baseUrl).pipe(
+  read(): Observable<Avaliacao[]> {
+    return this.http.get<Avaliacao[]>(this.baseUrl).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  findById(id: string): Observable<avaliacao> {
+  findById(id: string): Observable<Avaliacao> {
     const url = `${this.baseUrl}/${id}`
-    return this.http.get<avaliacao>(url)
-  }
-
-  update(avaliacao: avaliacao): Observable<avaliacao> {
-    const url = `${this.baseUrl}/${avaliacao.id}`
-    return this.http.put<avaliacao>(url, avaliacao).pipe(
+    return this.http.get<Avaliacao>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
   }
 
-  delete(id: number): Observable<avaliacao> {
-    const url = `${this.baseUrl}/${id}`
-    return this.http.delete<avaliacao>(url).pipe(
+  update(avaliacao: Avaliacao): Observable<Avaliacao> {
+    const url = `${this.baseUrl}/Atualizar/`
+    return this.http.patch<Avaliacao>(url, avaliacao).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+  delete(avaliacao: Avaliacao): Observable<Avaliacao> {
+    const url = `${this.baseUrl}/Remover/`
+    return this.http.delete<Avaliacao>(url, { body: avaliacao }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

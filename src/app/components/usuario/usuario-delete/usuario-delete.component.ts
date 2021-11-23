@@ -10,7 +10,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class UsuarioDeleteComponent implements OnInit {
 
-  usuario!: Usuario;
+  usuario: Usuario = {
+    senha: '',
+    email: '',
+    cnpjCpf: '',
+    nome: ''
+  }
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,
@@ -24,7 +29,7 @@ export class UsuarioDeleteComponent implements OnInit {
     )
   }
 
-  deleteusuario(): void {
+  deleteUsuario(): void {
     this.UsuarioService.delete(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario Excluido com sucesso')
       this.router.navigate(['/usuario'])

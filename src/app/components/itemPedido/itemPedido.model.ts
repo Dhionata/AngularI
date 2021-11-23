@@ -1,4 +1,4 @@
-export interface itemPedido {
+export interface ItemPedido {
   id?: number;
   nome: string
   email: string

@@ -41,8 +41,8 @@ export class ProdutoService {
 
   //params para definir os parâmetros do get()
   findById(id: string): Observable<Produto> {
-    const url = `${this.baseUrl}/BuscarById/`
-    return this.http.get<Produto>(url, { params: { "id": id } }).pipe(
+    const url = `${this.baseUrl}/BuscarById/${id}`
+    return this.http.get<Produto>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

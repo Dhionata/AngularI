@@ -1,5 +1,5 @@
 import { ClienteService } from '../cliente.service';
-import { cliente } from '../cliente.model';
+import { Cliente } from '../cliente.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientelerComponent implements OnInit {
 
-  clientes!: cliente[]
+  clientes!: Cliente[]
   displayedColumns = ['id','cnpjCpf','email','nome','senha','actions']
 
   constructor(private ClienteService: ClienteService) { }

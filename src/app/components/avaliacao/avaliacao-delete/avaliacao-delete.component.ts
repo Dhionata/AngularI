@@ -1,4 +1,4 @@
-import { avaliacao } from '../avaliacao.model';
+import { Avaliacao } from '../avaliacao.model';
 import { AvaliacaoService } from '../avaliacao.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AvaliacaoDeleteComponent implements OnInit {
 
-  avaliacao!: avaliacao
+  avaliacao!: Avaliacao
 
   constructor(private AvaliacaoService: AvaliacaoService,
     private router: Router,
@@ -25,7 +25,7 @@ export class AvaliacaoDeleteComponent implements OnInit {
   }
 
   deleteavaliacao(): void {
-    this.AvaliacaoService.delete(this.avaliacao.id!).subscribe(() => {
+    this.AvaliacaoService.delete(this.avaliacao).subscribe(() => {
       this.AvaliacaoService.ShowOMessage('avaliacao Excluido com sucesso')
       this.router.navigate(['/avaliacao'])
     })

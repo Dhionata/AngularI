@@ -10,11 +10,18 @@ import { Usuario } from '../usuario.model';
 })
 export class UsuarioUpdateComponent implements OnInit {
 
-  usuario!: Usuario;
+  botaoHabilitado: boolean = false;
+
+  usuario: Usuario = {
+    senha: '',
+    email: '',
+    cnpjCpf: '',
+    nome: ''
+  }
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
@@ -23,7 +30,7 @@ export class UsuarioUpdateComponent implements OnInit {
       this.usuario = usuario)
   }
 
-  updatecliente(): void {
+  updateUsuario(): void {
     this.UsuarioService.update(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
@@ -31,9 +38,17 @@ export class UsuarioUpdateComponent implements OnInit {
 
   }
 
+  desabilitar(): void {
+    console.log("tá entrando no desabilitar")
+    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.senha == '' || this.usuario.cnpjCpf == '') {
+      this.botaoHabilitado = false;
+    }
+    else {
+      this.botaoHabilitado = true;
+    }
+  }
+
   cancel(): void {
     this.router.navigate(['/usuario'])
   }
-
-
 }

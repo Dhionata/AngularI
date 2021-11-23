@@ -1,5 +1,5 @@
-import { cliente } from '../cliente/cliente.model';
-export class enderecoCliente {
+import { Cliente } from '../cliente/cliente.model';
+export class EnderecoCliente {
   id?: number
-  cliente!: cliente;
+  cliente!: Cliente;
 }

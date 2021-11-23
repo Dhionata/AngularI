@@ -1,7 +1,7 @@
 import {ItemPedidoService } from '../itemPedido.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { itemPedido } from '../itemPedido.model';
+import { ItemPedido } from '../itemPedido.model';
 
 @Component({
   selector: 'app-itemPedido-update',
@@ -10,7 +10,7 @@ import { itemPedido } from '../itemPedido.model';
 })
 export class ItemPedidoUpdateComponent implements OnInit {
 
-  itemPedido!: itemPedido;
+  itemPedido!: ItemPedido;
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router,
