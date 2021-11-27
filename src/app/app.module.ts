@@ -13,7 +13,7 @@ import { AgmCoreModule } from '@agm/core';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
-import { NavComponent } from './components/produto/nav/nav.component';
+import { NavComponent } from './views/home/nav/nav.component';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
