@@ -2,6 +2,21 @@
     <mat-card-title>Novo usuario</mat-card-title>
     <form (change)="desabilitar()">
         <mat-form-field>
+<<<<<<< HEAD
+            <input matInput placeholder="Nome" [(ngModel)]="Usuario.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="Usuario.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="Usuario.senha" password="password">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="Usuario.cnpjCpf" name="cnpjCpf">
+=======
             <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome" required>
         </mat-form-field>
 
@@ -15,11 +30,16 @@
 
         <mat-form-field>
             <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf" required>
+>>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
         </mat-form-field>
 
     </form>
 </mat-card>
+<<<<<<< HEAD
+<button mat-raised-button (click)="CreateUsuario()" color="primary">
+=======
 <button mat-raised-button (click)="createUsuario()" color="primary" type="submit" id="salvar" [disabled]="!botaoHabilitado">
+>>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
   Salvar
 </button>
 

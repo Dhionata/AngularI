@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/templates/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
 import { AgmCoreModule } from '@agm/core';
 
@@ -108,8 +107,8 @@ import { TipoUsuarioUpdateComponent } from './components/tipoUsuario/tipoUsuario
 import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario-delete/tipoUsuario-delete.component';
 import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
 import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario-criar/tipoUsuario-criar.component';
-
-registerLocaleData(localePt)
+import { AuthenticationComponent } from './components/login/authentication/authentication.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -175,6 +174,8 @@ registerLocaleData(localePt)
     PedidoComponent,
     PedidoCreateComponent,
     FormaPagamentoComponent,
+    MapaComponent,
+    AuthenticationComponent,
     LoginComponent,
     MapaComponent,
     TipoUsuarioCreateComponent,
@@ -207,12 +208,13 @@ registerLocaleData(localePt)
     MatBottomSheetModule,
     ReactiveFormsModule,
     BrowserModule,
+    LoginComponent,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'
     })
   ],
-  providers: [AuthService],
+  providers: [],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

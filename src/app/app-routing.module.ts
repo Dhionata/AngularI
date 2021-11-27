@@ -53,10 +53,16 @@ import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
+import { AuthenticationComponent } from './components/login/authentication/authentication.component';
 
 const routes: Routes = [{
   path: "",
   component: HomeComponent
+},
+
+{
+  path: "",
+  component: AuthenticationComponent
 },
 
 {
