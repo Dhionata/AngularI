@@ -28,9 +28,9 @@ import { FornecedorDeleteComponent } from './components/fornecedor/fornecedor-de
 import { FornecedorUpdateComponent } from './components/fornecedor/fornecedor-update/fornecedor-update.component';
 
 import { ProdutoFornecedorComponent } from './views/produtoFornecedor/produtoFornecedor.component';
-import { produtoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
-import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
-import { produtoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
+import { ProdutoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
+import { ProdutoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
+import { ProdutoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
 
 import { AvaliacaoComponent } from './views/avaliacao/avaliacao.component';
 import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar/avaliacao-criar.component';
@@ -47,10 +47,10 @@ import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedo
 import { EnderecoFornecedorDeleteComponent } from './components/enderecoFornecedor/enderecoFornecedor-delete/enderecoFornecedor-delete.component';
 import { EnderecoFornecedorUpdateComponent } from './components/enderecoFornecedor/enderecoFornecedor-update/enderecoFornecedor-update.component';
 
-import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
-import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
-import { pedidoComponent } from './views/pedido/pedido.component';
-import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
+import { PedidoComponent } from './views/pedido/pedido.component';
+import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
 
@@ -166,17 +166,17 @@ const routes: Routes = [{
 
 {
   path: "produtoFornecedor/create",
-  component: produtoFornecedorCreateComponent
+  component: ProdutoFornecedorCreateComponent
 },
 
 {
   path: "produtoFornecedor/update/:id",
-  component: produtoFornecedorUpdateComponent
+  component: ProdutoFornecedorUpdateComponent
 },
 
 {
   path: "produtoFornecedor/delete/:id",
-  component: produtoFornecedorDeleteComponent
+  component: ProdutoFornecedorDeleteComponent
 },
 {
   path: "avaliacao",
@@ -240,22 +240,22 @@ const routes: Routes = [{
 
 {
   path: "pedido",
-  component: pedidoComponent
+  component: PedidoComponent
 },
 
 {
   path: "pedido/create",
-  component: pedidoCreateComponent
+  component: PedidoCreateComponent
 },
 
 {
   path: "pedido/update/:id",
-  component: pedidoUpdateComponent
+  component: PedidoUpdateComponent
 },
 
 {
   path: "pedido/delete/:id",
-  component: pedidoDeleteComponent
+  component: PedidoDeleteComponent
 },
 
 {

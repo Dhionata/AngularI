@@ -8,7 +8,7 @@ import { Pedido } from '../pedido.model';
   templateUrl: './pedido-update.component.html',
   styleUrls: ['./pedido-update.component.scss']
 })
-export class pedidoUpdateComponent implements OnInit {
+export class PedidoUpdateComponent implements OnInit {
 
   pedido!: Pedido;
 

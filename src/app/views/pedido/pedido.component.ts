@@ -7,7 +7,7 @@ import { HeaderService } from 'src/app/components/templates/header/header.servic
   templateUrl: './pedido.component.html',
   styleUrls: ['./pedido.component.scss']
 })
-export class pedidoComponent implements OnInit {
+export class PedidoComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {

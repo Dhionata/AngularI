@@ -73,11 +73,11 @@ import { FornecedorlerComponent } from './components/fornecedor/fornecedor-ler/f
 import { FornecedorComponent } from './views/fornecedor/fornecedor.component';
 import { FornecedorCreateComponent } from './components/fornecedor/fornecedor-criar/fornecedor-criar.component';
 
-import { produtoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
-import { produtoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
-import { produtoFornecedorlerComponent } from './components/produtoFornecedor/produtoFornecedor-ler/produtoFornecedor-ler.component';
+import { ProdutoFornecedorUpdateComponent } from './components/produtoFornecedor/produtoFornecedor-update/produtoFornecedor-update.component';
+import { ProdutoFornecedorDeleteComponent } from './components/produtoFornecedor/produtoFornecedor-delete/produtoFornecedor-delete.component';
+import { ProdutoFornecedorlerComponent } from './components/produtoFornecedor/produtoFornecedor-ler/produtoFornecedor-ler.component';
 import { ProdutoFornecedorComponent } from './views/produtoFornecedor/produtoFornecedor.component';
-import { produtoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
+import { ProdutoFornecedorCreateComponent } from './components/produtoFornecedor/produtoFornecedor-criar/produtoFornecedor-criar.component';
 
 import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
 import { AvaliacaoDeleteComponent } from './components/avaliacao/avaliacao-delete/avaliacao-delete.component';
@@ -97,14 +97,17 @@ import { EnderecoFornecedorlerComponent } from './components/enderecoFornecedor/
 import { EnderecoFornecedorComponent } from './views/enderecoFornecedor/enderecoFornecedor.component';
 import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedor/enderecoFornecedor-criar/enderecoFornecedor-criar.component';
 
-import { pedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
-import { pedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
-import { pedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.component';
-import { pedidoComponent } from './views/pedido/pedido.component';
-import { pedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
+import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
+import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
+import { PedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.component';
+import { PedidoComponent } from './views/pedido/pedido.component';
+import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
 import { AuthService } from './components/login/auth.service';
-
+import { TipoUsuarioUpdateComponent } from './components/tipoUsuario/tipoUsuario-update/tipoUsuario-update.component';
+import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario-delete/tipoUsuario-delete.component';
+import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
+import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario-criar/tipoUsuario-criar.component';
 
 registerLocaleData(localePt)
 
@@ -146,10 +149,10 @@ registerLocaleData(localePt)
     FornecedorlerComponent,
     FornecedorUpdateComponent,
     FornecedorDeleteComponent,
-    produtoFornecedorCreateComponent,
-    produtoFornecedorlerComponent,
-    produtoFornecedorUpdateComponent,
-    produtoFornecedorDeleteComponent,
+    ProdutoFornecedorCreateComponent,
+    ProdutoFornecedorlerComponent,
+    ProdutoFornecedorUpdateComponent,
+    ProdutoFornecedorDeleteComponent,
     ProdutoFornecedorComponent,
     AvaliacaoCreateComponent,
     AvaliacaolerComponent,
@@ -166,14 +169,18 @@ registerLocaleData(localePt)
     EnderecoFornecedorUpdateComponent,
     EnderecoFornecedorDeleteComponent,
     EnderecoFornecedorComponent,
-    pedidoUpdateComponent,
-    pedidoDeleteComponent,
-    pedidoLerComponent,
-    pedidoComponent,
-    pedidoCreateComponent,
+    PedidoUpdateComponent,
+    PedidoDeleteComponent,
+    PedidoLerComponent,
+    PedidoComponent,
+    PedidoCreateComponent,
     FormaPagamentoComponent,
     LoginComponent,
     MapaComponent,
+    TipoUsuarioCreateComponent,
+    TipoUsuarioLerComponent,
+    TipoUsuarioUpdateComponent,
+    TipoUsuarioDeleteComponent,
 
   ],
 

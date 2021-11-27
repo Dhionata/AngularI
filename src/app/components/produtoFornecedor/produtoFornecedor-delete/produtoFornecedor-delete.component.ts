@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './produtoFornecedor-delete.component.html',
   styleUrls: ['./produtoFornecedor-delete.component.scss']
 })
-export class produtoFornecedorDeleteComponent implements OnInit {
+export class ProdutoFornecedorDeleteComponent implements OnInit {
 
   produtoFornecedor!: ProdutoFornecedor;
 

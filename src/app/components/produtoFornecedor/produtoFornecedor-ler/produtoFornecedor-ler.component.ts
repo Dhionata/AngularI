@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './produtoFornecedor-ler.component.html',
   styleUrls: ['./produtoFornecedor-ler.component.scss']
 })
-export class produtoFornecedorlerComponent implements OnInit {
+export class ProdutoFornecedorlerComponent implements OnInit {
 
   produtoFornecedor!: ProdutoFornecedor[]
   displayedColumns = ['id', 'preco' , 'action']

@@ -8,7 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './pedido-delete.component.html',
   styleUrls: ['./pedido-delete.component.scss']
 })
-export class pedidoDeleteComponent implements OnInit {
+export class PedidoDeleteComponent implements OnInit {
 
   pedido!: Pedido;
 

@@ -8,7 +8,7 @@ import { ProdutoFornecedor } from '../produtoFornecedor.model';
   templateUrl: './produtoFornecedor-update.component.html',
   styleUrls: ['./produtoFornecedor-update.component.scss']
 })
-export class produtoFornecedorUpdateComponent implements OnInit {
+export class ProdutoFornecedorUpdateComponent implements OnInit {
 
   produtoFornecedor!: ProdutoFornecedor;
 

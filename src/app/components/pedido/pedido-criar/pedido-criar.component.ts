@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './pedido-criar.component.html',
   styleUrls: ['./pedido-criar.component.scss']
 })
-export class pedidoCreateComponent implements OnInit {
+export class PedidoCreateComponent implements OnInit {
 
   pedido: Pedido = {
 

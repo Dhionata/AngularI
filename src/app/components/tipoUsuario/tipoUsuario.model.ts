@@ -1,0 +1,3 @@
+export enum TipoUsuario {
+  ADMINISTRADOR, FORNECEDOR, CLIENTE, VISITANTE
+}

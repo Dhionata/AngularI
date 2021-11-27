@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './pedido-ler.component.html',
   styleUrls: ['./pedido-ler.component.scss']
 })
-export class pedidoLerComponent implements OnInit {
+export class PedidoLerComponent implements OnInit {
 
   pedido!: Pedido[]
   displayedColumns = ['id', 'preco' , 'action']
