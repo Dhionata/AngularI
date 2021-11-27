@@ -13,14 +13,14 @@ import { Usuario } from '../usuario/usuario.model';
     './vendor/animate/animate.css', './fonts/font-awesome-4.7.0/css/font-awesome.min.css',
     './fonts/Linearicons-Free-v1.0.0/icon-font.min.css']
 })
+
 export class LoginComponent implements OnInit {
+
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+
   }
   formBuilder: any;
   form: any;
-
-  /* private usuario: usuario new usuario(); */
 
   constructor(privateformBuilder: FormBuilder, private AuthService: AuthService) {
 
@@ -28,23 +28,8 @@ export class LoginComponent implements OnInit {
     senha: ''
 
   }
-  /*   ngOnInit(): void {
-      throw new Error('Method not implemented.');
-    }
-   */
+
   fazerLogin() {
-    
+
   }
-  /* criarForm(){
-
-      this.form = this.formBuilder.group({
-
-          email: [''],
-
-          senha: ['']
-
-      })
-
-  } */
-
 }

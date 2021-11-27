@@ -110,6 +110,8 @@ import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario
 import { AuthenticationComponent } from './components/login/authentication/authentication.component';
 import { LoginComponent } from './components/login/login.component';
 
+registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -176,8 +178,6 @@ import { LoginComponent } from './components/login/login.component';
     FormaPagamentoComponent,
     MapaComponent,
     AuthenticationComponent,
-    LoginComponent,
-    MapaComponent,
     TipoUsuarioCreateComponent,
     TipoUsuarioLerComponent,
     TipoUsuarioUpdateComponent,
@@ -208,7 +208,6 @@ import { LoginComponent } from './components/login/login.component';
     MatBottomSheetModule,
     ReactiveFormsModule,
     BrowserModule,
-    LoginComponent,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'

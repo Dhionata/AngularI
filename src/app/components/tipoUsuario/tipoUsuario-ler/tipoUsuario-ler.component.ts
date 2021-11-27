@@ -1,5 +1,5 @@
 import { TipoUsuarioService } from '../tipoUsuario.service';
-import { TipoUsuario } from '../TipoUsuario.model';
+import { TipoUsuario } from '../tipoUsuario.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoUsuarioLerComponent implements OnInit {
 
-  TipoUsuarios!: TipoUsuario[]
-  displayedColumns = ['id', 'nome', 'preco', 'quantidade', 'actions']
+  tipoUsuarios!: TipoUsuario[]
+  //displayedColumns = ['id', 'nome', 'preco', 'quantidade', 'actions']
 
-  constructor(private TipoUsuarioService: TipoUsuarioService) { }
+  constructor(private tipoUsuarioService: TipoUsuarioService) { }
 
   ngOnInit(): void {
-    this.TipoUsuarioService.read().subscribe(TipoUsuarios => {
-      this.TipoUsuarios = TipoUsuarios
-      console.log(TipoUsuarios);
+    this.tipoUsuarioService.read().subscribe(tipoUsuarios => {
+      this.tipoUsuarios = tipoUsuarios
+      console.log(tipoUsuarios);
 
     })
   }

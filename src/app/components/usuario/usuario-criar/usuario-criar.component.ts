@@ -2,6 +2,7 @@ import { Usuario } from '../usuario.model';
 import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-usuario-criar',
@@ -9,18 +10,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./usuario-criar.component.scss']
 })
 export class UsuarioCreateComponent implements OnInit {
-
-<<<<<<< HEAD
-  Usuario: Usuario = {
-=======
   botaoHabilitado: boolean = false;
 
   usuario: Usuario = {
->>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
     nome: '',
     email: '',
     senha: '',
     cnpjCpf: '',
+    tipoUsuario: TipoUsuario.CLIENTE,
   }
 
   constructor(private UsuarioService: UsuarioService,
@@ -32,11 +29,17 @@ export class UsuarioCreateComponent implements OnInit {
 
   }
 
-<<<<<<< HEAD
   CreateUsuario(): void {
-    this.UsuarioService.create(this.Usuario).subscribe(() => {
-=======
-  //listener
+    this.UsuarioService.create(this.usuario).subscribe(() => {
+      this.UsuarioService.ShowOMessage('usuario criado!')
+      this.router.navigate(['/usuario'])
+    })
+
+  }
+  cancel(): void {
+    this.router.navigate(['/usuario'])
+  }
+
   desabilitar(): void {
     console.log("tá entrando no desabilitar")
     if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.senha == '' || this.usuario.cnpjCpf == '') {
@@ -45,19 +48,6 @@ export class UsuarioCreateComponent implements OnInit {
     else {
       this.botaoHabilitado = true;
     }
-  }
-
-  createUsuario(): void {
-    this.botaoHabilitado = false;
-    this.UsuarioService.create(this.usuario).subscribe(() => {
->>>>>>> c9463cebbecd55113364c923405bc1fd632f05d5
-      this.UsuarioService.ShowOMessage('usuario criado!')
-      this.router.navigate(['/usuario'])
-    })
-
-  }
-  cancel(): void {
-    this.router.navigate(['/usuario'])
   }
 
 

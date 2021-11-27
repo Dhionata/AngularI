@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class TipoUsuarioCreateComponent implements OnInit {
 
-  TipoUsuario!: TipoUsuario;
+  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router) { }
@@ -20,7 +20,7 @@ export class TipoUsuarioCreateComponent implements OnInit {
   }
 
   CreateTipoUsuario(): void {
-    this.TipoUsuarioService.create(this.TipoUsuario).subscribe(() => {
+    this.TipoUsuarioService.create(this.tipoUsuario).subscribe(() => {
       this.TipoUsuarioService.ShowOMessage('TipoUsuario criado!')
       this.router.navigate(['/TipoUsuario'])
 

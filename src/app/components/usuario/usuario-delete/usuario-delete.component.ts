@@ -2,6 +2,7 @@ import { Usuario } from '../usuario.model';
 import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-usuario-delete',
@@ -14,7 +15,8 @@ export class UsuarioDeleteComponent implements OnInit {
     senha: '',
     email: '',
     cnpjCpf: '',
-    nome: ''
+    nome: '',
+    tipoUsuario: TipoUsuario.CLIENTE,
   }
 
   constructor(private UsuarioService: UsuarioService,

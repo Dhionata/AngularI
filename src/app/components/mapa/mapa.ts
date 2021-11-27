@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./mapa.css']
 })
 export class MapaComponent {
-  texto : string = 'Chupa sociedade';
-  lat: number = -16.8360435;
-  lng: number = -49.2509255;
-  zoom: number = 15;
+  texto : string = 'Mapa';
+  lat: number = 0;
+  lng: number = 0;
+  zoom: number = 5;
 }

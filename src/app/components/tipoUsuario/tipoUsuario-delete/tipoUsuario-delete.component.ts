@@ -1,5 +1,5 @@
 import { TipoUsuarioService } from '../tipoUsuario.service';
-import { TipoUsuario } from '../TipoUsuario.model';
+import { TipoUsuario } from '../tipoUsuario.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TipoUsuarioDeleteComponent implements OnInit {
 
-  TipoUsuario!: TipoUsuario;
+  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router,
@@ -20,12 +20,12 @@ export class TipoUsuarioDeleteComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.TipoUsuarioService.findById(id!).subscribe(TipoUsuario =>
-      this.TipoUsuario = TipoUsuario
+      this.tipoUsuario = TipoUsuario
     )
   }
 
   deleteTipoUsuario(): void {
-    this.TipoUsuarioService.delete(this.TipoUsuario).subscribe(() => {
+    this.TipoUsuarioService.delete(this.tipoUsuario).subscribe(() => {
       this.TipoUsuarioService.ShowOMessage('TipoUsuario Excluido com sucesso')
       this.router.navigate(['/TipoUsuario'])
     })

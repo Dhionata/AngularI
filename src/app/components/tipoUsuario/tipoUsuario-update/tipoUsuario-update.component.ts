@@ -1,7 +1,7 @@
 import { TipoUsuarioService } from '../tipoUsuario.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TipoUsuario } from '../TipoUsuario.model';
+import { TipoUsuario } from '../tipoUsuario.model';
 
 @Component({
   selector: 'app-TipoUsuario-update',
@@ -10,7 +10,7 @@ import { TipoUsuario } from '../TipoUsuario.model';
 })
 export class TipoUsuarioUpdateComponent implements OnInit {
 
-  TipoUsuario!: TipoUsuario;
+  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router,
@@ -20,11 +20,11 @@ export class TipoUsuarioUpdateComponent implements OnInit {
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
     this.TipoUsuarioService.findById(id!).subscribe(TipoUsuario =>
-      this.TipoUsuario = TipoUsuario)
+      this.tipoUsuario = TipoUsuario)
   }
 
   updateTipoUsuario(): void {
-    this.TipoUsuarioService.update(this.TipoUsuario).subscribe(() => {
+    this.TipoUsuarioService.update(this.tipoUsuario).subscribe(() => {
       this.TipoUsuarioService.ShowOMessage('TipoUsuario atualizado com sucesso')
       this.router.navigate(["/TipoUsuario"])
     })

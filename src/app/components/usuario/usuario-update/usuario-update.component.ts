@@ -2,6 +2,7 @@ import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from '../usuario.model';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-usuario-update',
@@ -16,7 +17,8 @@ export class UsuarioUpdateComponent implements OnInit {
     senha: '',
     email: '',
     cnpjCpf: '',
-    nome: ''
+    nome: '',
+    tipoUsuario: TipoUsuario.CLIENTE,
   }
 
   constructor(private UsuarioService: UsuarioService,

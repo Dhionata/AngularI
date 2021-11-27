@@ -2,17 +2,8 @@
     <mat-card-title>Novo TipoUsuario</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="TipoUsuario.nome" name="nome">
+            <input matInput placeholder="Nome" [(ngModel)]="tipoUsuario" name="nome">
         </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="TipoUsuario.preco" name="preco">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="TipoUsuario.quantidade" name="quantidade">
-        </mat-form-field>
-
     </form>
 </mat-card>
 <button mat-raised-button (click)="CreateTipoUsuario()" color="primary">
