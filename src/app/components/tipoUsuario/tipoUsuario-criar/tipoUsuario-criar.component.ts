@@ -1,4 +1,4 @@
-import { TipoUsuario } from '../TipoUsuario.model';
+import { TipoUsuario } from '../tipoUsuario.model';
 import { TipoUsuarioService } from '../tipoUsuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
