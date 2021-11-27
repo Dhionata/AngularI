@@ -1,6 +1,9 @@
 <mat-card class="home mat-elevation-z4">
     <mat-card-title class="title">
         Bem Vindo
+        <mat-card-subtitle class="subtitle">
+          Sistema Delivery Web
+      </mat-card-subtitle>
         <section>
             <div class="example-button-row">
                 <a href="/login">
@@ -15,13 +18,12 @@
             </div>
         </section>
     </mat-card-title>
-    <mat-card-subtitle class="subtitle">
-        Sistema Delivery Web
-    </mat-card-subtitle>
-    <mat-toolbar>
-        <span>Nome do Fornecedor</span>
-    </mat-toolbar>
-    <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
+
+    <div class="example-button-row">
+      <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
+  </div>
+
+ <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
         <button mat-menu-item>lista produtos</button>
     </mat-menu>
@@ -42,7 +44,52 @@
     </mat-menu>
 
 </mat-card>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile> <img src = "assets\img\imagem teste1.png" height="100%" width="100%" ></mat-grid-tile>
+  <mat-grid-tile> <img src = "assets\img\imagem teste2.jpg" height="100%" width="100%" ></mat-grid-tile>
+  <mat-grid-tile> <img src = "assets\img\imagem teste3.jpg" height="100%" width="100%" ></mat-grid-tile>
+  <mat-grid-tile> <img src = "assets\img\imagem teste4.jpg" height="100%" width="100%" ></mat-grid-tile>
+</mat-grid-list>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Fornecedor nome</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src = "assets\img\imagem teste4.jpg" height="100%" width="100%" >
+  <mat-card-actions>
+    <!-- adicionar rota para pedido -->
+    <button mat-button> Comprar  </button>
+  </mat-card-actions>
+</mat-card>
 
-<div class="example-button-row">
-    <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-</div>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Fornecedor nome</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src = "assets\img\imagem teste1.jpg" height="100%" width="100%" >
+  <mat-card-actions>
+    <!-- adicionar rota para pedido -->
+    <button mat-button> Comprar  </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Fornecedor nome</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src = "assets\img\imagem teste2.jpg" height="100%" width="100%" >
+  <mat-card-actions>
+    <!-- adicionar rota para pedido -->
+    <button mat-button> Comprar  </button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Fornecedor nome</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src = "assets\img\imagem teste3.jpg" height="100%" width="100%" >
+  <mat-card-actions>
+    <!-- adicionar rota para pedido -->
+    <button mat-button> Comprar  </button>
+  </mat-card-actions>
+</mat-card>

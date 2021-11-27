@@ -102,7 +102,7 @@ import { PedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.co
 import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { FormaPagamentoComponent } from './components/formaPagamento/formaPagamento.component';
-import { AuthService } from './components/login/auth.service';
+
 import { TipoUsuarioUpdateComponent } from './components/tipoUsuario/tipoUsuario-update/tipoUsuario-update.component';
 import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario-delete/tipoUsuario-delete.component';
 import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
