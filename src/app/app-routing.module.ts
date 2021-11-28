@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
@@ -53,16 +53,27 @@ import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
-import { AuthenticationComponent } from './components/login/authentication/authentication.component';
+import { AuthGuard } from './components/login/shared/auth.guard';
+import { AuthenticationComponent } from './views/authentication/authentication.component';
+
 
 const routes: Routes = [{
-  path: "",
-  component: HomeComponent
-},
 
+  path: " ", component: HomeComponent,
+  children: [
+    {path: " ",  component: LoginComponent},
+  ],
+  canActivate: [AuthGuard]
+
+},
 {
-  path: "",
-  component: AuthenticationComponent
+  path: '',
+  component: AuthenticationComponent,
+  children: [
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
+    { path: 'login', component: LoginComponent },
+    { path: "usuario/create",component: UsuarioCreateComponent }
+  ]
 },
 
 {

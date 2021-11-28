@@ -107,7 +107,6 @@ import { TipoUsuarioUpdateComponent } from './components/tipoUsuario/tipoUsuario
 import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario-delete/tipoUsuario-delete.component';
 import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
 import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario-criar/tipoUsuario-criar.component';
-import { AuthenticationComponent } from './components/login/authentication/authentication.component';
 import { LoginComponent } from './components/login/login.component';
 
 registerLocaleData(localePt);
@@ -116,7 +115,6 @@ registerLocaleData(localePt);
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
     FooterComponent,
     NavComponent,
     HomeComponent,
@@ -177,7 +175,6 @@ registerLocaleData(localePt);
     PedidoCreateComponent,
     FormaPagamentoComponent,
     MapaComponent,
-    AuthenticationComponent,
     TipoUsuarioCreateComponent,
     TipoUsuarioLerComponent,
     TipoUsuarioUpdateComponent,
