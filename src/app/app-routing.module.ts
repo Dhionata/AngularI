@@ -37,36 +37,24 @@ import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar
 import { AvaliacaoDeleteComponent } from './components/avaliacao/avaliacao-delete/avaliacao-delete.component';
 import { AvaliacaoUpdateComponent } from './components/avaliacao/avaliacao-update/avaliacao-update.component';
 
-import { EnderecoClienteComponent } from './views/enderecoCliente/enderecoCliente.component';
-import { EnderecoClienteCreateComponent } from './components/enderecoCliente/enderecoCliente-criar/enderecoCliente-criar.component';
-import { EnderecoClienteDeleteComponent } from './components/enderecoCliente/enderecoCliente-delete/enderecoCliente-delete.component';
-import { EnderecoClienteUpdateComponent } from './components/enderecoCliente/enderecoCliente-update/enderecoCliente-update.component';
-
-import { EnderecoFornecedorComponent } from './views/enderecoFornecedor/enderecoFornecedor.component';
-import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedor/enderecoFornecedor-criar/enderecoFornecedor-criar.component';
-import { EnderecoFornecedorDeleteComponent } from './components/enderecoFornecedor/enderecoFornecedor-delete/enderecoFornecedor-delete.component';
-import { EnderecoFornecedorUpdateComponent } from './components/enderecoFornecedor/enderecoFornecedor-update/enderecoFornecedor-update.component';
-
 import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
 import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapaComponent } from './components/mapa/mapa';
-import { AuthGuard } from './components/login/shared/auth.guard';
+/* import { AuthGuard } from './components/login/shared/auth.guard'; */
 import { AuthenticationComponent } from './views/authentication/authentication.component';
 
 
 const routes: Routes = [{
 
   path: " ", component: HomeComponent,
-  children: [
-    {path: " ",  component: LoginComponent},
-  ],
-  canActivate: [AuthGuard]
+
+  /* canActivate: [AuthGuard] */
 
 },
-{
+/* {
   path: '',
   component: AuthenticationComponent,
   children: [
@@ -74,7 +62,7 @@ const routes: Routes = [{
     { path: 'login', component: LoginComponent },
     { path: "usuario/create",component: UsuarioCreateComponent }
   ]
-},
+}, */
 
 {
   path: "produto",
@@ -213,46 +201,6 @@ const routes: Routes = [{
 {
   path: "avaliacao/delete/:id",
   component: AvaliacaoDeleteComponent
-},
-
-{
-  path: "enderecoCliente",
-  component: EnderecoClienteComponent
-},
-
-{
-  path: "enderecoCliente/create",
-  component: EnderecoClienteCreateComponent
-},
-
-{
-  path: "enderecoCliente/update/:id",
-  component: EnderecoClienteUpdateComponent
-},
-
-{
-  path: "enderecoCliente/delete/:id",
-  component: EnderecoClienteDeleteComponent
-},
-
-{
-  path: "enderecoFornecedor",
-  component: EnderecoFornecedorComponent
-},
-
-{
-  path: "enderecoFornecedor/create",
-  component: EnderecoFornecedorCriarComponent
-},
-
-{
-  path: "enderecoFornecedor/update/:id",
-  component: EnderecoFornecedorUpdateComponent
-},
-
-{
-  path: "enderecoFornecedor/delete/:id",
-  component: EnderecoFornecedorDeleteComponent
 },
 
 {

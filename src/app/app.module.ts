@@ -11,6 +11,7 @@ import { MapaComponent } from './components/mapa/mapa';
 import { AgmCoreModule } from '@agm/core';
 
 
+
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { NavComponent } from './views/home/nav/nav.component';
@@ -84,18 +85,6 @@ import { AvaliacaolerComponent } from './components/avaliacao/avaliacao-ler/aval
 import { AvaliacaoComponent } from './views/avaliacao/avaliacao.component';
 import { AvaliacaoCreateComponent } from './components/avaliacao/avaliacao-criar/avaliacao-criar.component';
 
-import { EnderecoClienteUpdateComponent } from './components/enderecoCliente/enderecoCliente-update/enderecoCliente-update.component';
-import { EnderecoClienteDeleteComponent } from './components/enderecoCliente/enderecoCliente-delete/enderecoCliente-delete.component';
-import { EnderecoClientelerComponent } from './components/enderecoCliente/enderecoCliente-ler/enderecoCliente-ler.component';
-import { EnderecoClienteComponent } from './views/enderecoCliente/enderecoCliente.component';
-import { EnderecoClienteCreateComponent } from './components/enderecoCliente/enderecoCliente-criar/enderecoCliente-criar.component';
-
-import { EnderecoFornecedorUpdateComponent } from './components/enderecoFornecedor/enderecoFornecedor-update/enderecoFornecedor-update.component';
-import { EnderecoFornecedorDeleteComponent } from './components/enderecoFornecedor/enderecoFornecedor-delete/enderecoFornecedor-delete.component';
-import { EnderecoFornecedorlerComponent } from './components/enderecoFornecedor/enderecoFornecedor-ler/enderecoFornecedor-ler.component';
-import { EnderecoFornecedorComponent } from './views/enderecoFornecedor/enderecoFornecedor.component';
-import { EnderecoFornecedorCriarComponent } from './components/enderecoFornecedor/enderecoFornecedor-criar/enderecoFornecedor-criar.component';
-
 import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-update.component';
 import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { PedidoLerComponent } from './components/pedido/pedido-ler/pedido-ler.component';
@@ -158,16 +147,6 @@ registerLocaleData(localePt);
     AvaliacaoUpdateComponent,
     AvaliacaoDeleteComponent,
     AvaliacaoComponent,
-    EnderecoClienteCreateComponent,
-    EnderecoClientelerComponent,
-    EnderecoClienteUpdateComponent,
-    EnderecoClienteDeleteComponent,
-    EnderecoClienteComponent,
-    EnderecoFornecedorCriarComponent,
-    EnderecoFornecedorlerComponent,
-    EnderecoFornecedorUpdateComponent,
-    EnderecoFornecedorDeleteComponent,
-    EnderecoFornecedorComponent,
     PedidoUpdateComponent,
     PedidoDeleteComponent,
     PedidoLerComponent,

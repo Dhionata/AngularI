@@ -1,4 +1,4 @@
-import { AccountService } from './account.service';
+/* import { AccountService } from './account.service';
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 
@@ -21,3 +21,4 @@ export class AuthGuard implements CanActivate {
     }
   }
 }
+ */
