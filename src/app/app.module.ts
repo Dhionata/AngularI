@@ -96,7 +96,7 @@ import { TipoUsuarioUpdateComponent } from './components/tipoUsuario/tipoUsuario
 import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario-delete/tipoUsuario-delete.component';
 import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
 import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario-criar/tipoUsuario-criar.component';
-import { LoginComponent } from './components/login/login.component';
+/* import { LoginComponent } from './components/login/login.component'; */
 
 registerLocaleData(localePt);
 

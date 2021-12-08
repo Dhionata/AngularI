@@ -19,6 +19,8 @@ export class UsuarioUpdateComponent implements OnInit {
     cnpjCpf: '',
     nome: '',
     tipoUsuario: TipoUsuario.CLIENTE,
+    enderecos: [],
+    telefone: []
   }
 
   constructor(private UsuarioService: UsuarioService,

@@ -1,28 +1,23 @@
 <mat-card>
-    <mat-card-title>Novo usuario</mat-card-title>
-    <form (change)="desabilitar()">
-        <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
-        </mat-form-field>
+  <mat-card-title>Novo usuario</mat-card-title>
+  <form (change)="desabilitar()">
+    <mat-form-field>
+      <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" type="password" name="password">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf">
+    </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="email">
-        </mat-form-field>
+    <button mat-raised-button (click)="CreateUsuario()" color="primary">
+      Salvar
+    </button>
 
-        <mat-form-field>
-            <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" password="password">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf">
-        </mat-form-field>
-
-    </form>
-</mat-card>
-<button mat-raised-button (click)="CreateUsuario()" color="primary">
-  Salvar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-  Cancelar
-</button>
+    <button mat-raised-button (click)="cancel()">
+      Cancelar
+    </button>

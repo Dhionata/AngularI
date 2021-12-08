@@ -13,28 +13,21 @@ export class UsuarioCreateComponent implements OnInit {
   botaoHabilitado: boolean = false;
 
   usuario: Usuario = {
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
+    nome: '', email: '', senha: '', cnpjCpf: '',
     tipoUsuario: TipoUsuario.CLIENTE,
+    enderecos: [],
+    telefone: []
   }
-
   constructor(private UsuarioService: UsuarioService,
     private router: Router) {
-
   }
-
   ngOnInit(): void {
-
   }
-
   CreateUsuario(): void {
     this.UsuarioService.create(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('usuario criado!')
       this.router.navigate(['/usuario'])
     })
-
   }
   cancel(): void {
     this.router.navigate(['/usuario'])

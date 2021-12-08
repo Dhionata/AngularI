@@ -41,17 +41,15 @@ import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-
 import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
-import { LoginComponent } from './components/login/login.component';
+/* import { LoginComponent } from './components/login/login.component'; */
 import { MapaComponent } from './components/mapa/mapa';
 /* import { AuthGuard } from './components/login/shared/auth.guard'; */
-import { AuthenticationComponent } from './views/authentication/authentication.component';
+/* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
 
 
 const routes: Routes = [{
 
   path: " ", component: HomeComponent,
-
-  /* canActivate: [AuthGuard] */
 
 },
 /* {
@@ -223,10 +221,10 @@ const routes: Routes = [{
   component: PedidoDeleteComponent
 },
 
-{
+/* {
   path: "login",
   component: LoginComponent
-},
+}, */
 
 {
   path: "mapa",
