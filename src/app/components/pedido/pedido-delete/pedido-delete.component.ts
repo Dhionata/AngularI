@@ -2,6 +2,7 @@ import { PedidoService } from '../pedido.service';
 import { Pedido } from '../pedido.model';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-pedido-delete',
@@ -10,23 +11,27 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PedidoDeleteComponent implements OnInit {
 
+
   pedido!: Pedido;
 
-  constructor(private PedidoService: PedidoService,
+  preco!: Observable<number>;
+
+  constructor(private pedidoService: PedidoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.PedidoService.findById(id!).subscribe(pedido =>
+    this.pedidoService.findById(id!).subscribe(pedido =>
       this.pedido = pedido
     )
+    this.preco = this.pedidoService.valorTotal(this.pedido.id!)
   }
 
-  deleteprodutoFornecedor(): void {
-    this.PedidoService.delete(this.pedido).subscribe(() => {
-      this.PedidoService.ShowOMessage('pedido Excluido com sucesso')
+  deletePedido(): void {
+    this.pedidoService.delete(this.pedido).subscribe(() => {
+      this.pedidoService.ShowOMessage('pedido Excluido com sucesso')
       this.router.navigate(['/pedido'])
     })
 

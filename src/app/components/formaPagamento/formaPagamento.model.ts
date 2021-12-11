@@ -1,3 +1,3 @@
 export enum FormaPagamento {
- Debito, Credito, Parcelado, Vista, Boleto
+    DEBITO, CREDITO, PARCELADO, VISTA, BOLETO
 }

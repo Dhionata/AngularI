@@ -2,24 +2,19 @@
     <mat-card-title>Alterar itemPedido</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="itemPedido.nome" name="nome">
+            <input matInput placeholder="Nome" [(ngModel)]="itemPedido.pedido" name="pedido">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="E-mail" [(ngModel)]="itemPedido.email" name="email">
+            <input matInput placeholder="E-mail" [(ngModel)]="itemPedido.produto" name="produto">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="itemPedido.cnpjCpf" name="cnpjCpf">
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="itemPedido.quantidade" name="quantidade">
         </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="senha" [(ngModel)]="itemPedido.senha" name="senha">
-        </mat-form-field>
-
     </form>
 </mat-card>
-<button mat-raised-button (click)="updatecliente()" color="primary">
+<button mat-raised-button (click)="updateItemPedido()" color="primary">
 Atualizar
 </button>
 

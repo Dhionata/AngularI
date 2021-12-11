@@ -1,7 +1,3 @@
-export interface Cliente {
-  id?: number;
-  nome: string
-  email: string
-  senha: string
-  cnpjCpf: number
-}
+import { Usuario } from "../usuario/usuario.model";
+
+export interface Cliente extends Usuario { }

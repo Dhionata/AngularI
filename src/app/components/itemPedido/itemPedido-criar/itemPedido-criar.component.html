@@ -2,28 +2,15 @@
     <mat-card-title>Novo itemPedido</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-            [(ngModel)] = "itemPedido.nome" name= "nome">
+            <input matInput placeholder="Produto" [(ngModel)]="itemPedido.produto" name="produto">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder="Email"
-          [(ngModel)] = "itemPedido.email" name = "email">
-      </mat-form-field>
-
-      <mat-form-field>
-        <input matInput placeholder="Senha"
-        [(ngModel)] = "itemPedido.senha" name = "senha">
-    </mat-form-field>
-
-      <mat-form-field>
-        <input matInput placeholder="Cnpj/Cpf"
-        [(ngModel)] = "itemPedido.cnpjCpf" name = "cnpjCpf">
-    </mat-form-field>
-
+            <input matInput placeholder="Quantidade" [(ngModel)]="itemPedido.quantidade" name="quantidade">
+        </mat-form-field>
     </form>
 </mat-card>
-<button mat-raised-button (click)="Createcliente()" color="primary">
+<button mat-raised-button (click)="createItemPedido()" color="primary">
   Salvar
 </button>
 

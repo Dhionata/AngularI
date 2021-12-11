@@ -23,7 +23,7 @@ export class AvaliacaoUpdateComponent implements OnInit {
       this.avaliacao = avaliacao)
   }
 
-  updateavaliacao(): void {
+  updateAvaliacao(): void {
     this.AvaliacaoService.update(this.avaliacao).subscribe(() => {
       this.AvaliacaoService.ShowOMessage('avaliacao atualizado com sucesso')
       this.router.navigate(["/avaliacao"])

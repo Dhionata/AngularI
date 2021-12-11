@@ -2,28 +2,24 @@
     <mat-card-title>Novo cliente</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome"
-            [(ngModel)] = "cliente.nome" name= "nome">
+            <input matInput placeholder="Nome" [(ngModel)]="cliente.nome" name="nome">
         </mat-form-field>
 
         <mat-form-field>
-          <input matInput placeholder="Email"
-          [(ngModel)] = "cliente.email" name = "email">
-      </mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="cliente.email" name="email">
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Senha"
-        [(ngModel)] = "cliente.senha" name = "senha">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="cliente.senha" name="senha">
+        </mat-form-field>
 
-      <mat-form-field>
-        <input matInput placeholder="Cnpj/Cpf"
-        [(ngModel)] = "cliente.cnpjCpf" name = "cnpjCpf">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="cliente.cnpjCpf" name="cnpjCpf">
+        </mat-form-field>
 
     </form>
 </mat-card>
-<button mat-raised-button (click)="Createcliente()" color="primary">
+<button mat-raised-button (click)="createCliente()" color="primary">
   Salvar
 </button>
 

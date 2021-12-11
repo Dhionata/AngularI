@@ -63,6 +63,14 @@ export class PedidoService {
     )
   }
 
+  valorTotal(id: number): Observable<number> {
+    const url = `${this.baseUrl}/ValorTotal/${id}`
+    return this.http.get<number>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
     console.log(e)
     this.ShowOMessage('Ocorreu um erro!', true)

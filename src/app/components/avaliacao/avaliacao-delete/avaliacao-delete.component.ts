@@ -24,7 +24,7 @@ export class AvaliacaoDeleteComponent implements OnInit {
     )
   }
 
-  deleteavaliacao(): void {
+  deleteAvaliacao(): void {
     this.AvaliacaoService.delete(this.avaliacao).subscribe(() => {
       this.AvaliacaoService.ShowOMessage('avaliacao Excluido com sucesso')
       this.router.navigate(['/avaliacao'])

@@ -18,7 +18,8 @@ export class UsuarioDeleteComponent implements OnInit {
     nome: '',
     tipoUsuario: TipoUsuario.CLIENTE,
     enderecos: [],
-    telefone: []
+    telefone: [],
+    pedidos: []
   }
 
   constructor(private UsuarioService: UsuarioService,

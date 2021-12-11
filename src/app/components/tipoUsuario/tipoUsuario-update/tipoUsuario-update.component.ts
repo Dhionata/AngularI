@@ -10,7 +10,7 @@ import { TipoUsuario } from '../tipoUsuario.model';
 })
 export class TipoUsuarioUpdateComponent implements OnInit {
 
-  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
+  tipoUsuario: TipoUsuario = TipoUsuario.VISITANTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router,

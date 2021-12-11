@@ -1,7 +1,8 @@
 import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-cliente-criar',
@@ -15,18 +16,22 @@ export class ClienteCreateComponent implements OnInit {
     email: null!,
     cnpjCpf: null!,
     senha: null!,
+    pedidos: [],
+    enderecos: [],
+    telefone: [],
+    tipoUsuario: TipoUsuario.CLIENTE
   }
 
-  constructor(private ClienteService: ClienteService,
+  constructor(private clienteService: ClienteService,
     private router: Router) { }
 
   ngOnInit(): void {
 
   }
 
-  Createcliente(): void {
-    this.ClienteService.create(this.cliente).subscribe(() => {
-      this.ClienteService.ShowOMessage('cliente criado!')
+  createCliente(): void {
+    this.clienteService.create(this.cliente).subscribe(() => {
+      this.clienteService.ShowOMessage('cliente criado!')
       this.router.navigate(['/cliente'])
 
     })

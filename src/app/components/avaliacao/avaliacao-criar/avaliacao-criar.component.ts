@@ -1,7 +1,7 @@
 import { Avaliacao } from '../avaliacao.model';
 import { AvaliacaoService } from '../avaliacao.service';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-avaliacao-criar',
@@ -11,12 +11,11 @@ import {Router} from '@angular/router';
 export class AvaliacaoCreateComponent implements OnInit {
 
   avaliacao: Avaliacao = {
-
-  nota: null!,
-  comentario: ' ',
-  data: null!
-}
-
+    nota: null!,
+    comentario: ' ',
+    data: null!,
+    pedido: null!,
+  }
 
   constructor(private AvaliacaoService: AvaliacaoService,
     private router: Router) { }
@@ -25,7 +24,7 @@ export class AvaliacaoCreateComponent implements OnInit {
 
   }
 
-  Createavaliacao(): void {
+  createAvaliacao(): void {
     this.AvaliacaoService.create(this.avaliacao).subscribe(() => {
       this.AvaliacaoService.ShowOMessage('avaliacao criado!')
       this.router.navigate(['/avaliacao'])
@@ -36,6 +35,4 @@ export class AvaliacaoCreateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/avaliacao'])
   }
-
-
 }

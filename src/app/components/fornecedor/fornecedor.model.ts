@@ -1,8 +1,7 @@
 import { ProdutoFornecedor } from "../produtoFornecedor/produtoFornecedor.model";
+import { Usuario } from "../usuario/usuario.model";
 
-export interface Fornecedor {
-  id?: number;
+export interface Fornecedor extends Usuario {
   descricao: String;
-  endereco: String;
   listaProdutos: Array<ProdutoFornecedor>
 }

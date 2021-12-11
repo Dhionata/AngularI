@@ -2,21 +2,16 @@
     <mat-card-title>Excluir pedido</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="id"
-            [value]= "pedido.id" name="id" disabled>
-        </mat-form-field>
-
-        <!-- <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [value]="pedido.preco" name="preco" disabled>
+            <input matInput placeholder="ID" [(ngModel)]="pedido.id" name="id" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Quantidade" [value]="pedido.quantidade" name="quantidade" disabled>
-        </mat-form-field> -->
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="preco" name="preco" disabled>
+        </mat-form-field>
 
     </form>
 </mat-card>
-<button mat-raised-button (click)="deleteprodutoFornecedor()" color="warn">
+<button mat-raised-button (click)="deletePedido()" color="warn">
 Excluir
 </button>
 

@@ -1,4 +1,4 @@
-import {ItemPedidoService } from '../itemPedido.service';
+import { ItemPedidoService } from '../itemPedido.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ItemPedido } from '../itemPedido.model';
@@ -23,7 +23,7 @@ export class ItemPedidoUpdateComponent implements OnInit {
       this.itemPedido = itemPedido)
   }
 
-  updatecliente(): void {
+  updateItemPedido(): void {
     this.ItemPedidoService.update(this.itemPedido).subscribe(() => {
       this.ItemPedidoService.ShowOMessage('itemPedido atualizado com sucesso')
       this.router.navigate(["/itemPedido"])

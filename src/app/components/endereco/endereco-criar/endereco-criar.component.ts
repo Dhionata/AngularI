@@ -29,7 +29,7 @@ export class EnderecoCreateComponent implements OnInit {
 
   }
 
-  CreateEndereco(): void {
+  createEndereco(): void {
     this.EnderecoService.create(this.endereco).subscribe(() => {
       this.EnderecoService.ShowOMessage('Endereco criado!')
       this.router.navigate(['/endereco'])

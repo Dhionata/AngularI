@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class TipoUsuarioLerComponent implements OnInit {
 
   tipoUsuarios!: TipoUsuario[]
-  //displayedColumns = ['id', 'nome', 'preco', 'quantidade', 'actions']
+  //displayedColumns = ['id']
 
   constructor(private tipoUsuarioService: TipoUsuarioService) { }
 

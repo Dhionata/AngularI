@@ -16,7 +16,8 @@ export class UsuarioCreateComponent implements OnInit {
     nome: '', email: '', senha: '', cnpjCpf: '',
     tipoUsuario: TipoUsuario.CLIENTE,
     enderecos: [],
-    telefone: []
+    telefone: [],
+    pedidos: []
   }
   constructor(private UsuarioService: UsuarioService,
     private router: Router) {

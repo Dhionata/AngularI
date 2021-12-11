@@ -11,21 +11,23 @@ import { Pedido } from '../pedido.model';
 export class PedidoUpdateComponent implements OnInit {
 
   pedido!: Pedido;
+  preco: any;
 
-  constructor(private PedidoService: PedidoService,
+  constructor(private pedidoService: PedidoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.PedidoService.findById(id!).subscribe(pedido =>
+    this.pedidoService.findById(id!).subscribe(pedido =>
       this.pedido = pedido)
+    this.preco = this.pedidoService.valorTotal(this.pedido.id!)
   }
 
-  updatepedido(): void {
-    this.PedidoService.update(this.pedido).subscribe(() => {
-      this.PedidoService.ShowOMessage('pedido atualizado com sucesso')
+  updatePedido(): void {
+    this.pedidoService.update(this.pedido).subscribe(() => {
+      this.pedidoService.ShowOMessage('pedido atualizado com sucesso')
       this.router.navigate(["/pedido"])
     })
 

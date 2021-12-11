@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class TipoUsuarioCreateComponent implements OnInit {
 
-  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
+  tipoUsuario: TipoUsuario = TipoUsuario.VISITANTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router) { }

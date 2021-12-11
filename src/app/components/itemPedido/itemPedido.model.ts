@@ -1,7 +1,9 @@
+import { Pedido } from "../pedido/pedido.model";
+import { Produto } from "../produto/produto.model";
+
 export interface ItemPedido {
   id?: number;
-  nome: string
-  email: string
-  senha: string
-  cnpjCpf: number
+  pedido: Pedido;
+  produto: Produto;
+  quantidade: number;
 }

@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TipoUsuarioDeleteComponent implements OnInit {
 
-  tipoUsuario: TipoUsuario = TipoUsuario.CLIENTE;
+  tipoUsuario: TipoUsuario = TipoUsuario.VISITANTE;
 
   constructor(private TipoUsuarioService: TipoUsuarioService,
     private router: Router,

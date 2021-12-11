@@ -11,27 +11,23 @@ import { Router } from '@angular/router';
 export class PedidoCreateComponent implements OnInit {
 
   pedido: Pedido = {
-
-  itensPedido: [],
-  cliente: null!,
-  formaPagamento: null!,
-  desconto: null!,
-  pago: null!,
-  entregue: null!,
-  data: null!
+    itensPedido: [],
+    cliente: null!,
+    formaPagamento: null!,
+    desconto: null!,
+    pago: null!,
+    entregue: null!,
+    data: null!,
+    avaliacao: null!
   }
-
 
   constructor(private PedidoService: PedidoService,
     private router: Router) { }
 
 
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-
-  }
-
-  CreatePedido(): void {
+  createPedido(): void {
     this.PedidoService.create(this.pedido).subscribe(() => {
       this.PedidoService.ShowOMessage('pedido criado!')
       this.router.navigate(['/pedido'])
@@ -39,6 +35,7 @@ export class PedidoCreateComponent implements OnInit {
     })
 
   }
+
   cancel(): void {
     this.router.navigate(['/pedido'])
   }

@@ -11,26 +11,19 @@ import { Router } from '@angular/router';
 export class ItemPedidoCreateComponent implements OnInit {
 
   itemPedido: ItemPedido = {
-    nome: " ",
-    email: " ",
-    senha: " ",
-    cnpjCpf: null!
+    pedido: null!,
+    produto: null!,
+    quantidade: 0
   }
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router) { }
 
   ngOnInit(): void {
-    /* itemPedido = {
-      id: '',
-      pedido: '',
-      produto: '',
-      quantidade: '' ,
-      avaliacao: ''
-    } */
+
   }
 
-  Createcliente(): void {
+  createItemPedido(): void {
     this.ItemPedidoService.create(this.itemPedido).subscribe(() => {
       this.ItemPedidoService.ShowOMessage('itemPedido criado!')
       this.router.navigate(['/itemPedido'])

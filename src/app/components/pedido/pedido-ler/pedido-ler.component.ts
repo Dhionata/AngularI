@@ -10,15 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class PedidoLerComponent implements OnInit {
 
   pedido!: Pedido[]
-  displayedColumns = ['id', 'preco' , 'action']
+  preco!: number
+  displayedColumns = ['id', 'cliente', 'action']
 
-  constructor(private PedidoService: PedidoService) { }
+  constructor(private pedidoService: PedidoService) { }
 
   ngOnInit(): void {
-    this.PedidoService.read().subscribe(pedido => {
+    this.pedidoService.read().subscribe(pedido => {
       this.pedido = pedido
       console.log(pedido);
-
     })
   }
 

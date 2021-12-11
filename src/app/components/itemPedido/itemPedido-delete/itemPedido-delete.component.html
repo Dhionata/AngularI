@@ -1,25 +1,22 @@
 <mat-card>
     <mat-card-title>Excluir itemPedido</mat-card-title>
     <form>
-        <mat-form-field>
-            <input matInput placeholder="Nome" [value]="itemPedido.nome" name="nome" disabled>
-        </mat-form-field>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Nome" [(ngModel)]="itemPedido.pedido" name="pedido" disabled>
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Email" [value]="itemPedido.email" name="email" disabled>
-        </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="E-mail" [(ngModel)]="itemPedido.produto" name="produto" disabled>
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Senha" [value]="itemPedido.senha" name="senha">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Cnpj/Cpf" [value]="itemPedido.cnpjCpf" name="cnpjCpf" disabled>
-        </mat-form-field>
-
+            <mat-form-field>
+                <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="itemPedido.quantidade" name="quantidade" disabled>
+            </mat-form-field>
+        </form>
     </form>
 </mat-card>
-<button mat-raised-button (click)="deleteitemPedido()" color="warn">
+<button mat-raised-button (click)="deleteItemPedido()" color="warn">
 Excluir
 </button>
 

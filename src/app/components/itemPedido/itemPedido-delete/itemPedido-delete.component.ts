@@ -24,7 +24,7 @@ export class ItemPedidoDeleteComponent implements OnInit {
     )
   }
 
-  deleteitemPedido(): void {
+  deleteItemPedido(): void {
     this.ItemPedidoService.delete(this.itemPedido).subscribe(() => {
       this.ItemPedidoService.ShowOMessage('itemPedido Excluido com sucesso')
       this.router.navigate(['/itemPedido'])
