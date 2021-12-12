@@ -14,6 +14,7 @@ export class UsuarioUpdateComponent implements OnInit {
   botaoHabilitado: boolean = false;
 
   usuario: Usuario = {
+    id: null!,
     senha: '',
     email: '',
     cnpjCpf: '',
@@ -33,19 +34,22 @@ export class UsuarioUpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id')
     this.UsuarioService.findById(id!).subscribe(usuario =>
       this.usuario = usuario)
+
+    console.log(this.usuario)
   }
 
   updateUsuario(): void {
+    console.log(this.usuario)
     this.UsuarioService.update(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
     })
-
+    this.botaoHabilitado = false;
   }
 
   desabilitar(): void {
     console.log("tá entrando no desabilitar")
-    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.senha == '' || this.usuario.cnpjCpf == '') {
+    if (this.usuario.nome == '' || this.usuario.email == '' || this.usuario.cnpjCpf == '') {
       this.botaoHabilitado = false;
     }
     else {

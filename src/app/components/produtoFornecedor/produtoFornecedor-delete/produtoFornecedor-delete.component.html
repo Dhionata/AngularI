@@ -2,8 +2,7 @@
     <mat-card-title>Excluir produtoFornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="preco"
-            [value]= "produtoFornecedor.preco" name="preco" disabled>
+            <input matInput placeholder="preco" [value]="produtoFornecedor.preco" name="preco" disabled>
         </mat-form-field>
 
         <!-- <mat-form-field>
@@ -16,7 +15,7 @@
 
     </form>
 </mat-card>
-<button mat-raised-button (click)="deleteprodutoFornecedor()" color="warn">
+<button mat-raised-button (click)="deleteProdutoFornecedor()" color="warn">
 Excluir
 </button>
 

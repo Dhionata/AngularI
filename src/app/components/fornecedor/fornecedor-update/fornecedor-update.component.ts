@@ -2,6 +2,7 @@ import { FornecedorService } from '../fornecedor.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Fornecedor } from '../fornecedor.model';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-fornecedor-update',
@@ -10,7 +11,18 @@ import { Fornecedor } from '../fornecedor.model';
 })
 export class FornecedorUpdateComponent implements OnInit {
 
-  fornecedor!: Fornecedor;
+  fornecedor: Fornecedor = {
+    descricao: '',
+    listaProdutos: [],
+    nome: '',
+    email: '',
+    senha: '',
+    cnpjCpf: '',
+    pedidos: [],
+    enderecos: [],
+    telefone: [],
+    tipoUsuario: TipoUsuario.FORNECEDOR
+  }
 
   constructor(private FornecedorService: FornecedorService,
     private router: Router,
@@ -18,6 +30,7 @@ export class FornecedorUpdateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log(this.fornecedor)
     const id = this.route.snapshot.paramMap.get('id')
     this.FornecedorService.findById(id!).subscribe(fornecedor =>
       this.fornecedor = fornecedor)

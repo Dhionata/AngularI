@@ -1,23 +1,25 @@
 <mat-card>
-  <mat-card-title>Novo usuario</mat-card-title>
-  <form (change)="desabilitar()">
-    <mat-form-field>
-      <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="nome">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="email">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" type="password" name="password">
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="cnpjCpf">
-    </mat-form-field>
+    <mat-card-title>Novo usuario</mat-card-title>
+    <form (change)="desabilitar()">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="usuario.nome" name="Nome">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="usuario.email" name="Email">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="usuario.senha" type="password" name="Password">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="usuario.cnpjCpf" name="CnpjCpf">
+        </mat-form-field>
 
-    <button mat-raised-button (click)="CreateUsuario()" color="primary">
+        <mat-checkbox class="example-margin" (change)="mudou()" [(ngModel)]="checked">Fornecedor</mat-checkbox>
+
+        <button mat-raised-button (click)="createUsuario()" color="primary">
       Salvar
     </button>
 
-    <button mat-raised-button (click)="cancel()">
+        <button mat-raised-button (click)="cancel()">
       Cancelar
     </button>

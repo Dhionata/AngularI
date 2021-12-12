@@ -40,7 +40,7 @@ export class ClienteService {
   }
 
   findById(id: string): Observable<Cliente> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/BuscarById/${id}`
     return this.http.get<Cliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

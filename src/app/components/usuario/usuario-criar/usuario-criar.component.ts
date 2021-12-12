@@ -3,6 +3,8 @@ import { UsuarioService } from '../usuario.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
+import { ClienteService } from '../../cliente/cliente.service';
+import { FornecedorService } from '../../fornecedor/fornecedor.service';
 
 @Component({
   selector: 'app-usuario-criar',
@@ -13,22 +15,32 @@ export class UsuarioCreateComponent implements OnInit {
   botaoHabilitado: boolean = false;
 
   usuario: Usuario = {
-    nome: '', email: '', senha: '', cnpjCpf: '',
-    tipoUsuario: TipoUsuario.CLIENTE,
+    nome: '',
+    email: '',
+    senha: '',
+    cnpjCpf: '',
+    pedidos: [],
     enderecos: [],
     telefone: [],
-    pedidos: []
+    tipoUsuario: TipoUsuario.CLIENTE
   }
-  constructor(private UsuarioService: UsuarioService,
+
+  checked = false;
+
+  constructor(private usuarioService: UsuarioService, private clienteService: ClienteService,
     private router: Router) {
   }
+
   ngOnInit(): void {
   }
-  CreateUsuario(): void {
-    this.UsuarioService.create(this.usuario).subscribe(() => {
-      this.UsuarioService.ShowOMessage('usuario criado!')
+
+  createUsuario(): void {
+    console.log(this.usuario)
+    this.usuarioService.create(this.usuario).subscribe(() => {
+      this.usuarioService.ShowOMessage('usuario criado!')
       this.router.navigate(['/usuario'])
     })
+    this.botaoHabilitado = false;
   }
   cancel(): void {
     this.router.navigate(['/usuario'])
@@ -42,7 +54,12 @@ export class UsuarioCreateComponent implements OnInit {
     else {
       this.botaoHabilitado = true;
     }
+
   }
 
+  mudou(): void {
+    this.usuario.tipoUsuario = TipoUsuario.FORNECEDOR;
+    this.router.navigate(['fornecedor/create'])
+  }
 
 }

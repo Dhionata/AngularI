@@ -12,7 +12,7 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 export class FornecedorCreateComponent implements OnInit {
 
   fornecedor: Fornecedor = {
-    descricao: " ",
+    descricao: '',
     enderecos: [],
     listaProdutos: [],
     nome: '',
@@ -32,6 +32,7 @@ export class FornecedorCreateComponent implements OnInit {
 
 
   createFornecedor(): void {
+    console.log(this.fornecedor)
     this.fornecedorService.create(this.fornecedor).subscribe(() => {
       this.fornecedorService.ShowOMessage('fornecedor criado!')
       this.router.navigate(['/fornecedor'])

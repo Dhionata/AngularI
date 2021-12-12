@@ -40,7 +40,7 @@ export class FornecedorService {
   }
 
   findById(id: string): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/${id}`
+    const url = `${this.baseUrl}/BuscarById/${id}`
     return this.http.get<Fornecedor>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

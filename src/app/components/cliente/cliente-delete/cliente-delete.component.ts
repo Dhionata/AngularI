@@ -2,6 +2,7 @@ import { Cliente } from '../cliente.model';
 import { ClienteService } from '../cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-cliente-delete',
@@ -10,7 +11,16 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ClienteDeleteComponent implements OnInit {
 
-  cliente!: Cliente;
+  cliente: Cliente = {
+    nome: '',
+    email: '',
+    senha: '',
+    cnpjCpf: '',
+    pedidos: [],
+    enderecos: [],
+    telefone: [],
+    tipoUsuario: TipoUsuario.CLIENTE
+  };
 
   constructor(private ClienteService: ClienteService,
     private router: Router,

@@ -2,7 +2,23 @@
     <mat-card-title>Alterar fornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="fornecedor.descricao" name="descricao">
+            <input matInput placeholder="Nome" [(ngModel)]="this.fornecedor.nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Descrição" [(ngModel)]="this.fornecedor.descricao" name="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="this.fornecedor.email" name="email">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Senha" [(ngModel)]="this.fornecedor.senha" name="senha">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="this.fornecedor.cnpjCpf" name="cnpjCpf">
         </mat-form-field>
 
     </form>

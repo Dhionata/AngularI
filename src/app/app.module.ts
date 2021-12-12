@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MapaComponent } from './components/mapa/mapa';
 import { AgmCoreModule } from '@agm/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 
@@ -184,6 +185,7 @@ registerLocaleData(localePt);
     MatBottomSheetModule,
     ReactiveFormsModule,
     BrowserModule,
+    MatCheckboxModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'

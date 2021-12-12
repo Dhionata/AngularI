@@ -2,11 +2,19 @@
     <mat-card-title>Excluir fornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [value]="fornecedor.descricao" name="nome" disabled>
+            <input matInput placeholder="Nome" [(ngModel)]="this.fornecedor.nome" name="nome" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Endreco" [value]="fornecedor.enderecos" name="endereco" disabled>
+            <input matInput placeholder="Descrição" [(ngModel)]="this.fornecedor.descricao" name="descricao" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" [(ngModel)]="this.fornecedor.email" name="email" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="this.fornecedor.cnpjCpf" name="cnpjCpf" disabled>
         </mat-form-field>
 
     </form>
