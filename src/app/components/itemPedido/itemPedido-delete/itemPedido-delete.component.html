@@ -3,23 +3,14 @@
     <form>
         <form>
             <mat-form-field>
-                <input matInput placeholder="Nome" [(ngModel)]="itemPedido.pedido" name="pedido" disabled>
+                <input matInput placeholder="Produto" [(ngModel)]="itemPedido.produto" name="produto">
             </mat-form-field>
 
             <mat-form-field>
-                <input matInput placeholder="E-mail" [(ngModel)]="itemPedido.produto" name="produto" disabled>
-            </mat-form-field>
-
-            <mat-form-field>
-                <input matInput placeholder="Cnpj/Cpf" [(ngModel)]="itemPedido.quantidade" name="quantidade" disabled>
+                <input matInput placeholder="Quantidade" [(ngModel)]="itemPedido.quantidade" name="quantidade">
             </mat-form-field>
         </form>
     </form>
 </mat-card>
-<button mat-raised-button (click)="deleteItemPedido()" color="warn">
-Excluir
-</button>
-
-<button mat-raised-button (click)="cancel()">
-Cancelar
-</button>
+<button mat-raised-button (click)="deleteItemPedido()" color="warn">Excluir</button>
+<button mat-raised-button (click)="cancel()">Cancelar</button>

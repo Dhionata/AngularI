@@ -11,9 +11,9 @@ export class ItemPedidoComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) {
     headerService.headerData = {
-      title: "Cadastro de clientes",
+      title: "Cadastro de itensPedido",
       icon: 'storefront',
-      routerUrl: '/ItemPedido'
+      routerUrl: '/itemPedido'
     }
   }
 
@@ -21,6 +21,6 @@ export class ItemPedidoComponent implements OnInit {
   }
 
   navigateToItemPedidoCreate(): void {
-    this.router.navigate(['ItemPedido/create'])
+    this.router.navigate(['itemPedido/create'])
   }
 }

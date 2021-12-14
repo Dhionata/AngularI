@@ -1,12 +1,16 @@
 <mat-card>
-    <mat-card-title>Excluir avaliacao</mat-card-title>
+    <mat-card-title>Excluir avaliação</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nota" [value]="avaliacao.nota" name="nota" disabled>
+            <input matInput placeholder="Nota" [(ngModel)]="avaliacao.nota" name="nota" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Comentario" [value]="avaliacao.comentario" name="comentario" disabled>
+            <input matInput placeholder="Comentario" [(ngModel)]="avaliacao.comentario" name="comentario" disabled>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Pedido" [(ngModel)]="avaliacao.pedido" name="pedido" disabled>
         </mat-form-field>
 
     </form>

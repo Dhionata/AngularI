@@ -10,7 +10,18 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EnderecoDeleteComponent implements OnInit {
 
-  endereco!: Endereco;
+  endereco: Endereco = {
+    usuario: null!,
+    logradouro: '',
+    cidade: '',
+    bairro: '',
+    complemento: '',
+    cep: '',
+    numero: '',
+    coordenadaX: 0,
+    coordenadaY: 0
+  };
+
 
   constructor(private enderecoService: EnderecoService,
     private router: Router,

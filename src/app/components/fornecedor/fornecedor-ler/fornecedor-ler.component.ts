@@ -12,10 +12,10 @@ export class FornecedorlerComponent implements OnInit {
   fornecedor!: Fornecedor[]
   displayedColumns = ['id', 'nome', 'descricao', 'cnpjCpf', 'listaProdutos', 'actions']
 
-  constructor(private FornecedorService: FornecedorService) { }
+  constructor(private fornecedorService: FornecedorService) { }
 
   ngOnInit(): void {
-    this.FornecedorService.read().subscribe(fornecedores => {
+    this.fornecedorService.read().subscribe(fornecedores => {
       this.fornecedor = fornecedores
       console.log(fornecedores);
 

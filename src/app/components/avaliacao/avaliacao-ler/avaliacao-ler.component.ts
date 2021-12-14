@@ -9,15 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AvaliacaolerComponent implements OnInit {
 
-  avaliacao!: Avaliacao[]
-  displayedColumns = ['id', 'nota', 'comentario', 'action']
+  avaliacoes!: Avaliacao[]
+  displayedColumns = ['id', 'nota', 'comentario', 'pedido', 'actions']
 
   constructor(private AvaliacaoService: AvaliacaoService) { }
 
   ngOnInit(): void {
-    this.AvaliacaoService.read().subscribe(avaliacaoes => {
-      this.avaliacao = avaliacaoes
-      console.log(avaliacaoes);
+    this.AvaliacaoService.read().subscribe(avaliacoes => {
+      this.avaliacoes = avaliacoes
+      console.log(avaliacoes);
 
     })
   }

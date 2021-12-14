@@ -2,7 +2,7 @@
     <mat-card-title>Novo avaliacao</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nota" [(ngModel)]="avaliacao.nota" name="nota">
+            <input (change)="mudou()" matInput placeholder="Nota" [(ngModel)]="avaliacao.nota" name="nota">
         </mat-form-field>
 
         <mat-form-field>
@@ -11,10 +11,5 @@
 
     </form>
 </mat-card>
-<button mat-raised-button (click)="createAvaliacao()" color="primary">
-  Salvar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-  Cancelar
-</button>
+<button mat-raised-button (click)="createAvaliacao()" color="primary">Salvar</button>
+<button mat-raised-button (click)="cancel()">Cancelar</button>

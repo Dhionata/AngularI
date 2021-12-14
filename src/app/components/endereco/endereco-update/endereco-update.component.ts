@@ -10,7 +10,17 @@ import { Endereco } from '../endereco.model';
 })
 export class EnderecoUpdateComponent implements OnInit {
 
-  endereco!: Endereco;
+  endereco: Endereco = {
+    usuario: null!,
+    logradouro: '',
+    cidade: '',
+    bairro: '',
+    complemento: '',
+    cep: '',
+    numero: '',
+    coordenadaX: 0,
+    coordenadaY: 0
+  };
 
   constructor(private enderecoService: EnderecoService,
     private router: Router,

@@ -16,7 +16,7 @@ export class ItemPedidoCreateComponent implements OnInit {
     quantidade: 0
   }
 
-  constructor(private ItemPedidoService: ItemPedidoService,
+  constructor(private itemPedidoService: ItemPedidoService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -24,8 +24,8 @@ export class ItemPedidoCreateComponent implements OnInit {
   }
 
   createItemPedido(): void {
-    this.ItemPedidoService.create(this.itemPedido).subscribe(() => {
-      this.ItemPedidoService.ShowOMessage('itemPedido criado!')
+    this.itemPedidoService.create(this.itemPedido).subscribe(() => {
+      this.itemPedidoService.ShowOMessage('itemPedido criado!')
       this.router.navigate(['/itemPedido'])
 
     })

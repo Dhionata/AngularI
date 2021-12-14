@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 export class AvaliacaoCreateComponent implements OnInit {
 
   avaliacao: Avaliacao = {
-    nota: null!,
-    comentario: ' ',
-    data: null!,
+    nota: 0,
+    comentario: '',
+    data: new Date(),
     pedido: null!,
   }
 
-  constructor(private AvaliacaoService: AvaliacaoService,
+  constructor(private avaliacaoService: AvaliacaoService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -25,8 +25,8 @@ export class AvaliacaoCreateComponent implements OnInit {
   }
 
   createAvaliacao(): void {
-    this.AvaliacaoService.create(this.avaliacao).subscribe(() => {
-      this.AvaliacaoService.ShowOMessage('avaliacao criado!')
+    this.avaliacaoService.create(this.avaliacao).subscribe(() => {
+      this.avaliacaoService.ShowOMessage('avaliacao criado!')
       this.router.navigate(['/avaliacao'])
 
     })
@@ -34,5 +34,16 @@ export class AvaliacaoCreateComponent implements OnInit {
   }
   cancel(): void {
     this.router.navigate(['/avaliacao'])
+  }
+
+  mudou(): void {
+    console.log(this.avaliacao)
+    if (this.avaliacao.nota > 10) {
+      this.avaliacao.nota = 0
+      
+    } else if (this.avaliacao.nota < 0) {
+      this.avaliacao.nota = 0
+    }
+    console.log(this.avaliacao)
   }
 }

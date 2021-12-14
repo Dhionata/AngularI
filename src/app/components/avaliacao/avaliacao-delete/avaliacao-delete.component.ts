@@ -10,23 +10,28 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AvaliacaoDeleteComponent implements OnInit {
 
-  avaliacao!: Avaliacao
+  avaliacao: Avaliacao = {
+    nota: 0,
+    comentario: '',
+    data: new Date(),
+    pedido: null!
+  }
 
-  constructor(private AvaliacaoService: AvaliacaoService,
+  constructor(private avaliacaoService: AvaliacaoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.AvaliacaoService.findById(id!).subscribe(avaliacao =>
+    this.avaliacaoService.findById(id!).subscribe(avaliacao =>
       this.avaliacao = avaliacao
     )
   }
 
   deleteAvaliacao(): void {
-    this.AvaliacaoService.delete(this.avaliacao).subscribe(() => {
-      this.AvaliacaoService.ShowOMessage('avaliacao Excluido com sucesso')
+    this.avaliacaoService.delete(this.avaliacao).subscribe(() => {
+      this.avaliacaoService.ShowOMessage('avaliacao Excluido com sucesso')
       this.router.navigate(['/avaliacao'])
     })
 

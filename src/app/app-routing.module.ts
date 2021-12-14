@@ -43,6 +43,10 @@ import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 /* import { LoginComponent } from './components/login/login.component'; */
 import { MapaComponent } from './components/mapa/mapa';
+import { ItemPedidoComponent } from './views/itemPedido/itemPedido.component';
+import { ItemPedidoCreateComponent } from './components/itemPedido/itemPedido-criar/itemPedido-criar.component';
+import { ItemPedidoUpdateComponent } from './components/itemPedido/itemPedido-update/itemPedido-update.component';
+import { ItemPedidoDeleteComponent } from './components/itemPedido/itemPedido-delete/itemPedido-delete.component';
 /* import { AuthGuard } from './components/login/shared/auth.guard'; */
 /* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
 
@@ -219,6 +223,26 @@ const routes: Routes = [{
 {
   path: "pedido/delete/:id",
   component: PedidoDeleteComponent
+},
+
+{
+  path: "itemPedido",
+  component: ItemPedidoComponent
+},
+
+{
+  path: "itemPedido/create",
+  component: ItemPedidoCreateComponent
+},
+
+{
+  path: "itemPedido/update/:id",
+  component: ItemPedidoUpdateComponent
+},
+
+{
+  path: "itemPedido/delete/:id",
+  component: ItemPedidoDeleteComponent
 },
 
 /* {
