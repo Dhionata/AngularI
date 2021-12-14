@@ -40,11 +40,11 @@ export class UsuarioUpdateComponent implements OnInit {
 
   updateUsuario(): void {
     console.log(this.usuario)
+    this.botaoHabilitado = false;
     this.UsuarioService.update(this.usuario).subscribe(() => {
       this.UsuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
     })
-    this.botaoHabilitado = false;
   }
 
   desabilitar(): void {

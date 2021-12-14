@@ -49,7 +49,7 @@ import { MapaComponent } from './components/mapa/mapa';
 
 const routes: Routes = [{
 
-  path: " ", component: HomeComponent,
+  path: "", component: HomeComponent,
 
 },
 /* {

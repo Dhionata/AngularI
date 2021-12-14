@@ -10,7 +10,11 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProdutoDeleteComponent implements OnInit {
 
-  produto!: Produto;
+  produto: Produto = {
+    nome: '',
+    listaFornecedores: [],
+    disponivel: false
+  };
 
   constructor(private ProdutoService: ProdutoService,
     private router: Router,

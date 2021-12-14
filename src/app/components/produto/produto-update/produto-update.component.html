@@ -5,6 +5,9 @@
             <input matInput placeholder="Nome" [(ngModel)]="produto.nome" name="nome">
         </mat-form-field>
 
+        <mat-checkbox name="disponivel" class="example-margin" [(ngModel)]="produto.disponivel">Disponível</mat-checkbox>
+        {{produto.disponivel}}
+
     </form>
 </mat-card>
 <button mat-raised-button (click)="updateProduto()" color="primary">

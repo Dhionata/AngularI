@@ -11,7 +11,11 @@ import { Router } from '@angular/router';
 })
 export class ProdutoCreateComponent implements OnInit {
 
-  produto!: Produto
+  produto: Produto = {
+    nome: '',
+    listaFornecedores: [],
+    disponivel: false
+  }
 
   constructor(private ProdutoService: ProdutoService,
     private router: Router) { }
@@ -31,6 +35,4 @@ export class ProdutoCreateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/produto'])
   }
-
-
 }

@@ -25,8 +25,6 @@ export class UsuarioCreateComponent implements OnInit {
     tipoUsuario: TipoUsuario.CLIENTE
   }
 
-  checked = false;
-
   constructor(private usuarioService: UsuarioService, private clienteService: ClienteService,
     private router: Router) {
   }

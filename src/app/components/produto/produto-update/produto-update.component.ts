@@ -2,6 +2,7 @@ import { ProdutoService } from '../produto.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Produto } from '../produto.model';
+import { MatRadioButton } from '@angular/material/radio';
 
 @Component({
   selector: 'app-produto-update',
@@ -10,7 +11,12 @@ import { Produto } from '../produto.model';
 })
 export class ProdutoUpdateComponent implements OnInit {
 
-  produto!: Produto;
+  produto: Produto = {
+    nome: '',
+    listaFornecedores: [],
+    disponivel: false
+  };
+
   displayedColumns = ['id', 'nome', 'listaFornecedores', 'disponivel']
 
   constructor(private ProdutoService: ProdutoService,
@@ -22,9 +28,11 @@ export class ProdutoUpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id')
     this.ProdutoService.findById(id!).subscribe(produto =>
       this.produto = produto)
+
   }
 
   updateProduto(): void {
+    console.log(this.produto)
     this.ProdutoService.update(this.produto).subscribe(() => {
       this.ProdutoService.ShowOMessage('Produto atualizado com sucesso')
       this.router.navigate(["/produto"])
