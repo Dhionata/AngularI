@@ -25,7 +25,7 @@ export class AvaliacaoService {
   }
 
   create(avaliacao: Avaliacao): Observable<Avaliacao> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Avaliacao>(url, avaliacao).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -48,7 +48,7 @@ export class AvaliacaoService {
   }
 
   update(avaliacao: Avaliacao): Observable<Avaliacao> {
-    const url = `${this.baseUrl}/Atualizar/`
+    const url = `${this.baseUrl}`
     return this.http.patch<Avaliacao>(url, avaliacao).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class AvaliacaoService {
   }
 
   delete(avaliacao: Avaliacao): Observable<Avaliacao> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Avaliacao>(url, { body: avaliacao }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

@@ -25,7 +25,7 @@ export class UsuarioService {
   }
 
   create(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -40,14 +40,14 @@ export class UsuarioService {
   }
 
   findById(id: string): Observable<Usuario> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Usuario>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e)))
   }
 
   update(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.baseUrl}/Atualizar/`
+    const url = `${this.baseUrl}`
     return this.http.patch<Usuario>(url, usuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -55,7 +55,7 @@ export class UsuarioService {
   }
 
   delete(usuario: Usuario): Observable<Usuario> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Usuario>(url, { body: usuario }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

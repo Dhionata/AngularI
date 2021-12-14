@@ -25,7 +25,7 @@ export class PedidoService {
   }
 
   create(pedido: Pedido): Observable<Pedido> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Pedido>(url, pedido).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -48,7 +48,7 @@ export class PedidoService {
   }
 
   update(pedido: Pedido): Observable<Pedido> {
-    const url = `${this.baseUrl}/Atualizar/`
+    const url = `${this.baseUrl}`
     return this.http.patch<Pedido>(url, pedido).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class PedidoService {
   }
 
   delete(pedido: Pedido): Observable<Pedido> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Pedido>(url, { body: pedido }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

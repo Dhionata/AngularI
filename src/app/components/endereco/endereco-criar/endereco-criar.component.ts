@@ -2,6 +2,7 @@ import { Endereco } from '../endereco.model';
 import { EnderecoService } from '../endereco.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsuarioService } from '../../usuario/usuario.service';
 
 @Component({
   selector: 'app-endereco-criar',
@@ -19,7 +20,8 @@ export class EnderecoCreateComponent implements OnInit {
     cep: "",
     numero: "",
     coordenadaX: 0,
-    coordenadaY: 0
+    coordenadaY: 0,
+    usuario: null!
   }
 
   constructor(private EnderecoService: EnderecoService,
@@ -30,6 +32,7 @@ export class EnderecoCreateComponent implements OnInit {
   }
 
   createEndereco(): void {
+    console.log(this.endereco)
     this.EnderecoService.create(this.endereco).subscribe(() => {
       this.EnderecoService.ShowOMessage('Endereco criado!')
       this.router.navigate(['/endereco'])

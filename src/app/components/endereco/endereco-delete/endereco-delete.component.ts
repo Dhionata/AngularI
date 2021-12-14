@@ -12,28 +12,28 @@ export class EnderecoDeleteComponent implements OnInit {
 
   endereco!: Endereco;
 
-  constructor(private EnderecoService: EnderecoService,
+  constructor(private enderecoService: EnderecoService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.EnderecoService.findById(id!).subscribe(Endereco =>
-      this.endereco = Endereco
+    this.enderecoService.findById(id!).subscribe(endereco =>
+      this.endereco = endereco
     )
   }
 
   deleteEndereco(): void {
-    this.EnderecoService.delete(this.endereco).subscribe(() => {
-      this.EnderecoService.ShowOMessage('Endereco Excluido com sucesso')
-      this.router.navigate(['/Endereco'])
+    this.enderecoService.delete(this.endereco).subscribe(() => {
+      this.enderecoService.ShowOMessage('Endereco Excluido com sucesso')
+      this.router.navigate(['/endereco'])
     })
 
   }
 
   cancel(): void {
-    this.router.navigate(['/Endereco'])
+    this.router.navigate(['/endereco'])
   }
 
 }

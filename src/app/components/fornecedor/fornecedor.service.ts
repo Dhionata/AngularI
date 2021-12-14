@@ -25,7 +25,7 @@ export class FornecedorService {
   }
 
   create(Fornecedor: Fornecedor): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Fornecedor>(url, Fornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -40,7 +40,7 @@ export class FornecedorService {
   }
 
   findById(id: string): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Fornecedor>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -48,7 +48,7 @@ export class FornecedorService {
   }
 
   update(Fornecedor: Fornecedor): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/Atualizar/`
+    const url = `${this.baseUrl}`
     return this.http.patch<Fornecedor>(url, Fornecedor).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class FornecedorService {
   }
 
   delete(fornecedor: Fornecedor): Observable<Fornecedor> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Fornecedor>(url, { body: fornecedor }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

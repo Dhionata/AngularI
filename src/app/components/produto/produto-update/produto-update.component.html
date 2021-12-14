@@ -5,9 +5,13 @@
             <input matInput placeholder="Nome" [(ngModel)]="produto.nome" name="nome">
         </mat-form-field>
 
-        <mat-checkbox name="disponivel" class="example-margin" [(ngModel)]="produto.disponivel">Disponível</mat-checkbox>
-        {{produto.disponivel}}
+        <!-- <mat-checkbox name="disponivel2" class="example-margin" [(ngModel)]="produto.disponivel">Disponível</mat-checkbox> -->
+        <mat-radio-group [(ngModel)]="produto.disponivel" name="disponivel">
+            <mat-radio-button [value]="true">Disponível</mat-radio-button>
+            <mat-radio-button [value]="false">Indisponível</mat-radio-button>
+        </mat-radio-group>
 
+        <!--  {{produto.disponivel}} -->
     </form>
 </mat-card>
 <button mat-raised-button (click)="updateProduto()" color="primary">

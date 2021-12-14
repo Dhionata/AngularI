@@ -14,18 +14,18 @@
         </ng-container>
 
         <!-- Action Column -->
-        <ng-container matColumnDef="action">
+        <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef>Ações</th>
-            <td mat-cell *matCellDef="let row">
+            <td mat-cell *matCellDef="let row ">
 
-                <a routerLink="/produtoFornecedor/update/{{row.id}}" class=edit>
-                    <i class="material-icons">
+                <a routerLink="/produtoFornecedor/update/{{row.id}} " class=edit>
+                    <i class="material-icons ">
                 edit
               </i>
                 </a>
 
-                <a routerLink="/produtoFornecedor/delete/{{row.id}}" class=delete>
-                    <i class="material-icons">
+                <a routerLink="/produtoFornecedor/delete/{{row.id}} " class=delete>
+                    <i class="material-icons ">
               delete
             </i>
                 </a>
@@ -33,8 +33,8 @@
             </td>
         </ng-container>
 
-        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns "></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; "></tr>
     </table>
 
 </div>

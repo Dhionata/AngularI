@@ -25,7 +25,7 @@ export class ClienteService {
   }
 
   create(cliente: Cliente): Observable<Cliente> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Cliente>(url, cliente).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -40,7 +40,7 @@ export class ClienteService {
   }
 
   findById(id: string): Observable<Cliente> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Cliente>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -48,7 +48,7 @@ export class ClienteService {
   }
 
   update(cliente: Cliente): Observable<Cliente> {
-    const url = `${this.baseUrl}/Atualizar/`
+    const url = `${this.baseUrl}`
     return this.http.patch<Cliente>(url, cliente).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class ClienteService {
   }
 
   delete(cliente: Cliente): Observable<Cliente> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Cliente>(url, { body: cliente }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

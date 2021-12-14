@@ -25,7 +25,7 @@ export class TelefoneService {
   }
 
   create(Telefone: Telefone): Observable<Telefone> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<Telefone>(url, Telefone).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -40,7 +40,7 @@ export class TelefoneService {
   }
 
   findById(id: string): Observable<Telefone> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<Telefone>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class TelefoneService {
   }
 
   delete(telefone: Telefone): Observable<Telefone> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<Telefone>(url, { body: telefone }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

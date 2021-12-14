@@ -25,7 +25,7 @@ export class TipoUsuarioService {
   }
 
   create(TipoUsuario: TipoUsuario): Observable<TipoUsuario> {
-    const url = `${this.baseUrl}/Adicionar/`
+    const url = `${this.baseUrl}`
     return this.http.post<TipoUsuario>(url, TipoUsuario).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -40,7 +40,7 @@ export class TipoUsuarioService {
   }
 
   findById(id: string): Observable<TipoUsuario> {
-    const url = `${this.baseUrl}/BuscarById/${id}`
+    const url = `${this.baseUrl}/${id}`
     return this.http.get<TipoUsuario>(url).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
@@ -56,7 +56,7 @@ export class TipoUsuarioService {
   }
 
   delete(TipoUsuario: TipoUsuario): Observable<TipoUsuario> {
-    const url = `${this.baseUrl}/Remover/`
+    const url = `${this.baseUrl}`
     return this.http.delete<TipoUsuario>(url, { body: TipoUsuario }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))

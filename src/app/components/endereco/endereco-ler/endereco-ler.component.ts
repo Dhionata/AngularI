@@ -13,12 +13,12 @@ export class EnderecolerComponent implements OnInit {
   displayedColumns = ['id', 'logradouro', 'cidade', 'bairro',
     'complemento', 'cep', 'numero', 'coordenadaX', 'coordenadaY', 'actions']
 
-  constructor(private EnderecoService: EnderecoService) { }
+  constructor(private enderecoService: EnderecoService) { }
 
   ngOnInit(): void {
-    this.EnderecoService.read().subscribe(Enderecos => {
-      this.enderecos = Enderecos
-      console.log(Enderecos);
+    this.enderecoService.read().subscribe(enderecos => {
+      this.enderecos = enderecos
+      console.log(enderecos);
 
     })
   }
