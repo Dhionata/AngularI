@@ -5,102 +5,28 @@
             Sistema Delivery Web
         </mat-card-subtitle>
         <section>
-            <!-- <div class="example-button-row">
-                <a href="/login">
-                    <button m mat-raised-button color="primary">Entrar</button>
-                </a>
-            </div>
-        </section>
-        <section>
+
             <div class="example-button-row">
                 <a href="/usuario/create">
                     <button mat-raised-button color="primary">Cadastrar</button></a>
-            </div> -->
+            </div>
         </section>
 
-        <!--         <div class="example-button-row">
+      <div class="example-button-row">
           <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-      </div> -->
+      </div>
+
+      <div class="example-button-row">
+        <a href="/components/login"></a>
+        <button routerLink='login' mat-raised-button color="primary">Login</button>
+    </div>
+
+
     </mat-card-title>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">Produto</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item>lista produtos</button>
-    </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">Clientes</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item>clientes</button>
-    </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">Pedido</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item>lista pedidos</button>
-    </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">Carrinho</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item>Item 1</button>
-    </mat-menu>
-</mat-card>
-<mat-card>
-    <mat-card-title class="title">
-        Melhores Avaliações
-    </mat-card-title>
 </mat-card>
 
 
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile> <img src="assets\img\imagem teste1.png" height="100%" width="100%"></mat-grid-tile>
-    <mat-grid-tile> <img src="assets\img\imagem teste2.jpg" height="100%" width="100%"></mat-grid-tile>
-    <mat-grid-tile> <img src="assets\img\imagem teste3.jpg" height="100%" width="100%"></mat-grid-tile>
-    <mat-grid-tile> <img src="assets\img\imagem teste4.jpg" height="100%" width="100%"></mat-grid-tile>
-</mat-grid-list>
-<mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title>Fornecedor nome</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets\img\imagem teste4.jpg" height="100%" width="100%">
-    <mat-card-actions>
-        <!-- adicionar rota para pedido -->
-        <button mat-raised-button color="primary">Comprar</button>
-
-        <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-    </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title>Fornecedor nome</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets\img\imagem teste1.png" height="100%" width="100%">
-    <mat-card-actions>
-        <!-- adicionar rota para pedido -->
-        <button mat-raised-button color="primary"> Comprar </button>
-        <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-    </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title>Fornecedor nome</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets\img\imagem teste2.jpg" height="100%" width="100%">
-    <mat-card-actions>
-        <!-- adicionar rota para pedido -->
-        <button mat-raised-button color="primary"> Comprar </button>
-        <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-    </mat-card-actions>
-</mat-card>
-
-<mat-card class="example-card">
-    <mat-card-header>
-        <mat-card-title>Fornecedor nome</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="assets\img\imagem teste3.jpg" height="100%" width="100%">
-    <mat-card-actions>
-        <!-- adicionar rota para pedido -->
-        <button mat-raised-button color="primary"> Comprar </button>
-        <button routerLink='mapa' mat-raised-button color="primary">Mapa</button>
-    </mat-card-actions>
-</mat-card>
