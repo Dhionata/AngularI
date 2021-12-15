@@ -5,35 +5,39 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-Telefone-delete',
-  templateUrl: './Telefone-delete.component.html',
-  styleUrls: ['./Telefone-delete.component.scss']
+  templateUrl: './telefone-delete.component.html',
+  styleUrls: ['./telefone-delete.component.scss']
 })
 export class TelefoneDeleteComponent implements OnInit {
 
-  Telefone!: Telefone;
+  telefone: Telefone = {
+    numero: "",
+    usuario: null!
+  }
 
-  constructor(private TelefoneService: TelefoneService,
+  constructor(private telefoneService: TelefoneService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.TelefoneService.findById(id!).subscribe(Telefone =>
-      this.Telefone = Telefone
+    this.telefoneService.findById(id!).subscribe(Telefone =>
+      this.telefone = Telefone
     )
+    console.log(this.telefone.numero + "\n" + this.telefone.usuario + "\n" + this.telefone.id)
   }
 
   deleteTelefone(): void {
-    this.TelefoneService.delete(this.Telefone).subscribe(() => {
-      this.TelefoneService.ShowOMessage('Telefone Excluido com sucesso')
-      this.router.navigate(['/Telefone'])
+    this.telefoneService.delete(this.telefone).subscribe(() => {
+      this.telefoneService.ShowOMessage('Telefone Excluido com sucesso')
+      this.router.navigate(['/telefone'])
     })
 
   }
 
   cancel(): void {
-    this.router.navigate(['/Telefone'])
+    this.router.navigate(['/telefone'])
   }
 
 }

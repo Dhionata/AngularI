@@ -2,27 +2,22 @@
     <mat-card-title>Novo Produto Fornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Preo" [(ngModel)]="produtoFornecedor.preco" name="Preco">
+            <input matInput placeholder="Preço" [(ngModel)]="produtoFornecedor.preco" name="preco">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Produto" [(ngModel)]="produtoFornecedor.produto" name="Produto">
+            <input matInput placeholder="Produto" [(ngModel)]="produtoFornecedor.produto.nome" name="produto.nome">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="produtoFornecedor.quantidadeEmEstoque" name="Quantidade">
+            <input matInput placeholder="Quantidade" [(ngModel)]="produtoFornecedor.quantidadeEmEstoque" name="quantidadeEmEstoque">
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Fornecedor" [(ngModel)]="produtoFornecedor.fornecedor" name="Fornecedor">
+            <input matInput placeholder="Fornecedor" [(ngModel)]="produtoFornecedor.fornecedor.nome" name="fornecedor.nome">
         </mat-form-field>
 
     </form>
 </mat-card>
-<button mat-raised-button (click)="createProdutoFornecedor()" color="primary">
-Salvar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-Cancelar
-</button>
+<button mat-raised-button (click)="createProdutoFornecedor()" color="primary">Salvar</button>
+<button mat-raised-button (click)="cancel()">Cancelar</button>

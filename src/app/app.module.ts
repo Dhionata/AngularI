@@ -11,8 +11,6 @@ import { MapaComponent } from './components/mapa/mapa';
 import { AgmCoreModule } from '@agm/core';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
-
-
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/templates/footer/footer.component';
 import { NavComponent } from './views/home/nav/nav.component';
@@ -98,6 +96,11 @@ import { TipoUsuarioDeleteComponent } from './components/tipoUsuario/tipoUsuario
 import { TipoUsuarioLerComponent } from './components/tipoUsuario/tipoUsuario-ler/tipoUsuario-ler.component';
 import { TipoUsuarioCreateComponent } from './components/tipoUsuario/tipoUsuario-criar/tipoUsuario-criar.component';
 import { MatRadioModule } from '@angular/material/radio';
+import { TelefoneComponent } from './views/telefone/telefone.component';
+import { TelefoneCreateComponent } from './components/telefone/telefone-criar/telefone-criar.component';
+import { TelefoneDeleteComponent } from './components/telefone/telefone-delete/telefone-delete.component';
+import { TelefoneLerComponent } from './components/telefone/telefone-ler/telefone-ler.component';
+import { TelefoneUpdateComponent } from './components/telefone/telefone-update/telefone-update.component';
 /* import { LoginComponent } from './components/login/login.component'; */
 
 registerLocaleData(localePt);
@@ -160,7 +163,11 @@ registerLocaleData(localePt);
     TipoUsuarioLerComponent,
     TipoUsuarioUpdateComponent,
     TipoUsuarioDeleteComponent,
-
+    TelefoneComponent,
+    TelefoneCreateComponent,
+    TelefoneDeleteComponent,
+    TelefoneUpdateComponent,
+    TelefoneLerComponent,
   ],
 
   imports: [

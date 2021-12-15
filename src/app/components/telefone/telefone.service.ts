@@ -24,9 +24,9 @@ export class TelefoneService {
     })
   }
 
-  create(Telefone: Telefone): Observable<Telefone> {
+  create(telefone: Telefone): Observable<Telefone> {
     const url = `${this.baseUrl}`
-    return this.http.post<Telefone>(url, Telefone).pipe(
+    return this.http.post<Telefone>(url, telefone).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )
@@ -47,9 +47,9 @@ export class TelefoneService {
     )
   }
 
-  update(Telefone: Telefone): Observable<Telefone> {
-    const url = `${this.baseUrl}/Atualizar`
-    return this.http.patch<Telefone>(url, { body: Telefone }).pipe(
+  update(telefone: Telefone): Observable<Telefone> {
+    const url = `${this.baseUrl}`
+    return this.http.patch<Telefone>(url, { body: telefone }).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

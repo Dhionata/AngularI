@@ -2,8 +2,19 @@
     <mat-card-title>Alterar produto Fornecedor</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="preco"
-            [(ngModel)]= "produtoFornecedor.preco" name= "preco">
+            <input matInput placeholder="Preço" [(ngModel)]="produtoFornecedor.preco" name="Preco">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Produto" [(ngModel)]="produtoFornecedor.produto" name="Produto">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Quantidade" [(ngModel)]="produtoFornecedor.quantidadeEmEstoque" name="Quantidade">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Fornecedor" [(ngModel)]="produtoFornecedor.fornecedor" name="Fornecedor">
         </mat-form-field>
 
     </form>

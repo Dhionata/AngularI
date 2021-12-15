@@ -5,16 +5,17 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-Telefone-criar',
-  templateUrl: './Telefone-criar.component.html',
-  styleUrls: ['./Telefone-criar.component.scss']
+  templateUrl: './telefone-criar.component.html',
+  styleUrls: ['./telefone-criar.component.scss']
 })
 export class TelefoneCreateComponent implements OnInit {
 
-  Telefone: Telefone = {
-    numero: ""
+  telefone: Telefone = {
+    numero: "",
+    usuario: null!
   }
 
-  constructor(private TelefoneService: TelefoneService,
+  constructor(private telefoneService: TelefoneService,
     private router: Router) { }
 
   ngOnInit(): void {
@@ -22,15 +23,15 @@ export class TelefoneCreateComponent implements OnInit {
   }
 
   CreateTelefone(): void {
-    this.TelefoneService.create(this.Telefone).subscribe(() => {
-      this.TelefoneService.ShowOMessage('Telefone criado!')
-      this.router.navigate(['/Telefone'])
+    this.telefoneService.create(this.telefone).subscribe(() => {
+      this.telefoneService.ShowOMessage('Telefone criado!')
+      this.router.navigate(['/telefone'])
 
     })
 
   }
   cancel(): void {
-    this.router.navigate(['/Telefone'])
+    this.router.navigate(['/telefone'])
   }
 
 

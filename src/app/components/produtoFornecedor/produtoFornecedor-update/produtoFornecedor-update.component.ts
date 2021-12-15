@@ -10,22 +10,29 @@ import { ProdutoFornecedor } from '../produtoFornecedor.model';
 })
 export class ProdutoFornecedorUpdateComponent implements OnInit {
 
-  produtoFornecedor!: ProdutoFornecedor;
+  produtoFornecedor: ProdutoFornecedor = {
+    produto: null!,
+    fornecedor: null!,
+    preco: 0,
+    quantidadeEmEstoque: 0,
+    dataCadastro: null!,
+    dataAtualizacao: null!,
+  }
 
-  constructor(private ProdutoFornecedorService: ProdutoFornecedorService,
+  constructor(private produtoFornecedorService: ProdutoFornecedorService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.ProdutoFornecedorService.findById(id!).subscribe(produtoFornecedor =>
+    this.produtoFornecedorService.findById(id!).subscribe(produtoFornecedor =>
       this.produtoFornecedor = produtoFornecedor)
   }
 
   updateprodutoFornecedor(): void {
-    this.ProdutoFornecedorService.update(this.produtoFornecedor).subscribe(() => {
-      this.ProdutoFornecedorService.ShowOMessage('produtoFornecedor atualizado com sucesso')
+    this.produtoFornecedorService.update(this.produtoFornecedor).subscribe(() => {
+      this.produtoFornecedorService.ShowOMessage('produtoFornecedor atualizado com sucesso')
       this.router.navigate(["/produtoFornecedor"])
     })
 

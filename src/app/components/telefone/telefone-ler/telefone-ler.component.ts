@@ -3,21 +3,21 @@ import { Telefone } from '../telefone.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-Telefone-ler',
-  templateUrl: './Telefone-ler.component.html',
-  styleUrls: ['./Telefone-ler.component.scss']
+  selector: 'app-telefone-ler',
+  templateUrl: './telefone-ler.component.html',
+  styleUrls: ['./telefone-ler.component.scss']
 })
-export class TelefonelerComponent implements OnInit {
+export class TelefoneLerComponent implements OnInit {
 
-  Telefones!: Telefone[]
-  displayedColumns = ['id', 'nome', 'preco', 'quantidade', 'actions']
+  telefones!: Telefone[]
+  displayedColumns = ['id', 'numero', 'usuario', 'actions']
 
-  constructor(private TelefoneService: TelefoneService) { }
+  constructor(private telefoneService: TelefoneService) { }
 
   ngOnInit(): void {
-    this.TelefoneService.read().subscribe(Telefones => {
-      this.Telefones = Telefones
-      console.log(Telefones);
+    this.telefoneService.read().subscribe(telefones => {
+      this.telefones = telefones
+      console.log(telefones);
 
     })
   }

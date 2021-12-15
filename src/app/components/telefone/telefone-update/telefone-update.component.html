@@ -1,24 +1,10 @@
 <mat-card>
-    <mat-card-title>Alterar Telefone</mat-card-title>
+    <mat-card-title>Atualizar Telefone</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Nome" [(ngModel)]="Telefone.nome" name="nome">
+            <input matInput placeholder="Número" [(ngModel)]="telefone.numero" name="numero">
         </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)" [(ngModel)]="Telefone.preco" name="preco">
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="Telefone.quantidade" name="quantidade">
-        </mat-form-field>
-
     </form>
 </mat-card>
-<button mat-raised-button (click)="updateTelefone()" color="primary">
-Atualizar
-</button>
-
-<button mat-raised-button (click)="cancel()">
-Cancelar
-</button>
+<button mat-raised-button (click)="updateTelefone()" color="primary">Atualizar</button>
+<button mat-raised-button (click)="cancel()">Cancelar</button>

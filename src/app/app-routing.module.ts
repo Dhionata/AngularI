@@ -43,13 +43,18 @@ import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
 /* import { LoginComponent } from './components/login/login.component'; */
 import { MapaComponent } from './components/mapa/mapa';
+
 import { ItemPedidoComponent } from './views/itemPedido/itemPedido.component';
 import { ItemPedidoCreateComponent } from './components/itemPedido/itemPedido-criar/itemPedido-criar.component';
 import { ItemPedidoUpdateComponent } from './components/itemPedido/itemPedido-update/itemPedido-update.component';
 import { ItemPedidoDeleteComponent } from './components/itemPedido/itemPedido-delete/itemPedido-delete.component';
+
+import { TelefoneCreateComponent } from './components/telefone/telefone-criar/telefone-criar.component';
+import { TelefoneComponent } from './views/telefone/telefone.component';
+import { TelefoneUpdateComponent } from './components/telefone/telefone-update/telefone-update.component';
+import { TelefoneDeleteComponent } from './components/telefone/telefone-delete/telefone-delete.component';
 /* import { AuthGuard } from './components/login/shared/auth.guard'; */
 /* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
-
 
 const routes: Routes = [{
 
@@ -244,6 +249,26 @@ const routes: Routes = [{
   path: "itemPedido/delete/:id",
   component: ItemPedidoDeleteComponent
 },
+
+{
+  path: "telefone",
+  component: TelefoneComponent
+}, 
+
+{
+  path: "telefone/create",
+  component: TelefoneCreateComponent
+},
+
+{
+  path: "telefone/update/:id",
+  component: TelefoneUpdateComponent
+},
+{
+  path: "telefone/delete/:id",
+  component: TelefoneDeleteComponent
+},
+
 
 /* {
   path: "login",

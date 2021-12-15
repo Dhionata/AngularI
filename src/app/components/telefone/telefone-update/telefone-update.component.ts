@@ -4,35 +4,40 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Telefone } from '../telefone.model';
 
 @Component({
-  selector: 'app-Telefone-update',
-  templateUrl: './Telefone-update.component.html',
-  styleUrls: ['./Telefone-update.component.scss']
+  selector: 'app-telefone-update',
+  templateUrl: './telefone-update.component.html',
+  styleUrls: ['./telefone-update.component.scss']
 })
 export class TelefoneUpdateComponent implements OnInit {
 
-  Telefone!: Telefone;
+  telefone: Telefone = {
+    numero: '',
+    usuario: null!
+  }
 
-  constructor(private TelefoneService: TelefoneService,
+  constructor(private telefoneService: TelefoneService,
     private router: Router,
     private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.TelefoneService.findById(id!).subscribe(Telefone =>
-      this.Telefone = Telefone)
+    this.telefoneService.findById(id!).subscribe(Telefone =>
+      this.telefone = Telefone
+    )
+    console.log("Olha.. isso é oq veio do banco para atualizar...\n" + this.telefone.numero + "\n" + this.telefone.usuario + "\n" + this.telefone.id)
   }
 
   updateTelefone(): void {
-    this.TelefoneService.update(this.Telefone).subscribe(() => {
-      this.TelefoneService.ShowOMessage('Telefone atualizado com sucesso')
-      this.router.navigate(["/Telefone"])
+    this.telefoneService.update(this.telefone).subscribe(() => {
+      this.telefoneService.ShowOMessage('Telefone atualizado com sucesso')
+      this.router.navigate(["/telefone"])
     })
 
   }
 
   cancel(): void {
-    this.router.navigate(['/Telefone'])
+    this.router.navigate(['/telefone'])
   }
 
 
