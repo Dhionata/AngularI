@@ -1,38 +1,50 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { FormBuilder } from "@angular/forms";
+import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
+import { ErrorStateMatcher } from '@angular/material/core';
+import { TipoUsuario } from '../tipoUsuario/tipoUsuario.model';
+import { Usuario } from '../usuario/usuario.model';
+import { AuthService } from './auth.service';
 
+/** Error when invalid control is dirty, touched, or submitted. */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+    isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+        const isSubmitted = form && form.submitted;
+        return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+    }
+}
 @Component({
-
-    selector:'app-login',
-
-    templateUrl:'./login.component.html',
-
+    selector: 'app-login',
+    templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss']
-
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
-    form: any;
-    formBuilder: any;
+    emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+    matcher = new MyErrorStateMatcher();
 
-    constructor(privateformBuilder:FormBuilder) {
+    passwordFormControl = new FormControl('', [Validators.required]);
 
-        this.criarForm();
+    usuario: Usuario = {
+        nome: '',
+        email: '',
+        senha: '',
+        cnpjCpf: '',
+        pedidos: [],
+        enderecos: [],
+        telefone: [],
+        tipoUsuario: TipoUsuario.VISITANTE
+    }
+
+    constructor(private authService: AuthService) { }
+
+    ngOnInit(): void {
 
     }
 
-    criarForm(){
-
-        this.form = this.formBuilder.group({
-
-            email: [''],
-
-            senha: ['']
-
-        })
-
+    fazerLogin(): void {
+        console.log(this.usuario);
+        this.authService.fazerLogin(this.usuario);
     }
-
 }

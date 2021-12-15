@@ -1,25 +1,29 @@
 <div class="d-flex justify-content-center align-items-center">
 
-  <div class="card p-3">
-
-    <form>
-
-      <class="form-group">
-
-        <label for="email">E-mail</label>
-
-        <input type="text" id="email" class="form-control">
+    <div class="card p-3">
 
         <div class="form-group">
+            <form class="example-form">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input [(ngModel)]="usuario.email" type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeholder="Ex. pat@example.com">
+                    <mat-hint></mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Por favor, entre com um email válido!
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email é <strong>requisitado</strong>
+                    </mat-error>
+                </mat-form-field>
 
-          <label for="senha">Senha</label>
-
-          <input type="password" id="senha" class="form-control">
-
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Senha</mat-label>
+                    <input [(ngModel)]="usuario.senha" type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher" placeholder="Ex. @68~@Abacate">
+                </mat-form-field>
+            </form>
         </div>
 
-        <div class="form-group">
+        <button (click)="fazerLogin()" class="btn btn-success" type="submit">Entrar</button>
 
-          <button class="btn btn-success" type="submit">Entrar</button>
-
-        </div>
+    </div>
+</div>

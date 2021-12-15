@@ -25,14 +25,14 @@ export class UsuarioUpdateComponent implements OnInit {
     pedidos: []
   }
 
-  constructor(private UsuarioService: UsuarioService,
+  constructor(private usuarioService: UsuarioService,
     private router: Router,
     private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.UsuarioService.findById(id!).subscribe(usuario =>
+    this.usuarioService.findById(id!).subscribe(usuario =>
       this.usuario = usuario)
 
     console.log(this.usuario)
@@ -41,8 +41,8 @@ export class UsuarioUpdateComponent implements OnInit {
   updateUsuario(): void {
     console.log(this.usuario)
     this.botaoHabilitado = false;
-    this.UsuarioService.update(this.usuario).subscribe(() => {
-      this.UsuarioService.ShowOMessage('Usuario atualizado com sucesso')
+    this.usuarioService.update(this.usuario).subscribe(() => {
+      this.usuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
     })
   }

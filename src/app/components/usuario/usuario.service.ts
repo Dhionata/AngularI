@@ -62,6 +62,14 @@ export class UsuarioService {
     )
   }
 
+  autenticaUsuario(usuario: Usuario): Observable<Usuario> {
+    const url = `${this.baseUrl}/AutenticarUsuario/`
+    return this.http.post<Usuario>(url, usuario).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
   errorHandler(e: any): Observable<any> {
     console.log(e)
     this.ShowOMessage('Ocorreu um erro!', true)

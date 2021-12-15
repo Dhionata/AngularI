@@ -102,6 +102,7 @@ import { TelefoneDeleteComponent } from './components/telefone/telefone-delete/t
 import { TelefoneLerComponent } from './components/telefone/telefone-ler/telefone-ler.component';
 import { TelefoneUpdateComponent } from './components/telefone/telefone-update/telefone-update.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthService } from './components/login/auth.service';
 
 registerLocaleData(localePt);
 
@@ -168,6 +169,7 @@ registerLocaleData(localePt);
     TelefoneDeleteComponent,
     TelefoneUpdateComponent,
     TelefoneLerComponent,
+    LoginComponent,
   ],
 
   imports: [
@@ -196,12 +198,11 @@ registerLocaleData(localePt);
     MatCheckboxModule,
     MatRadioModule,
     AppRoutingModule,
-    LoginComponent,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'
     })
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

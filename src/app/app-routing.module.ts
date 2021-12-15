@@ -53,6 +53,7 @@ import { TelefoneCreateComponent } from './components/telefone/telefone-criar/te
 import { TelefoneComponent } from './views/telefone/telefone.component';
 import { TelefoneUpdateComponent } from './components/telefone/telefone-update/telefone-update.component';
 import { TelefoneDeleteComponent } from './components/telefone/telefone-delete/telefone-delete.component';
+import { LoginComponent } from './components/login/login.component';
 /* import { AuthGuard } from './components/login/shared/auth.guard'; */
 /* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
 
@@ -269,11 +270,10 @@ const routes: Routes = [{
   component: TelefoneDeleteComponent
 },
 
-
-/* {
+{
   path: "login",
   component: LoginComponent
-}, */
+},
 
 {
   path: "mapa",
