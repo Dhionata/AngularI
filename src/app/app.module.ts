@@ -103,6 +103,8 @@ import { TelefoneLerComponent } from './components/telefone/telefone-ler/telefon
 import { TelefoneUpdateComponent } from './components/telefone/telefone-update/telefone-update.component';
 import { LoginComponent } from './components/login/login.component';
 import { AuthService } from './components/login/auth.service';
+import { AuthGuard } from './components/guards/auth-guard.service';
+import { fornecedorGuard } from './components/guards/fornecedorGuard';
 
 registerLocaleData(localePt);
 
@@ -202,7 +204,9 @@ registerLocaleData(localePt);
       apiKey: 'AIzaSyDJ139gBZ0VDjqaUs1QLGCxzTueUzDieF8'
     })
   ],
-  providers: [AuthService],
+  providers: [AuthService,
+              AuthGuard,
+              fornecedorGuard ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

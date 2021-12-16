@@ -1,5 +1,5 @@
 import { NgModule, Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
 import { ProdutoComponent } from './views/produto/produto.component';
@@ -41,7 +41,6 @@ import { PedidoUpdateComponent } from './components/pedido/pedido-update/pedido-
 import { PedidoDeleteComponent } from './components/pedido/pedido-delete/pedido-delete.component';
 import { PedidoComponent } from './views/pedido/pedido.component';
 import { PedidoCreateComponent } from './components/pedido/pedido-criar/pedido-criar.component';
-/* import { LoginComponent } from './components/login/login.component'; */
 import { MapaComponent } from './components/mapa/mapa';
 
 import { ItemPedidoComponent } from './views/itemPedido/itemPedido.component';
@@ -58,17 +57,19 @@ import { LoginComponent } from './components/login/login.component';
 /* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
 import { Usuario } from './components/usuario/usuario.model';
 import { TipoUsuario } from './components/tipoUsuario/tipoUsuario.model';
+import { AuthGuard } from './components/guards/auth-guard.service';
+import { fornecedorGuard } from './components/guards/fornecedorGuard';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent,canActivate: [AuthGuard]},
 
-  { path: 'produto', component: ProdutoComponent },
+  { path: 'produto', component: ProdutoComponent,canActivate: [AuthGuard], canActivateChild: [fornecedorGuard] },
 
-  { path: 'produto/create', component: ProdutoCreateComponent },
+  { path: 'produto/create', component: ProdutoCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'produto/update/:id', component: ProdutoUpdateComponent },
+  { path: 'produto/update/:id', component: ProdutoUpdateComponent ,canActivate: [AuthGuard]},
 
-  { path: 'produto/delete/:id', component: ProdutoDeleteComponent },
+  { path: 'produto/delete/:id', component: ProdutoDeleteComponent,canActivate: [AuthGuard] },
 
   { path: 'cliente', component: ClienteComponent },
 
@@ -78,73 +79,73 @@ const routes: Routes = [
 
   { path: 'cliente/delete/:id', component: ClienteDeleteComponent },
 
-  { path: 'endereco', component: EnderecoComponent },
+  { path: 'endereco', component: EnderecoComponent,canActivate: [AuthGuard] },
 
-  { path: 'endereco/create', component: EnderecoCreateComponent },
+  { path: 'endereco/create', component: EnderecoCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'endereco/update/:id', component: EnderecoUpdateComponent },
+  { path: 'endereco/update/:id', component: EnderecoUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'endereco/delete/:id', component: EnderecoDeleteComponent },
+  { path: 'endereco/delete/:id', component: EnderecoDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'usuario', component: UsuarioComponent },
+  { path: 'usuario', component: UsuarioComponent,canActivate: [AuthGuard] },
 
-  { path: 'usuario/create', component: UsuarioCreateComponent },
+  { path: 'usuario/create', component: UsuarioCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'usuario/update/:id', component: UsuarioUpdateComponent },
+  { path: 'usuario/update/:id', component: UsuarioUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'usuario/delete/:id', component: UsuarioDeleteComponent },
+  { path: 'usuario/delete/:id', component: UsuarioDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'fornecedor', component: FornecedorComponent },
+  { path: 'fornecedor', component: FornecedorComponent,canActivate: [AuthGuard] },
 
-  { path: 'fornecedor/create', component: FornecedorCreateComponent },
+  { path: 'fornecedor/create', component: FornecedorCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'fornecedor/update/:id', component: FornecedorUpdateComponent },
+  { path: 'fornecedor/update/:id', component: FornecedorUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'fornecedor/delete/:id', component: FornecedorDeleteComponent },
+  { path: 'fornecedor/delete/:id', component: FornecedorDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'produtoFornecedor', component: ProdutoFornecedorComponent },
+  { path: 'produtoFornecedor', component: ProdutoFornecedorComponent,canActivate: [AuthGuard] },
 
-  { path: 'produtoFornecedor/create',component: ProdutoFornecedorCreateComponent,},
+  { path: 'produtoFornecedor/create',component: ProdutoFornecedorCreateComponent,canActivate: [AuthGuard]},
 
-  { path: 'produtoFornecedor/update/:id',component: ProdutoFornecedorUpdateComponent,},
+  { path: 'produtoFornecedor/update/:id',component: ProdutoFornecedorUpdateComponent,canActivate: [AuthGuard]},
 
-  { path: 'produtoFornecedor/delete/:id',component: ProdutoFornecedorDeleteComponent,},
+  { path: 'produtoFornecedor/delete/:id',component: ProdutoFornecedorDeleteComponent,canActivate: [AuthGuard]},
 
-  { path: 'avaliacao', component: AvaliacaoComponent },
+  { path: 'avaliacao', component: AvaliacaoComponent,canActivate: [AuthGuard] },
 
-  { path: 'avaliacao/create', component: AvaliacaoCreateComponent },
+  { path: 'avaliacao/create', component: AvaliacaoCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'avaliacao/update/:id', component: AvaliacaoUpdateComponent },
+  { path: 'avaliacao/update/:id', component: AvaliacaoUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'avaliacao/delete/:id', component: AvaliacaoDeleteComponent },
+  { path: 'avaliacao/delete/:id', component: AvaliacaoDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'pedido', component: PedidoComponent },
+  { path: 'pedido', component: PedidoComponent,canActivate: [AuthGuard] },
 
-  { path: 'pedido/create', component: PedidoCreateComponent },
+  { path: 'pedido/create', component: PedidoCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'pedido/update/:id', component: PedidoUpdateComponent },
+  { path: 'pedido/update/:id', component: PedidoUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'pedido/delete/:id', component: PedidoDeleteComponent },
+  { path: 'pedido/delete/:id', component: PedidoDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'itemPedido', component: ItemPedidoComponent },
+  { path: 'itemPedido', component: ItemPedidoComponent,canActivate: [AuthGuard] },
 
-  { path: 'itemPedido/create', component: ItemPedidoCreateComponent },
+  { path: 'itemPedido/create', component: ItemPedidoCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'itemPedido/update/:id', component: ItemPedidoUpdateComponent },
+  { path: 'itemPedido/update/:id', component: ItemPedidoUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'itemPedido/delete/:id', component: ItemPedidoDeleteComponent },
+  { path: 'itemPedido/delete/:id', component: ItemPedidoDeleteComponent,canActivate: [AuthGuard] },
 
-  { path: 'telefone', component: TelefoneComponent },
+  { path: 'telefone', component: TelefoneComponent,canActivate: [AuthGuard] },
 
-  { path: 'telefone/create', component: TelefoneCreateComponent },
+  { path: 'telefone/create', component: TelefoneCreateComponent,canActivate: [AuthGuard] },
 
-  { path: 'telefone/update/:id', component: TelefoneUpdateComponent },
+  { path: 'telefone/update/:id', component: TelefoneUpdateComponent,canActivate: [AuthGuard] },
 
-  { path: 'telefone/delete/:id', component: TelefoneDeleteComponent },
+  { path: 'telefone/delete/:id', component: TelefoneDeleteComponent,canActivate: [AuthGuard] },
 
   { path: 'login', component: LoginComponent },
 
-  { path: 'mapa', component: MapaComponent },
+  { path: 'mapa', component: MapaComponent,canActivate: [AuthGuard] },
 ];
 
 @NgModule({
