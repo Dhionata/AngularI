@@ -9,20 +9,12 @@ import { UsuarioService } from '../usuario/usuario.service';
 })
 export class AuthService {
   private usuarioAutenticado: boolean = false;
-  usuario: Usuario = {
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
-    pedidos: [],
-    enderecos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.VISITANTE,
-  };
+
+  usuario = new Usuario();
 
   mostrarMenuEmitter = new EventEmitter<boolean>();
 
-  constructor(private usuarioService: UsuarioService, private router: Router) {}
+  constructor(private usuarioService: UsuarioService, private router: Router) { }
 
   fazerLogin(usuario: Usuario) {
     var a = this.usuarioService.autenticaUsuario(usuario);
@@ -31,16 +23,17 @@ export class AuthService {
       a.subscribe((usuario) => (this.usuario = usuario));
       this.mostrarMenuEmitter.emit(true);
       console.log(this.usuario);
-      sessionStorage.setItem('usuarioAutenticado', usuario.email!);
+      sessionStorage.setItem('usuarioAutenticado', usuario.tipoUsuario!.toString());
+      console.log(sessionStorage.getItem('usuarioAutenticado'));
       this.router.navigate(['/usuario']);
-    }else {
+    } else {
       this.usuarioAutenticado = false;
 
       this.mostrarMenuEmitter.emit(false);
     }
   }
 
-      usuarioEstaAutenticado(){
-        return this.usuarioAutenticado;
-      }
+  usuarioEstaAutenticado() {
+    return this.usuarioAutenticado;
+  }
 }
