@@ -56,233 +56,99 @@ import { TelefoneDeleteComponent } from './components/telefone/telefone-delete/t
 import { LoginComponent } from './components/login/login.component';
 /* import { AuthGuard } from './components/login/shared/auth.guard'; */
 /* import { AuthenticationComponent } from './views/authentication/authentication.component'; */
+import { Usuario } from './components/usuario/usuario.model';
+import { TipoUsuario } from './components/tipoUsuario/tipoUsuario.model';
 
-const routes: Routes = [{
+const routes: Routes = [
+  { path: '', component: HomeComponent },
 
-  path: "", component: HomeComponent,
+  { path: 'produto', component: ProdutoComponent },
 
-},
-/* {
-  path: '',
-  component: AuthenticationComponent,
-  children: [
-    { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
-    { path: "usuario/create",component: UsuarioCreateComponent }
-  ]
-}, */
+  { path: 'produto/create', component: ProdutoCreateComponent },
 
-{
-  path: "produto",
-  component: ProdutoComponent
-},
+  { path: 'produto/update/:id', component: ProdutoUpdateComponent },
 
-{
-  path: "produto/create",
-  component: ProdutoCreateComponent
-},
+  { path: 'produto/delete/:id', component: ProdutoDeleteComponent },
 
-{
-  path: "produto/update/:id",
-  component: ProdutoUpdateComponent
-},
+  { path: 'cliente', component: ClienteComponent },
 
-{
-  path: "produto/delete/:id",
-  component: ProdutoDeleteComponent
-},
+  { path: 'cliente/create', component: ClienteCreateComponent },
 
-{
-  path: "cliente",
-  component: ClienteComponent
-},
+  { path: 'cliente/update/:id', component: ClienteUpdateComponent },
 
-{
-  path: "cliente/create",
-  component: ClienteCreateComponent
-},
+  { path: 'cliente/delete/:id', component: ClienteDeleteComponent },
 
-{
-  path: "cliente/update/:id",
-  component: ClienteUpdateComponent
-},
+  { path: 'endereco', component: EnderecoComponent },
 
-{
-  path: "cliente/delete/:id",
-  component: ClienteDeleteComponent
-},
+  { path: 'endereco/create', component: EnderecoCreateComponent },
 
-{
-  path: "endereco",
-  component: EnderecoComponent
-},
+  { path: 'endereco/update/:id', component: EnderecoUpdateComponent },
 
-{
-  path: "endereco/create",
-  component: EnderecoCreateComponent
-},
+  { path: 'endereco/delete/:id', component: EnderecoDeleteComponent },
 
-{
-  path: "endereco/update/:id",
-  component: EnderecoUpdateComponent
-},
+  { path: 'usuario', component: UsuarioComponent },
 
-{
-  path: "endereco/delete/:id",
-  component: EnderecoDeleteComponent
-},
+  { path: 'usuario/create', component: UsuarioCreateComponent },
 
-{
-  path: "usuario",
-  component: UsuarioComponent
-},
+  { path: 'usuario/update/:id', component: UsuarioUpdateComponent },
 
-{
-  path: "usuario/create",
-  component: UsuarioCreateComponent
-},
+  { path: 'usuario/delete/:id', component: UsuarioDeleteComponent },
 
-{
-  path: "usuario/update/:id",
-  component: UsuarioUpdateComponent
-},
+  { path: 'fornecedor', component: FornecedorComponent },
 
-{
-  path: "usuario/delete/:id",
-  component: UsuarioDeleteComponent
-},
+  { path: 'fornecedor/create', component: FornecedorCreateComponent },
 
-{
-  path: "fornecedor",
-  component: FornecedorComponent
-},
+  { path: 'fornecedor/update/:id', component: FornecedorUpdateComponent },
 
-{
-  path: "fornecedor/create",
-  component: FornecedorCreateComponent
-},
+  { path: 'fornecedor/delete/:id', component: FornecedorDeleteComponent },
 
-{
-  path: "fornecedor/update/:id",
-  component: FornecedorUpdateComponent
-},
+  { path: 'produtoFornecedor', component: ProdutoFornecedorComponent },
 
-{
-  path: "fornecedor/delete/:id",
-  component: FornecedorDeleteComponent
-},
+  { path: 'produtoFornecedor/create',component: ProdutoFornecedorCreateComponent,},
 
-{
-  path: "produtoFornecedor",
-  component: ProdutoFornecedorComponent
-},
+  { path: 'produtoFornecedor/update/:id',component: ProdutoFornecedorUpdateComponent,},
 
-{
-  path: "produtoFornecedor/create",
-  component: ProdutoFornecedorCreateComponent
-},
+  { path: 'produtoFornecedor/delete/:id',component: ProdutoFornecedorDeleteComponent,},
 
-{
-  path: "produtoFornecedor/update/:id",
-  component: ProdutoFornecedorUpdateComponent
-},
+  { path: 'avaliacao', component: AvaliacaoComponent },
 
-{
-  path: "produtoFornecedor/delete/:id",
-  component: ProdutoFornecedorDeleteComponent
-},
-{
-  path: "avaliacao",
-  component: AvaliacaoComponent
-},
+  { path: 'avaliacao/create', component: AvaliacaoCreateComponent },
 
-{
-  path: "avaliacao/create",
-  component: AvaliacaoCreateComponent
-},
+  { path: 'avaliacao/update/:id', component: AvaliacaoUpdateComponent },
 
-{
-  path: "avaliacao/update/:id",
-  component: AvaliacaoUpdateComponent
-},
+  { path: 'avaliacao/delete/:id', component: AvaliacaoDeleteComponent },
 
-{
-  path: "avaliacao/delete/:id",
-  component: AvaliacaoDeleteComponent
-},
+  { path: 'pedido', component: PedidoComponent },
 
-{
-  path: "pedido",
-  component: PedidoComponent
-},
+  { path: 'pedido/create', component: PedidoCreateComponent },
 
-{
-  path: "pedido/create",
-  component: PedidoCreateComponent
-},
+  { path: 'pedido/update/:id', component: PedidoUpdateComponent },
 
-{
-  path: "pedido/update/:id",
-  component: PedidoUpdateComponent
-},
+  { path: 'pedido/delete/:id', component: PedidoDeleteComponent },
 
-{
-  path: "pedido/delete/:id",
-  component: PedidoDeleteComponent
-},
+  { path: 'itemPedido', component: ItemPedidoComponent },
 
-{
-  path: "itemPedido",
-  component: ItemPedidoComponent
-},
+  { path: 'itemPedido/create', component: ItemPedidoCreateComponent },
 
-{
-  path: "itemPedido/create",
-  component: ItemPedidoCreateComponent
-},
+  { path: 'itemPedido/update/:id', component: ItemPedidoUpdateComponent },
 
-{
-  path: "itemPedido/update/:id",
-  component: ItemPedidoUpdateComponent
-},
+  { path: 'itemPedido/delete/:id', component: ItemPedidoDeleteComponent },
 
-{
-  path: "itemPedido/delete/:id",
-  component: ItemPedidoDeleteComponent
-},
+  { path: 'telefone', component: TelefoneComponent },
 
-{
-  path: "telefone",
-  component: TelefoneComponent
-}, 
+  { path: 'telefone/create', component: TelefoneCreateComponent },
 
-{
-  path: "telefone/create",
-  component: TelefoneCreateComponent
-},
+  { path: 'telefone/update/:id', component: TelefoneUpdateComponent },
 
-{
-  path: "telefone/update/:id",
-  component: TelefoneUpdateComponent
-},
-{
-  path: "telefone/delete/:id",
-  component: TelefoneDeleteComponent
-},
+  { path: 'telefone/delete/:id', component: TelefoneDeleteComponent },
 
-{
-  path: "login",
-  component: LoginComponent
-},
+  { path: 'login', component: LoginComponent },
 
-{
-  path: "mapa",
-  component: MapaComponent
-}
+  { path: 'mapa', component: MapaComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
