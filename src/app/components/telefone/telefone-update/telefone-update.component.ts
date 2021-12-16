@@ -10,10 +10,7 @@ import { Telefone } from '../telefone.model';
 })
 export class TelefoneUpdateComponent implements OnInit {
 
-  telefone: Telefone = {
-    numero: '',
-    usuario: null!
-  }
+  telefone: Telefone = new Telefone()
 
   constructor(private telefoneService: TelefoneService,
     private router: Router,
@@ -25,11 +22,11 @@ export class TelefoneUpdateComponent implements OnInit {
     this.telefoneService.findById(id!).subscribe(telefone =>
       this.telefone = telefone
     )
-    console.log("Olha.. isso é oq veio do banco para atualizar...\n" + this.telefone)
+    console.log("Olha.. isso é oq veio do banco para atualizar...\n" + this.telefone.numero)
   }
 
   updateTelefone(): void {
-    console.log("Telefone Enviado: " + this.telefone)
+    console.log("Telefone Enviado: " + this.telefone.numero, this.telefone.usuario, this.telefone.id)
     this.telefoneService.update(this.telefone).subscribe(() => {
       this.telefoneService.ShowOMessage('Telefone atualizado com sucesso')
       this.router.navigate(["/telefone"])

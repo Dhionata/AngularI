@@ -49,7 +49,7 @@ export class TelefoneService {
 
   update(telefone: Telefone): Observable<Telefone> {
     const url = `${this.baseUrl}`
-    return this.http.patch<Telefone>(url, { body: telefone }).pipe(
+    return this.http.patch<Telefone>(url, telefone).pipe(
       map(obj => obj),
       catchError(e => this.errorHandler(e))
     )

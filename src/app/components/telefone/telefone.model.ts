@@ -1,7 +1,7 @@
 import { Usuario } from "../usuario/usuario.model";
 
-export interface Telefone {
+export class Telefone {
   id?: number
-  usuario: Usuario
-  numero: string
+  usuario?: Usuario
+  numero!: string
 }
