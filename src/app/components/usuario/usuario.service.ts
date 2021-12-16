@@ -70,6 +70,17 @@ export class UsuarioService {
     )
   }
 
+  usuarioAutenticado(): Observable<Usuario> {
+    let a = sessionStorage.getItem('usuarioAutenticado')
+    const url = `${this.baseUrl}/Buscar/${a}`
+    console.log(a)
+    return this.http.get<Usuario>(url).pipe(
+      map(obj => obj),
+      catchError(e => this.errorHandler(e))
+    )
+  }
+
+
   errorHandler(e: any): Observable<any> {
     console.log(e)
     this.ShowOMessage('Ocorreu um erro!', true)

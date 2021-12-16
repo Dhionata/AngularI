@@ -3,14 +3,14 @@ import { Endereco } from '../endereco/endereco.model';
 import { Telefone } from "../telefone/telefone.model";
 import { Pedido } from "../pedido/pedido.model";
 
-export interface Usuario {
+export class Usuario {
   id?: number
-  nome: string
-  email: string
-  senha: string
-  cnpjCpf: string
-  pedidos: Array<Pedido>
-  enderecos: Array<Endereco>
-  telefone: Array<Telefone>
-  tipoUsuario: TipoUsuario
+  nome?: string
+  email?: string
+  senha?: string
+  cnpjCpf?: string
+  pedidos?: Array<Pedido>
+  enderecos?: Array<Endereco>
+  telefone?: Array<Telefone>
+  tipoUsuario?: TipoUsuario
 }

@@ -31,7 +31,7 @@ export class AuthService {
       a.subscribe((usuario) => (this.usuario = usuario));
       this.mostrarMenuEmitter.emit(true);
       console.log(this.usuario);
-      sessionStorage.setItem('usuarioAutenticado', usuario.email);
+      sessionStorage.setItem('usuarioAutenticado', usuario.email!);
       this.router.navigate(['/usuario']);
     }else {
       this.usuarioAutenticado = false;

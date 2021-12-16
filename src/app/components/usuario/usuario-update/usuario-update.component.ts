@@ -13,17 +13,7 @@ export class UsuarioUpdateComponent implements OnInit {
 
   botaoHabilitado: boolean = false;
 
-  usuario: Usuario = {
-    id: null!,
-    senha: '',
-    email: '',
-    cnpjCpf: '',
-    nome: '',
-    tipoUsuario: TipoUsuario.CLIENTE,
-    enderecos: [],
-    telefone: [],
-    pedidos: []
-  }
+  usuario = new Usuario()
 
   constructor(private usuarioService: UsuarioService,
     private router: Router,
@@ -45,6 +35,14 @@ export class UsuarioUpdateComponent implements OnInit {
       this.usuarioService.ShowOMessage('Usuario atualizado com sucesso')
       this.router.navigate(["/usuario"])
     })
+  }
+
+  usuarioAutenticado() {
+    this.usuarioService.usuarioAutenticado().subscribe(usuario => {
+      this.usuario = usuario
+      console.log(usuario)
+    })
+
   }
 
   desabilitar(): void {

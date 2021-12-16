@@ -23,6 +23,6 @@
 Atualizar
 </button>
 
-<button mat-raised-button (click)="cancel()">
-Cancelar
-</button>
+<button mat-raised-button (click)="usuarioAutenticado()" color="primary" [disabled]="!botaoHabilitado">testarBusca</button>
+
+<button mat-raised-button (click)="cancel()">Cancelar</button>
