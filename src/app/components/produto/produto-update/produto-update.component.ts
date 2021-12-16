@@ -28,11 +28,11 @@ export class ProdutoUpdateComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id')
     this.ProdutoService.findById(id!).subscribe(produto =>
       this.produto = produto)
-
+    console.log(this.produto)
   }
 
   updateProduto(): void {
-    console.log(this.produto)
+    console.log("Produto Enviado: " + this.produto)
     this.ProdutoService.update(this.produto).subscribe(() => {
       this.ProdutoService.ShowOMessage('Produto atualizado com sucesso')
       this.router.navigate(["/produto"])

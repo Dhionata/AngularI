@@ -22,13 +22,14 @@ export class TelefoneUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.telefoneService.findById(id!).subscribe(Telefone =>
-      this.telefone = Telefone
+    this.telefoneService.findById(id!).subscribe(telefone =>
+      this.telefone = telefone
     )
-    console.log("Olha.. isso é oq veio do banco para atualizar...\n" + this.telefone.numero + "\n" + this.telefone.usuario + "\n" + this.telefone.id)
+    console.log("Olha.. isso é oq veio do banco para atualizar...\n" + this.telefone)
   }
 
   updateTelefone(): void {
+    console.log("Telefone Enviado: " + this.telefone)
     this.telefoneService.update(this.telefone).subscribe(() => {
       this.telefoneService.ShowOMessage('Telefone atualizado com sucesso')
       this.router.navigate(["/telefone"])

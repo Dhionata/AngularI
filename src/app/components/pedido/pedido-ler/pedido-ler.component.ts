@@ -9,16 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidoLerComponent implements OnInit {
 
-  pedido!: Pedido[]
-  preco!: number
-  displayedColumns = ['id', 'cliente', 'action']
+  pedidos!: Pedido[]
+  displayedColumns = ['id', 'cliente', 'actions']
 
   constructor(private pedidoService: PedidoService) { }
-
   ngOnInit(): void {
-    this.pedidoService.read().subscribe(pedido => {
-      this.pedido = pedido
-      console.log(pedido);
+    this.pedidoService.read().subscribe(pedidos => {
+      this.pedidos = pedidos
+      console.log(this.pedidos);
     })
   }
 
