@@ -11,12 +11,8 @@ import { Router } from '@angular/router';
 })
 export class ProdutoCreateComponent implements OnInit {
 
-  produto: Produto = {
-    nome: '',
-    listaFornecedores: [],
-    disponivel: false
-  }
-
+  produto = new Produto()
+  
   constructor(private ProdutoService: ProdutoService,
     private router: Router) { }
 

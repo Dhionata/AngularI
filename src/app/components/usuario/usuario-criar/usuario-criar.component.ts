@@ -14,16 +14,7 @@ import { FornecedorService } from '../../fornecedor/fornecedor.service';
 export class UsuarioCreateComponent implements OnInit {
   botaoHabilitado: boolean = false;
 
-  usuario: Usuario = {
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
-    pedidos: [],
-    enderecos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.CLIENTE
-  }
+  usuario = new Usuario()
 
   constructor(private usuarioService: UsuarioService, private clienteService: ClienteService,
     private router: Router) {

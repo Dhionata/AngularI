@@ -11,7 +11,7 @@ import { MatRadioButton } from '@angular/material/radio';
 })
 export class ProdutoUpdateComponent implements OnInit {
 
-  produto: Produto = new Produto()
+  produto = new Produto()
 
   displayedColumns = ['id', 'nome', 'listaFornecedores', 'disponivel']
 

@@ -2,7 +2,6 @@ import { ClienteService } from '../cliente.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../cliente.model';
-import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 
 @Component({
   selector: 'app-cliente-update',
@@ -11,16 +10,7 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 })
 export class ClienteUpdateComponent implements OnInit {
 
-  cliente: Cliente = {
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
-    pedidos: [],
-    enderecos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.CLIENTE
-  };
+  cliente = new Cliente()
 
   constructor(private ClienteService: ClienteService,
     private router: Router,
@@ -44,6 +34,4 @@ export class ClienteUpdateComponent implements OnInit {
   cancel(): void {
     this.router.navigate(['/cliente'])
   }
-
-
 }

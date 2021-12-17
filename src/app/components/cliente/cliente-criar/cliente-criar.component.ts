@@ -11,22 +11,12 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 })
 export class ClienteCreateComponent implements OnInit {
 
-  cliente: Cliente = {
-    nome: '',
-    email: null!,
-    cnpjCpf: null!,
-    senha: null!,
-    pedidos: [],
-    enderecos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.CLIENTE
-  }
+  cliente = new Cliente()
 
   constructor(private clienteService: ClienteService,
     private router: Router) { }
 
   ngOnInit(): void {
-    //TODO DFASDFA
   }
 
   createCliente(): void {

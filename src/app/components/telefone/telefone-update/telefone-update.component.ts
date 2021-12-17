@@ -10,7 +10,7 @@ import { Telefone } from '../telefone.model';
 })
 export class TelefoneUpdateComponent implements OnInit {
 
-  telefone: Telefone = new Telefone()
+  telefone = new Telefone()
 
   constructor(private telefoneService: TelefoneService,
     private router: Router,

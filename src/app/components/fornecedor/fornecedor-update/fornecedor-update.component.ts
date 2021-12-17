@@ -11,18 +11,7 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 })
 export class FornecedorUpdateComponent implements OnInit {
 
-  fornecedor: Fornecedor = {
-    descricao: '',
-    listaProdutos: [],
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
-    pedidos: [],
-    enderecos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.FORNECEDOR
-  }
+  fornecedor = new Fornecedor()
 
   constructor(private FornecedorService: FornecedorService,
     private router: Router,

@@ -10,11 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ItemPedidoDeleteComponent implements OnInit {
 
-  itemPedido: ItemPedido = {
-    pedido: null!,
-    produto: null!,
-    quantidade: 0
-  }
+  itemPedido = new ItemPedido()
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router,
@@ -30,7 +26,7 @@ export class ItemPedidoDeleteComponent implements OnInit {
 
   deleteItemPedido(): void {
     this.ItemPedidoService.delete(this.itemPedido).subscribe(() => {
-      this.ItemPedidoService.ShowOMessage('itemPedido Excluido com sucesso')
+      this.ItemPedidoService.ShowOMessage('itemPedido excluido com sucesso')
       this.router.navigate(['/itemPedido'])
     })
 

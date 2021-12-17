@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidoLerComponent implements OnInit {
 
-  pedidos!: Pedido[]
+  pedidos = new Array< Pedido>()
   displayedColumns = ['id', 'cliente', 'actions']
 
   constructor(private pedidoService: PedidoService) { }

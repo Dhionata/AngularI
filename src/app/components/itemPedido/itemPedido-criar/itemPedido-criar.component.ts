@@ -10,11 +10,7 @@ import { Router } from '@angular/router';
 })
 export class ItemPedidoCreateComponent implements OnInit {
 
-  itemPedido: ItemPedido = {
-    pedido: null!,
-    produto: null!,
-    quantidade: 0
-  }
+  itemPedido = new ItemPedido()
 
   constructor(private itemPedidoService: ItemPedidoService,
     private router: Router) { }

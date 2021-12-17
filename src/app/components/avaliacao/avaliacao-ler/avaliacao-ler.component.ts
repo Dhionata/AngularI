@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AvaliacaolerComponent implements OnInit {
 
   avaliacoes!: Avaliacao[]
-  displayedColumns = ['id', 'nota', 'comentario', 'pedido', 'actions']
+  displayedColumns = ['id', 'nota', 'comentario',/*  'pedido', */ 'actions']
 
   constructor(private AvaliacaoService: AvaliacaoService) { }
 

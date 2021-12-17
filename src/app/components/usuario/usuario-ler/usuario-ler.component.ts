@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariolerComponent implements OnInit {
 
-  usuario!: Usuario[]
+  usuario = new Array<Usuario>()
   displayedColumns = ['id', 'nome', 'email', 'cnpjCpf', 'actions']
 
   constructor(private UsuarioService: UsuarioService) { }

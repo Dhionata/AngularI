@@ -1,3 +1,3 @@
 import { Usuario } from "../usuario/usuario.model";
 
-export interface Cliente extends Usuario { }
+export class Cliente extends Usuario { }

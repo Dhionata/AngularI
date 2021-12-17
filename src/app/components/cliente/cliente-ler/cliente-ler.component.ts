@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientelerComponent implements OnInit {
 
-  clientes!: Cliente[]
+  clientes = new Array<Cliente>()
   displayedColumns = ['id', 'cnpjCpf', 'email', 'nome', 'actions']
 
   constructor(private ClienteService: ClienteService) { }

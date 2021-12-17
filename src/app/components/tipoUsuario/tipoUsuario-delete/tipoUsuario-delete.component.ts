@@ -26,7 +26,7 @@ export class TipoUsuarioDeleteComponent implements OnInit {
 
   deleteTipoUsuario(): void {
     this.TipoUsuarioService.delete(this.tipoUsuario).subscribe(() => {
-      this.TipoUsuarioService.ShowOMessage('TipoUsuario Excluido com sucesso')
+      this.TipoUsuarioService.ShowOMessage('TipoUsuario excluido com sucesso')
       this.router.navigate(['/TipoUsuario'])
     })
 

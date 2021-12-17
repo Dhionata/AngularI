@@ -10,11 +10,7 @@ import { ItemPedido } from '../itemPedido.model';
 })
 export class ItemPedidoUpdateComponent implements OnInit {
 
-  itemPedido: ItemPedido = {
-    pedido: null!,
-    produto: null!,
-    quantidade: 0
-  }
+  itemPedido = new ItemPedido()
 
   constructor(private ItemPedidoService: ItemPedidoService,
     private router: Router,

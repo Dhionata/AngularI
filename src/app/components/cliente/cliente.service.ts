@@ -55,7 +55,7 @@ export class ClienteService {
     )
   }
 
-  delete(cliente: Cliente): Observable<Cliente> {
+  delete(cliente: Cliente): Observable<void> {
     const url = `${this.baseUrl}`
     return this.http.delete<Cliente>(url, { body: cliente }).pipe(
       map(obj => obj),

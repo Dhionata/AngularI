@@ -10,14 +10,7 @@ import { ProdutoFornecedor } from '../produtoFornecedor.model';
 })
 export class ProdutoFornecedorUpdateComponent implements OnInit {
 
-  produtoFornecedor: ProdutoFornecedor = {
-    produto: null!,
-    fornecedor: null!,
-    preco: 0,
-    quantidadeEmEstoque: 0,
-    dataCadastro: null!,
-    dataAtualizacao: null!,
-  }
+  produtoFornecedor = new ProdutoFornecedor()
 
   constructor(private produtoFornecedorService: ProdutoFornecedorService,
     private router: Router,

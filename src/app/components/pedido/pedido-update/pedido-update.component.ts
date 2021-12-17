@@ -10,7 +10,7 @@ import { Pedido } from '../pedido.model';
 })
 export class PedidoUpdateComponent implements OnInit {
 
-  pedido!: Pedido;
+  pedido = new Pedido();
   preco: any;
 
   constructor(private pedidoService: PedidoService,

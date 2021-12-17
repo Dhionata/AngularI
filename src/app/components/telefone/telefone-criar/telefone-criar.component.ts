@@ -10,10 +10,7 @@ import { Router } from '@angular/router';
 })
 export class TelefoneCreateComponent implements OnInit {
 
-  telefone: Telefone = {
-    numero: "",
-    usuario: null!
-  }
+  telefone = new Telefone()
 
   constructor(private telefoneService: TelefoneService,
     private router: Router) { }

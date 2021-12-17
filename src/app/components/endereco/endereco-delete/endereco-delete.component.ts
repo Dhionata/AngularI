@@ -10,17 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class EnderecoDeleteComponent implements OnInit {
 
-  endereco: Endereco = {
-    usuario: null!,
-    logradouro: '',
-    cidade: '',
-    bairro: '',
-    complemento: '',
-    cep: '',
-    numero: '',
-    coordenadaX: 0,
-    coordenadaY: 0
-  };
+  endereco = new Endereco()
 
 
   constructor(private enderecoService: EnderecoService,
@@ -37,7 +27,7 @@ export class EnderecoDeleteComponent implements OnInit {
 
   deleteEndereco(): void {
     this.enderecoService.delete(this.endereco).subscribe(() => {
-      this.enderecoService.ShowOMessage('Endereco Excluido com sucesso')
+      this.enderecoService.ShowOMessage('Endereco excluido com sucesso')
       this.router.navigate(['/endereco'])
     })
 

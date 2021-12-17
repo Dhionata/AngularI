@@ -11,16 +11,7 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 })
 export class UsuarioDeleteComponent implements OnInit {
 
-  usuario: Usuario = {
-    senha: '',
-    email: '',
-    cnpjCpf: '',
-    nome: '',
-    tipoUsuario: TipoUsuario.CLIENTE,
-    enderecos: [],
-    telefone: [],
-    pedidos: []
-  }
+  usuario = new Usuario()
 
   constructor(private UsuarioService: UsuarioService,
     private router: Router,
@@ -36,7 +27,7 @@ export class UsuarioDeleteComponent implements OnInit {
 
   deleteUsuario(): void {
     this.UsuarioService.delete(this.usuario).subscribe(() => {
-      this.UsuarioService.ShowOMessage('usuario Excluido com sucesso')
+      this.UsuarioService.ShowOMessage('usuario excluido com sucesso')
       this.router.navigate(['/usuario'])
     })
 

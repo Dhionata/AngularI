@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemPedidolerComponent implements OnInit {
 
-  itensPedido!: ItemPedido[]
-  displayedColumns = ['id', 'pedido', 'produto', 'quantidade', 'actions']
+  itensPedido = new Array<ItemPedido>()
+  displayedColumns = ['id', /* 'pedido', */ 'produto', 'quantidade', 'actions']
 
   constructor(private ItemPedidoService: ItemPedidoService) { }
 

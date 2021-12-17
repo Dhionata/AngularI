@@ -9,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TelefoneLerComponent implements OnInit {
 
-  telefones!: Telefone[]
-  displayedColumns = ['id', 'numero', 'usuario', 'actions']
+  telefones = new Array<Telefone>()
+  displayedColumns = ['id', 'numero',/*  'usuario', */ 'actions']
 
   constructor(private telefoneService: TelefoneService) { }
 

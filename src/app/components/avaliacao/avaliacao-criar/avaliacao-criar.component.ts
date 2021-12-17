@@ -10,12 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AvaliacaoCreateComponent implements OnInit {
 
-  avaliacao: Avaliacao = {
-    nota: 0,
-    comentario: '',
-    data: new Date(),
-    pedido: null!,
-  }
+  avaliacao = new Avaliacao()
 
   constructor(private avaliacaoService: AvaliacaoService,
     private router: Router) { }
@@ -38,10 +33,10 @@ export class AvaliacaoCreateComponent implements OnInit {
 
   mudou(): void {
     console.log(this.avaliacao)
-    if (this.avaliacao.nota > 10) {
+    if (this.avaliacao.nota! > 10) {
       this.avaliacao.nota = 0
-      
-    } else if (this.avaliacao.nota < 0) {
+
+    } else if (this.avaliacao.nota! < 0) {
       this.avaliacao.nota = 0
     }
     console.log(this.avaliacao)

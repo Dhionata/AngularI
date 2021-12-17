@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnderecolerComponent implements OnInit {
 
-  enderecos!: Endereco[]
+  enderecos = new Array<Endereco>()
   displayedColumns = ['id', 'logradouro', 'cidade', 'bairro',
-    'complemento', 'cep', 'numero', 'coordenadaX', 'coordenadaY', 'actions']
+    'complemento', 'cep', 'numero',/*  'coordenadaX', 'coordenadaY', */ 'actions']
 
   constructor(private enderecoService: EnderecoService) { }
 

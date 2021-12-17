@@ -10,12 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class AvaliacaoDeleteComponent implements OnInit {
 
-  avaliacao: Avaliacao = {
-    nota: 0,
-    comentario: '',
-    data: new Date(),
-    pedido: null!
-  }
+  avaliacao = new Avaliacao()
 
   constructor(private avaliacaoService: AvaliacaoService,
     private router: Router,
@@ -31,7 +26,7 @@ export class AvaliacaoDeleteComponent implements OnInit {
 
   deleteAvaliacao(): void {
     this.avaliacaoService.delete(this.avaliacao).subscribe(() => {
-      this.avaliacaoService.ShowOMessage('avaliacao Excluido com sucesso')
+      this.avaliacaoService.ShowOMessage('avaliacao excluido com sucesso')
       this.router.navigate(['/avaliacao'])
     })
 

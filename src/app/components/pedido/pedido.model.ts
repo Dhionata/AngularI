@@ -5,12 +5,12 @@ import { Avaliacao } from '../avaliacao/avaliacao.model';
 
 export class Pedido {
   id?: number
-  itensPedido!: Array<ItemPedido>;
-  cliente!: Cliente
-  formaPagamento!: FormaPagamento
-  desconto!: number
-  pago!: boolean
-  entregue!: boolean
-  data!: Date
-  avaliacao!: Avaliacao
+  itensPedido?: Array<ItemPedido>;
+  cliente?: Cliente
+  formaPagamento?: FormaPagamento
+  desconto?: number
+  pago?: boolean
+  entregue?: boolean
+  data?: Date
+  avaliacao?: Avaliacao
 }

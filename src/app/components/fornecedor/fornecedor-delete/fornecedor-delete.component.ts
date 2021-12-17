@@ -10,7 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FornecedorDeleteComponent implements OnInit {
 
-  fornecedor!: Fornecedor;
+  fornecedor = new Fornecedor()
 
   constructor(private FornecedorService: FornecedorService,
     private router: Router,
@@ -26,7 +26,7 @@ export class FornecedorDeleteComponent implements OnInit {
 
   deleteFornecedor(): void {
     this.FornecedorService.delete(this.fornecedor).subscribe(() => {
-      this.FornecedorService.ShowOMessage('fornecedor Excluido com sucesso')
+      this.FornecedorService.ShowOMessage('fornecedor excluido com sucesso')
       this.router.navigate(['/fornecedor'])
     })
 

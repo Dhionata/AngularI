@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class PedidoDeleteComponent implements OnInit {
 
 
-  pedido!: Pedido;
+  pedido = new Pedido()
 
   preco!: Observable<number>;
 
@@ -31,7 +31,7 @@ export class PedidoDeleteComponent implements OnInit {
 
   deletePedido(): void {
     this.pedidoService.delete(this.pedido).subscribe(() => {
-      this.pedidoService.ShowOMessage('pedido Excluido com sucesso')
+      this.pedidoService.ShowOMessage('pedido excluido com sucesso')
       this.router.navigate(['/pedido'])
     })
 

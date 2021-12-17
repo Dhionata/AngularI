@@ -10,14 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProdutoFornecedorDeleteComponent implements OnInit {
 
-  produtoFornecedor: ProdutoFornecedor = {
-    produto: null!,
-    fornecedor: null!,
-    preco: 0,
-    quantidadeEmEstoque: 0,
-    dataCadastro: null!,
-    dataAtualizacao: null!,
-  }
+  produtoFornecedor = new ProdutoFornecedor()
 
   constructor(private produtoFornecedorService: ProdutoFornecedorService,
     private router: Router,
@@ -33,7 +26,7 @@ export class ProdutoFornecedorDeleteComponent implements OnInit {
 
   deleteProdutoFornecedor(): void {
     this.produtoFornecedorService.delete(this.produtoFornecedor).subscribe(() => {
-      this.produtoFornecedorService.ShowOMessage('produtoFornecedor Excluido com sucesso')
+      this.produtoFornecedorService.ShowOMessage('produtoFornecedor excluido com sucesso')
       this.router.navigate(['/produtoFornecedor'])
     })
 

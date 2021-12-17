@@ -10,10 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class TelefoneDeleteComponent implements OnInit {
 
-  telefone: Telefone = {
-    numero: "",
-    usuario: null!
-  }
+  telefone = new Telefone()
 
   constructor(private telefoneService: TelefoneService,
     private router: Router,
@@ -30,7 +27,7 @@ export class TelefoneDeleteComponent implements OnInit {
 
   deleteTelefone(): void {
     this.telefoneService.delete(this.telefone).subscribe(() => {
-      this.telefoneService.ShowOMessage('Telefone Excluido com sucesso')
+      this.telefoneService.ShowOMessage('Telefone excluido com sucesso')
       this.router.navigate(['/telefone'])
     })
 

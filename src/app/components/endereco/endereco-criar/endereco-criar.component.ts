@@ -11,18 +11,7 @@ import { UsuarioService } from '../../usuario/usuario.service';
 })
 export class EnderecoCreateComponent implements OnInit {
 
-  endereco: Endereco = {
-    id: 0,
-    logradouro: "",
-    cidade: "",
-    bairro: "",
-    complemento: "",
-    cep: "",
-    numero: "",
-    coordenadaX: 0,
-    coordenadaY: 0,
-    usuario: null!
-  }
+  endereco = new Endereco()
 
   constructor(private EnderecoService: EnderecoService,
     private router: Router) { }

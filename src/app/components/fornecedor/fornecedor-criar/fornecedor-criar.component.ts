@@ -11,18 +11,7 @@ import { TipoUsuario } from '../../tipoUsuario/tipoUsuario.model';
 })
 export class FornecedorCreateComponent implements OnInit {
 
-  fornecedor: Fornecedor = {
-    descricao: '',
-    enderecos: [],
-    listaProdutos: [],
-    nome: '',
-    email: '',
-    senha: '',
-    cnpjCpf: '',
-    pedidos: [],
-    telefone: [],
-    tipoUsuario: TipoUsuario.FORNECEDOR
-  }
+  fornecedor = new Fornecedor()
 
   ngOnInit(): void {
   }
