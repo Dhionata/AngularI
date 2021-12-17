@@ -17,19 +17,26 @@ export class AuthService {
   constructor(private usuarioService: UsuarioService, private router: Router) { }
 
   fazerLogin(usuario: Usuario) {
-    var a = this.usuarioService.autenticaUsuario(usuario);
-    if (a != null) {
+    this.usuarioService.autenticaUsuario(usuario).subscribe(
+      (usuario: Usuario) => {
+        if (usuario != null) {
+          this.usuario = usuario;
+        } else {
+          this.usuario = new Usuario();
+        }
+      }
+    )
+    if (this.usuario.email != null) {
+      console.log("Entrou no if, o email n é nulo " + this.usuario.email);
       this.usuarioAutenticado = true;
-      a.subscribe((usuario) => (this.usuario = usuario));
       this.mostrarMenuEmitter.emit(true);
-      console.log(this.usuario);
       sessionStorage.setItem('usuarioAutenticado', usuario.tipoUsuario!.toString());
       console.log(sessionStorage.getItem('usuarioAutenticado'));
       this.router.navigate(['/usuario']);
     } else {
       this.usuarioAutenticado = false;
-
       this.mostrarMenuEmitter.emit(false);
+      console.log("não existe email")
     }
   }
 

@@ -24,6 +24,7 @@ export class UsuarioCreateComponent implements OnInit {
   }
 
   createUsuario(): void {
+    this.usuario.tipoUsuario = TipoUsuario.CLIENTE;
     console.log(this.usuario)
     this.usuarioService.create(this.usuario).subscribe(() => {
       this.usuarioService.ShowOMessage('usuario criado!')
