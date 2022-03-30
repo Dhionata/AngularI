@@ -1,6 +1,7 @@
 # HelloWorld
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9 and uses the [
+Delivery2021](https://github.com/Dhionata/Delivery2021) repository as the application backend.
 
 ## Development server
 
