@@ -3,7 +3,7 @@ import { Router } from '@angular/router'
 import { HeaderService } from 'src/app/components/templates/header/header.service';
 
 @Component({
-  selector: 'app-ItemPedido',
+  selector: 'app-itemPedido',
   templateUrl: './itemPedido.component.html',
   styleUrls: ['./itemPedido.component.scss']
 })

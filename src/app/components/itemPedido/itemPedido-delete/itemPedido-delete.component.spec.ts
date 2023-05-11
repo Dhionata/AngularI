@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ItemPedidolerComponent } from './itemPedido-delete.component';
+import { ItemPedidoDeleteComponent } from './itemPedido-delete.component';
 
-describe('ItemPedidolerComponent', () => {
-  let component: ItemPedidolerComponent;
-  let fixture: ComponentFixture<ItemPedidolerComponent>;
+describe('ItemPedidoDeleteComponent', () => {
+  let component: ItemPedidoDeleteComponent;
+  let fixture: ComponentFixture<ItemPedidoDeleteComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ItemPedidolerComponent]
+      declarations: [ItemPedidoDeleteComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ItemPedidolerComponent);
+    fixture = TestBed.createComponent(ItemPedidoDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

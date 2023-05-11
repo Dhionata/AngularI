@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class ProdutoCreateComponent implements OnInit {
 
   produto = new Produto()
-  
+
   constructor(private ProdutoService: ProdutoService,
     private router: Router) { }
 

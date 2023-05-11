@@ -1,5 +1,6 @@
 {
-    "product": [{
+    "product": [
+        {
             "name": "Produto de Teste",
             "price": "125",
             "quant": "1",

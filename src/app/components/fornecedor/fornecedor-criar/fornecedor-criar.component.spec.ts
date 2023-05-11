@@ -8,9 +8,9 @@ describe('FornecedorCreateComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FornecedorCreateComponent ]
+      declarations: [FornecedorCreateComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

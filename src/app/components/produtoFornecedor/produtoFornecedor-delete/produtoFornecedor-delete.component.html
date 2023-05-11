@@ -10,26 +10,30 @@
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Quantidade" [(ngModel)]="produtoFornecedor.quantidadeEmEstoque" name="Quantidade" disabled>
+            <input matInput placeholder="Quantidade" [(ngModel)]="produtoFornecedor.quantidadeEmEstoque"
+                name="Quantidade" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Fornecedor" [(ngModel)]="produtoFornecedor.fornecedor" name="Fornecedor" disabled>
+            <input matInput placeholder="Fornecedor" [(ngModel)]="produtoFornecedor.fornecedor" name="Fornecedor"
+                disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Data de Atualização" [(ngModel)]="produtoFornecedor.dataAtualizacao" name="atualizacao" disabled>
+            <input matInput placeholder="Data de Atualização" [(ngModel)]="produtoFornecedor.dataAtualizacao"
+                name="atualizacao" disabled>
         </mat-form-field>
 
         <mat-form-field>
-            <input matInput placeholder="Data de Cadastro" [(ngModel)]="produtoFornecedor.dataCadastro" name="cadastro" disabled>
+            <input matInput placeholder="Data de Cadastro" [(ngModel)]="produtoFornecedor.dataCadastro" name="cadastro"
+                disabled>
         </mat-form-field>
     </form>
 </mat-card>
 <button mat-raised-button (click)="deleteProdutoFornecedor()" color="warn">
-Excluir
+    Excluir
 </button>
 
 <button mat-raised-button (click)="cancel()">
-Cancelar
+    Cancelar
 </button>

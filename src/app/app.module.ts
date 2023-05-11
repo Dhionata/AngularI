@@ -205,8 +205,8 @@ registerLocaleData(localePt);
     })
   ],
   providers: [AuthService,
-              AuthGuard,
-              fornecedorGuard ],
+    AuthGuard,
+    fornecedorGuard],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
