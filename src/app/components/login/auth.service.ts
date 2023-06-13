@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
-import { TipoUsuario } from '../tipoUsuario/tipoUsuario.model';
 import { Usuario } from '../usuario/usuario.model';
 import { UsuarioService } from '../usuario/usuario.service';
 
